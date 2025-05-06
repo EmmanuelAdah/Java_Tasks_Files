@@ -7,9 +7,20 @@ public class MathQuiz {
 
 	Munchies quiz = new Munchies();
 
-	quiz.fifthMultiple(8);
+	System.out.print("Enter an integer: ");
+	int userInput = munchies.nextInt(); 
 
-	
+	quiz.fifthMultiple(5);
+
+	quiz.ageYears(4);
+
+	quiz.primeNumber();
+
+	quiz.findMultiplesOf7Not5();
+
+	quiz.dogAge("Doggy",4);
+
+	quiz.sumOfNumbers(2342);
 	}
 
 }

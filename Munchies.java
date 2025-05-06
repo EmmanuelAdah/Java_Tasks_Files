@@ -3,7 +3,7 @@ public class Munchies {
 	public static int fifthMultiple (int userInput){
 		final int five = 5;
 		int multiple = userInput * five;
-		System.out.print("The fifth multiple of " + userInput + " is " + multiple);
+		System.out.println("The fifth multiple of " + userInput + " is " + multiple);
 		return multiple;
 	}
 
@@ -15,7 +15,7 @@ public class Munchies {
 				return i;
 			}
 			else {
-				System.out.print("The first 50 print numbers are: "+ i + " ");
+				System.out.println("The first 50 print numbers are: "+ i + " ");
 			}
 			return i;
 	}
@@ -29,10 +29,31 @@ public class Munchies {
 		int minutes = 60 * 24 * daysPerYear * years;
 		int seconds = 60 * 60 * 24 * daysPerYear * years;
 		
-		System.out.print("Year(s): " +years + ", Months: " + months + ", Days: " + days + ", Minutes: " + minutes + ", Seconds: "+ seconds);
+		System.out.println("Year(s): " + years + ", Months: " + months + ", Days: " + days + ", Minutes: " + minutes + ", Seconds: "+ seconds);
 
 		return years;
 	}
+
+	public static int dogAge (String dogsName, int dogAge){
+		final int humanYear = 7;
+		String dogName = dogsName;
+		int dogYears = humanYear * dogAge;
+		System.out.println("\nThe dog's name is " + dogName + ", and the age is " + dogYears);
+		return humanYear;
+	}
+
+	public static int findMultiplesOf7Not5 (){
+
+	int i = 2000;
+	for ( ; i <= 3200; i++){
+		if (i % 7 == 0 && i % 5 != 0){
+		System.out.print(i);
+		System.out.print(", ");
+		}
+	} return i;
+
+	}
+
 	
 	public static int sumOfNumbers (int userInput){
 
@@ -42,11 +63,10 @@ public class Munchies {
 		int fourthDigit = userInput % 10;
 
 		int sum = (firstDigit + secondDigit + thirdDigit + fourthDigit);
-		System.out.print("The sum of " + userInput + "is " + sum);
+		System.out.println("The sum of " + userInput + " is " + sum);
 		
 		return sum;
 	}
-
 	
-
+	
 }
