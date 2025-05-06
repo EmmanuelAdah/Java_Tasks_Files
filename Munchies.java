@@ -51,10 +51,8 @@ public class Munchies {
 		System.out.print(", ");
 		}
 	} return i;
-
 	}
 
-	
 	public static int sumOfNumbers (int userInput){
 
 		int firstDigit = userInput / 1000;
@@ -68,5 +66,16 @@ public class Munchies {
 		return sum;
 	}
 	
+	public static boolean isLeapYear(int userInput){
+	
+	int year = userInput;
+
+		if (userInput % 4 == 0){
+			System.out.println("True. " + year + " is a leap year");
+			return true;
+		}
+		else{ System.out.print("False. " + year + " is not a leap year");
+			return false;}
+	}
 	
 }
