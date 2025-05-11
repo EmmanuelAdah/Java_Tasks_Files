@@ -6,7 +6,7 @@ public class ArrayKata {
 	scores[0] = user0; scores[1] = user1; scores[2] = user2; scores[3] = user3; scores[4] = user4; scores[5] = user5;
 	int i = 0;
 	int maximum = scores[i];
-	for ( ; i < 6; i++){
+	for ( ; i < scores.length; i++){
 		if (scores[i] > maximum){
 		maximum = scores[i];
 		}	
@@ -21,7 +21,7 @@ public class ArrayKata {
 	
 	int i = 0;
 	int minimum = scores[i];
-	for ( ; i < 6; i++){
+	for ( ; i < scores.length; i++){
 		if (scores[i] < minimum){
 		minimum = scores[i];
 		}	
@@ -61,7 +61,7 @@ public class ArrayKata {
 	scores[0] = user0; scores[1] = user1; scores[2] = user2; scores[3] = user3; scores[4] = user4; scores[5] = user5;
 	
 	int sumOfOdd = 0;
-	for (int i = 0; i < 6; i++){
+	for (int i = 0; i < scores.length; i++){
 		if (scores[i] % 2 != 0){
 		sumOfOdd += scores[i];
 		}
@@ -77,7 +77,8 @@ public class ArrayKata {
 	int i = 0;
 	int maximum = scores[i];
 	int minimum = scores[i];
-	for ( ; i < 6; i++){
+
+	for ( ; i < scores.length; i++){
 		if (scores[i] > maximum){
 		maximum = scores[i];
 		}
@@ -158,7 +159,7 @@ public class ArrayKata {
 	int i = 0;
 	int square = 0;
 	System.out.print("The square number(s) are ");
-	for ( ; i < 6; i++){
+	for ( ; i < scores.length; i++){
 		square = scores[i] * scores[i];
 		System.out.print(square + " ");
 		}	
