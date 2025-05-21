@@ -49,11 +49,28 @@ public class Kata {
 		return false;	
 	} 
 
-/*
-	public static int isPalindrome (int firstInteger){
+
+	public static boolean isPalindrome (int Integers){
+
+		int integer1 = integers / 10000;
+		int integer2 = integers / 1000 % 10;
+		int integer3 = integers / 100 % 10;
+		int integer4 = integers / 10 % 10;
+	int integer5 = integers % 10;
+
+	int reverse = integer1 * 1 + integer2 * 10 + integer3 * 100 + integer4 * 1000 + integer5 * 10000;
+
+		if (integers == reverse){
+		System.out.print(integers + " Input is a palindrome");
+		return true;
+		}
+		else{
+		System.out.print(integers + "Input is not a palindrome");
+		return false;
+		}
 		
 	}  
-*/
+
 	public static int factorialOf (int firstInteger){
 		int factorial = 1;
 		for (int i = 1; i <= firstInteger; i++){

@@ -10,7 +10,7 @@ public class Munchies {
 	public static int primeNumber (){
 		int i = 2;
 		for ( ; i <= 50; i++);
-		final int number = 50;
+		   int number = 50;
 			if (number % i == 0){
 				return i;
 			}

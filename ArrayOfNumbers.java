@@ -4,27 +4,38 @@ public class ArrayOfNumbers {
 
 	ArrayKata array = new ArrayKata();
 
-	array.maximumIn(4, 6, 8, 3, 7, 2);
+	int[] maximum = {4, 6, 8, 3, 7, 2};
+	array.maximumIn(maximum);
 
-	array.minimumIn(4, 6, 8, 3, 7, 2);
+	int[] minimum = {4, 6, 8, 3, 7, 2};
+	array.minimumIn(maximum);
 
-	array.SumOfIntegers(4, 6, 8, 3, 7, 2);
+	int[] sumOfInteger = {4, 6, 8, 3, 7, 2};
+	array.sumOf(sumOfInteger);
 
-	array.SumOfEvenNumbers(4, 6, 8, 3, 7, 2);
+	int[] sumEvenNumbers = {4, 6, 8, 3, 7, 2};
+	array.sumOfEvenNumbersIn(sumEvenNumbers);
 
-	array.SumOfOddNumbers(4, 6, 8, 3, 7, 2);
+	int[] sumOfOddIntegers = {4, 6, 8, 3, 7, 2};
+	array.sumOfOddNumbersIn(sumOfOddIntegers);
 
-	array.maximumAndMinimumOf(4, 6, 8, 3, 7, 2);
+	int[] minAndMaxIn = {4, 6, 8, 3, 7, 2};
+	array.maximumAndMinimumIn(minAndMaxIn);
 
-	array.noOfOddNumbersIn(4, 6, 8, 3, 7, 2);
+	int[] oddNumbersIn = {4, 6, 8, 3, 7, 2};
+	array.noOfOddNumbersIn(oddNumbersIn);
 
-	array.noOfEvenNumbersIn(4, 6, 8, 3, 7, 2);
+	int[] evenIntegersIn = {4, 6, 8, 3, 7, 2};
+	array.noOfEvenNumbersIn(evenIntegersIn);
 
-	array.evenNumbersIn(4, 6, 8, 3, 7, 2);
+	int[] evenNumbers = {4, 6, 8, 3, 7, 2};
+	array.evenNumbersIn(evenNumbers);
 
-	array.oddNumbersIn(4, 6, 8, 3, 7, 2);
+	int[] oddNumbers = {4, 6, 8, 3, 7, 2};
+	array.oddNumbersIn(oddNumbers);
 
-	array.squareNumbersIn(4, 6, 8, 3, 7, 2);
+        int[] squareOfNumbers = {4, 6, 8, 3, 7, 2};
+	array.squareNumbersIn(squareOfNumbers);
 	}
 
 
