@@ -4,11 +4,11 @@ public class ArrayOfNumbers {
 
 	ArrayKata array = new ArrayKata();
 
-	int[] maximum = {4, 6, 8, 3, 7, 2};
-	array.maximumIn(maximum);
+	int[] maximumNumber = {4, 6, 8, 3, 7, 2};
+	array.maximumIn(maximumNumber);
 
-	int[] minimum = {4, 6, 8, 3, 7, 2};
-	array.minimumIn(maximum);
+	int[] minimumNumber = {4, 6, 8, 3, 7, 2};
+	array.minimumIn(maximumNumber);
 
 	int[] sumOfInteger = {4, 6, 8, 3, 7, 2};
 	array.sumOf(sumOfInteger);
