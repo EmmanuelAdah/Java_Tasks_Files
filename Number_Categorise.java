@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 import java.util.Arrays;
 public class Number_Categorise {

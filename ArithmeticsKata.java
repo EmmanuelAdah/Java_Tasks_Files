@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Arithmetics {
+public class ArithmeticsKata {
 
 	public static void main(String[] args){
 
@@ -17,7 +17,7 @@ public class Arithmetics {
 
 	calc.squareOf(6);
 
-	
+	calc.isPrime(6);
 	}
 
 }
