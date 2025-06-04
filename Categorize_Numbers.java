@@ -16,5 +16,4 @@ public class Categorize_Numbers {
 	}
 	return values;
 	}
-
 }

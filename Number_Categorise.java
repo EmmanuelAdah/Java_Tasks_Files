@@ -25,7 +25,7 @@ public class Number_Categorise {
 		values[counter] += value;
 		counter += 1;	
 	}
+
 	array.numberCategories(values,divisor,range);
 	}
-
 }
