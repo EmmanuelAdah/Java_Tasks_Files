@@ -5,9 +5,9 @@ public class Categorize_Numbers {
 
 	int divisible = 0;
 	
-	for (int i = 0; i < range; i++){
-		if (values[i] % divisor == 0){
-		System.out.println(values[i]);
+	for (int index = 0; index < range; index++){
+		if (values[index] % divisor == 0){
+		System.out.print(values[index] + " ");
 		divisible += 1;
 		}
 	}
