@@ -55,14 +55,14 @@ public class Munchies {
 
 	public static int sumOfNumbers (int userInput){
 
-		int firstDigit = userInput / 1000;
-		int secondDigit = userInput / 100 % 10;
-		int thirdDigit = userInput / 10 % 10;
-		int fourthDigit = userInput % 10;
+		int usersEntry = userInput;
+		int sum = 0;
+		while (usersEntry != 0){
+			sum += usersEntry % 10;
+			usersEntry /= 10;
+		}
 
-		int sum = (firstDigit + secondDigit + thirdDigit + fourthDigit);
 		System.out.println("The sum of " + userInput + " is " + sum);
-		
 		return sum;
 	}
 	
