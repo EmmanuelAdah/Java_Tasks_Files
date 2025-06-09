@@ -1,0 +1,18 @@
+1. import scanner
+2. declear class DollarToYuan
+3. declear the method main
+4. declear scanner input
+5. prompt user to input value for exchange rate
+6. declear variable rate input value from user
+7. prompt user to input value for converter
+8. declear variable converter for input from user
+9. prompt user to input value for dollar amount
+10. declear variable for dollarAmount 
+11. declear variable type double for yuan = dollarAmount * rate;
+12. declear variable type double for dollar = yuan / rate;
+13. if converter == 0;  print $%.1f is %.1f yuan
+14. if converter == 0; print %.1f yuan is $%.1f
+15. if converter < 0 && converter > 1. print 'invalid signal value'
+16. end method main
+17. end class DollarToYuan
+
