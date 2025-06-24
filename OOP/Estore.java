@@ -5,7 +5,7 @@ public class Estore {
     private String homeAddress;
     private String password;
     private String phoneNumber;
-    
+
 
     public Estore(String name, int age, String email, String homeAddress, String password, String phoneNumber) {
         this.name = name;
