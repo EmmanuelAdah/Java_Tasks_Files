@@ -14,6 +14,7 @@ public class CurrencyCheck {
 
         String cashValue = cashFormat.format(34483.98);
 
+        System.out.println(locale);
         System.out.println(currency.getCurrencyCode());
         System.out.println(cashValue);
     }
