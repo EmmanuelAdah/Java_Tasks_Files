@@ -1,6 +1,8 @@
+package Java_Files.OOP;
+
 public class Billing {
-    private String name;
-    private String phoneNumber;
+    private final String name;
+    private final String phoneNumber;
     private CardType cardType;
 
     public Billing(String name, String phoneNumber){

@@ -1,10 +1,12 @@
+package Java_Files.OOP;
+
 public class Estore {
-    private String name;
-    private int age;
-    private String email;
-    private String homeAddress;
-    private String password;
-    private String phoneNumber;
+    private final String name;
+    private final int age;
+    private final String email;
+    private final String homeAddress;
+    private final String password;
+    private final String phoneNumber;
 
 
     public Estore(String name, int age, String email, String homeAddress, String password, String phoneNumber) {
@@ -17,26 +19,26 @@ public class Estore {
     }
 
     public String getName(){
-        return this.name;
+        return name;
     }
 
     public int getAge(){
-        return this.age;
+        return age;
     }
 
     public String getEmail(){
-        return this.email;
+        return email;
     }
 
     public String getHomeAddress(){
-        return this.homeAddress;
+        return homeAddress;
     }
 
     public String getPassword(){
-        return this.password;
+        return password;
     }
 
     public String getPhoneNumber(){
-        return this.phoneNumber;
+        return phoneNumber;
     }
 }
