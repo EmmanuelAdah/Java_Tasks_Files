@@ -1,15 +1,20 @@
-package Java_Files.OOP;
-
 import java.text.NumberFormat;
+import java.util.Currency;
 import java.util.Locale;
-
 
 public class CurrencyCheck {
 
     public static void main(String[] args) {
 
-        String currency = NumberFormat.getCurrencyInstance().format(45457.56);
+        Locale locale = Locale.getDefault();
 
-        System.out.println(currency);
+        Currency currency = Currency.getInstance(locale);
+
+        NumberFormat cashFormat = NumberFormat.getCurrencyInstance(locale);
+
+        String cashValue = cashFormat.format(34483.98);
+
+        System.out.println(currency.getCurrencyCode());
+        System.out.println(cashValue);
     }
 }

@@ -1,5 +1,3 @@
-package Java_Files.OOP;
-
 public class Product {
     private final String productName;
     private final String productID;

@@ -1,6 +1,4 @@
-package Java_Files.OOP;
-
-public class Estore {
+public class Users {
     private final String name;
     private final int age;
     private final String email;
@@ -8,8 +6,7 @@ public class Estore {
     private final String password;
     private final String phoneNumber;
 
-
-    public Estore(String name, int age, String email, String homeAddress, String password, String phoneNumber) {
+    public Users(String name, int age, String email, String homeAddress, String password, String phoneNumber) {
         this.name = name;
         this.age = age;
         this.email = email;
