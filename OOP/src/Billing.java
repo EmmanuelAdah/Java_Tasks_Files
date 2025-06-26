@@ -1,5 +1,3 @@
-package Java_Files.OOP;
-
 public class Billing {
     private final String name;
     private final String phoneNumber;
