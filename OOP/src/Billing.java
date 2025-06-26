@@ -1,11 +1,11 @@
 public class Billing {
-    private final String name;
-    private final String phoneNumber;
+    private String name;
+    private String phoneNumber;
     private CardType cardType;
 
     public Billing(String name, String phoneNumber){
-        this.name = name;
-        this.phoneNumber = phoneNumber;
+        name = name;
+        phoneNumber = phoneNumber;
     }
 
     public String getName(){
