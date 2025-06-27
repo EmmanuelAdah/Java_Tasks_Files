@@ -7,7 +7,7 @@ public class Account {
 
     public void Account (int balance, int amount, String pin) {
         balance = 0;
-        Amount = amount;
+        amount = amount;
     }
 
     public int getBalance() {
@@ -25,6 +25,5 @@ public class Account {
     public String getPin() {
         return pin;
     }
-
 
 }
