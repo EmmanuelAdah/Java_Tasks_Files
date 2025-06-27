@@ -1,16 +1,16 @@
 public class Address {
-    private String country;
-    private String state;
-    private String city;
-    private String street;
-    private String houseNumber;
+    private final String country;
+    private final String state;
+    private final String city;
+    private final String street;
+    private final String houseNumber;
 
     public Address(String country, String state, String city, String street, String houseNumber) {
-        country = country;
-        state = state;
-        city = city;
-        street = street;
-        houseNumber = houseNumber;
+        this.country = country;
+        this.state = state;
+        this.city = city;
+        this.street = street;
+        this.houseNumber = houseNumber;
     }
 
     public String getCountry() { return country; }

@@ -1,15 +1,10 @@
-public class Billing {
-    private String name;
-    private String phoneNumber;
+public class Billing extends CreditCard {
+    private final String phoneNumber;
     private CardType cardType;
 
-    public Billing(String name, String phoneNumber){
-        name = name;
-        phoneNumber = phoneNumber;
-    }
-
-    public String getName(){
-        return name;
+    public Billing(String name, String phoneNumber, String cardNumber, String expiryMonth, String expiryYear, String cvv){
+        super(name, cardNumber, expiryMonth, expiryYear, cvv);
+        this.phoneNumber = phoneNumber;
     }
 
     public String getPhoneNumber(){
