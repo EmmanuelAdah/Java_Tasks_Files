@@ -1,6 +1,7 @@
 public class Address {
-    private final String country;
-    private final String state;
+
+    private String country;
+    private String state;
     private final String city;
     private final String street;
     private final String houseNumber;
@@ -11,6 +12,24 @@ public class Address {
         this.city = city;
         this.street = street;
         this.houseNumber = houseNumber;
+    }
+
+    public void setCountry(String country) {
+        if (country.chars().allMatch(Character::isLetter)) {
+            this.country = country;
+        }
+    }
+
+    public void setState(String state) {
+        if (state.chars().allMatch(Character::isLetter)) {
+            this.state = state;
+        }
+    }
+
+    public void setCity(String city) {
+        if (city.chars().allMatch(Character::isLetter)) {
+
+        }
     }
 
     public String getCountry() { return country; }

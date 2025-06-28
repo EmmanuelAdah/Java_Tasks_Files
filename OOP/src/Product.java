@@ -12,19 +12,11 @@ public class Product {
         this.productDescription = productDescription;
     }
 
-    public String getProductName() {
+    public static String getProductName(String productName) {
         return productName;
     }
 
-    public String getProductID() {
+    public static String getProductID(String productID) {
         return productID;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public String getProductDescription() {
-        return productDescription;
     }
 }
