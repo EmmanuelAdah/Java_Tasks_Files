@@ -43,4 +43,14 @@ public class EstoreTest {
     public void checkForProductID (){
         assertEquals("IP24535", Product.getProductID("IP24535"));
     }
+
+    @Test
+    public void checkForProductPrice (){
+        assertEquals(2_000, Product.getPrice(2_000));
+    }
+
+    @Test
+    public void checkForProductDescription (){
+        assertEquals("For making tea and coffee", Product.getProductDescription("For making tea and coffee"));
+    }
 }

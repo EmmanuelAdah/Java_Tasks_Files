@@ -19,4 +19,12 @@ public class Product {
     public static String getProductID(String productID) {
         return productID;
     }
+
+    public static int getPrice(int Price) {
+        return Price;
+    }
+
+    public static String getProductDescription(String productDescription) {
+        return productDescription;
+    }
 }
