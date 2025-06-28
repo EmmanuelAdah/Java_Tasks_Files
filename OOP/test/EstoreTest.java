@@ -53,4 +53,10 @@ public class EstoreTest {
     public void checkForProductDescription (){
         assertEquals("For making tea and coffee", Product.getProductDescription("For making tea and coffee"));
     }
+
+    @Test
+    public void checkForProductCategories(){
+        ProductCategory.setCategory("UTENSILS");
+        assertEquals("UTENSILS", ProductCategory.getCategory());
+    }
 }
