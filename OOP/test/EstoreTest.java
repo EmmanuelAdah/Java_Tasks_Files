@@ -55,8 +55,17 @@ public class EstoreTest {
     }
 
     @Test
-    public void checkForProductCategories(){
-        ProductCategory.setCategory("UTENSILS");
-        assertEquals("UTENSILS", ProductCategory.getCategory());
+    public void checkForCreditCardName (){
+        CreditCard.setName("Emma");
+        assertEquals("EMMA", CreditCard.getName());
+    }
+
+    @Test
+    public void checkForCustomersCountry (){
+        Address.setCountry("nigeria");
+        assertEquals("NIGERIA", Address.getCountry());
+    }
+
+
     }
 }

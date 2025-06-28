@@ -1,7 +1,7 @@
 public class Address {
 
-    private String country;
-    private String state;
+    private final String country;
+    private final String state;
     private final String city;
     private final String street;
     private final String houseNumber;
@@ -15,30 +15,10 @@ public class Address {
     }
 
     public void setCountry(String country) {
-        if (country.chars().allMatch(Character::isLetter)) {
-            this.country = country;
-        }
+        country = country.toUpperCase();
     }
 
-    public void setState(String state) {
-        if (state.chars().allMatch(Character::isLetter)) {
-            this.state = state;
-        }
+    public String getCountry() {
+        return country;
     }
-
-    public void setCity(String city) {
-        if (city.chars().allMatch(Character::isLetter)) {
-
-        }
-    }
-
-    public String getCountry() { return country; }
-
-    public String getState() { return state; }
-
-    public String getCity() { return city; }
-
-    public String getStreet() { return street; }
-
-    public String getHouseNumber() { return houseNumber; }
 }

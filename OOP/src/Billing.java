@@ -10,8 +10,6 @@ public class Billing extends CreditCard {
         }
     }
 
-    public String getPhoneNumber(){
-        return phoneNumber;
-    }
+
 }
 

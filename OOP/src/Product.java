@@ -5,7 +5,7 @@ public class Product {
     private final String productDescription;
     private ProductCategory productCategory;
 
-    public Product(String productName, String productID, double price, String productDescription) {
+    public Product(String productName, String productID, double price, String productDescription, ProductCategory productCategory) {
         this.productName = productName;
         this.productID = productID;
         this.price = price;
@@ -26,5 +26,17 @@ public class Product {
 
     public static String getProductDescription(String productDescription) {
         return productDescription;
+    }
+
+    public static void setProductCategory(ProductCategory productCategory) {
+        for (ProductCategory category : ProductCategory.values()) {
+            if (category.equals(productCategory)) {
+                productCategory = category;
+            }
+        }
+    }
+
+    public ProductCategory getProductCategory() {
+        return productCategory;
     }
 }

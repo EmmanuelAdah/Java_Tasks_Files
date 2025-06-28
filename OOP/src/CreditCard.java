@@ -14,24 +14,11 @@ public class CreditCard {
         this.cvv = cvv;
     }
 
-    public String getName(){
+    public static void setName(String name) {
+        name = name.toUpperCase();
+    }
+
+    public static String getName() {
         return name;
     }
-
-    public String getCardNumber(){
-        return cardNumber;
-    }
-
-    public String getExpiryMonth(){
-        return expiryMonth;
-    }
-
-    public String getExpiryYear(){
-        return expiryYear;
-    }
-
-    public String getCvv(){
-        return cvv;
-    }
-
 }
