@@ -4,7 +4,6 @@ public class CreditCard {
     private final int expiryMonth;
     private final int expiryYear;
     private final int cvv;
-    private CardType cardType;
 
     public CreditCard(String name, String cardNumber, int expiryMonth, int expiryYear, int cvv) {
         this.name = name;

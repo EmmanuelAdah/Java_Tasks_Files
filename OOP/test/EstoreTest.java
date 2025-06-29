@@ -59,7 +59,7 @@ public class EstoreTest {
 
     @Test
     public void checkForProductQuantity (){
-        assertEquals(4, items.getProductQunatity());
+        assertEquals(4, items.getProductQuantity());
     }
 
     Billing billing = new Billing("Emma Adah", "08160509785", "63746374634676", 11, 2026, 117);

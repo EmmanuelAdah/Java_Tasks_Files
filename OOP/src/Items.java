@@ -6,7 +6,7 @@ public class Items extends Product{
         this.quantity = quantity;
     }
 
-    public int getProductQunatity() {
+    public int getProductQuantity() {
         return quantity;
     }
 }
