@@ -35,26 +35,31 @@ public class EstoreTest {
         assertEquals("0806438273", users.getPhoneNumber());
     }
 
-    Product product = new Product("tea", "IP24535", 2_000, "For making tea and coffee");
+    Items items = new Items("tea", "IP24535", 2_000, "For making tea and coffee", 4);
 
     @Test
     public void checkForProductName (){
-        assertEquals("tea", product.getProductName());
+        assertEquals("tea", items.getProductName());
     }
 
     @Test
     public void checkForProductID (){
-        assertEquals("IP24535", product.getProductID());
+        assertEquals("IP24535", items.getProductID());
     }
 
     @Test
     public void checkForProductPrice (){
-        assertEquals(2_000, product.getPrice());
+        assertEquals(2_000, items.getPrice());
     }
 
     @Test
     public void checkForProductDescription (){
-        assertEquals("For making tea and coffee", product.getProductDescription());
+        assertEquals("For making tea and coffee", items.getProductDescription());
+    }
+
+    @Test
+    public void checkForProductQuantity (){
+        assertEquals(4, items.getProductQunatity());
     }
 
     Billing billing = new Billing("Emma Adah", "08160509785", "63746374634676", 11, 2026, 117);
@@ -99,5 +104,20 @@ public class EstoreTest {
     @Test
     public void checkForResidentState (){
         assertEquals("Lagos", address.getState());
+    }
+
+    @Test
+    public void checkForResidentCity (){
+        assertEquals("Yaba", address.getCity());
+    }
+
+    @Test
+    public void checkForResidentStreet (){
+        assertEquals("Sabo", address.getStreet());
+    }
+
+    @Test
+    public void checkForResidentHouseNumber (){
+        assertEquals("No 32", address.getHouseNumber());
     }
 }

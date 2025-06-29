@@ -14,7 +14,6 @@ public class Address {
         this.houseNumber = houseNumber;
     }
 
-
     public String getCountry() {
         return country;
     }
@@ -23,4 +22,15 @@ public class Address {
         return state;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public String getHouseNumber() {
+        return houseNumber;
+    }
 }
