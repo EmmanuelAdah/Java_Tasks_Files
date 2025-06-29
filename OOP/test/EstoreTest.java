@@ -35,7 +35,7 @@ public class EstoreTest {
         assertEquals("0806438273", users.getPhoneNumber());
     }
 
-    Items items = new Items("tea", "IP24535", 2_000, "For making tea and coffee", 4);
+    Items items = new Items("tea", "IP24535", 2_000, "For making tea and coffee", 4, ProductCategory.GROCERIES);
 
     @Test
     public void checkForProductName (){
@@ -60,6 +60,11 @@ public class EstoreTest {
     @Test
     public void checkForProductQuantity (){
         assertEquals(4, items.getProductQuantity());
+    }
+
+    @Test
+    public void checkForProductCategory (){
+        assertEquals("GROCERIES", items.getProductCategory());
     }
 
     Billing billing = new Billing("Emma Adah", "08160509785", "63746374634676", 11, 2026, 117, CardType.MASTERCARD);

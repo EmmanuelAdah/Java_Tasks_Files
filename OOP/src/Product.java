@@ -3,12 +3,14 @@ public class Product {
     private final String productID;
     private final double Price;
     private final String productDescription;
+    private final ProductCategory productCategory;
 
-    public Product(String productName, String productID, double price, String productDescription) {
+    public Product(String productName, String productID, double price, String productDescription, ProductCategory productCategory) {
         this.productName = productName;
         this.productID = productID;
         this.productDescription = productDescription;
         this.Price = price;
+        this.productCategory = productCategory;
     }
 
     public String getProductName() {
@@ -27,4 +29,7 @@ public class Product {
         return productDescription;
     }
 
+    public String getProductCategory() {
+        return productCategory.toString();
+    }
 }
