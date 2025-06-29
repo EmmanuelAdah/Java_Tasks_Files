@@ -1,30 +1,30 @@
 public class Product {
     private final String productName;
     private final String productID;
-    private final double price;
     private final String productDescription;
     private ProductCategory productCategory;
+    private final double Price;
 
-    public Product(String productName, String productID, double price, String productDescription, ProductCategory productCategory) {
+    public Product(String productName, String productID, double price, String productDescription) {
         this.productName = productName;
         this.productID = productID;
-        this.price = price;
         this.productDescription = productDescription;
+        Price = price;
     }
 
-    public static String getProductName(String productName) {
+    public String getProductName() {
         return productName;
     }
 
-    public static String getProductID(String productID) {
+    public String getProductID() {
         return productID;
     }
 
-    public static int getPrice(int Price) {
+    public double getPrice() {
         return Price;
     }
 
-    public static String getProductDescription(String productDescription) {
+    public String getProductDescription() {
         return productDescription;
     }
 

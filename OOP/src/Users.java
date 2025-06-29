@@ -15,25 +15,27 @@ public class Users {
         this.phoneNumber = phoneNumber;
     }
 
-    public static String getName(String name) {
+    public String getName() {
         return name;
     }
 
-    public static int getAge(int age) {
+    public int getAge() {
         return age;
     }
 
-    public static String getEmail(String email) {
+    public String getEmail() {
         return email;
     }
 
-    public static String getHomeAddress(String homeAddress) {
+    public String getHomeAddress() {
         return homeAddress;
     }
 
-    public static String getPassword(String password) {
+    public String getPassword() {
         return password;
     }
 
-
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 }

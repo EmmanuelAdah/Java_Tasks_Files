@@ -1,7 +1,7 @@
 public class ShoppingCart extends Items {
 
-    public ShoppingCart(int quantity, String productName, String productID, double price, String productDescription, ProductCategory productCategory) {
-        super(quantity, productName, productID, price, productDescription, productCategory);
+    public ShoppingCart(int quantity, String productName, String productID, double price, String productDescription) {
+        super(quantity, productName, productID, price, productDescription);
     }
 
 }

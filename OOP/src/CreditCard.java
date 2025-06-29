@@ -13,12 +13,4 @@ public class CreditCard {
         this.expiryYear = expiryYear;
         this.cvv = cvv;
     }
-
-    public static void setName(String name) {
-        name = name.toUpperCase();
-    }
-
-    public static String getName() {
-        return name;
-    }
 }
