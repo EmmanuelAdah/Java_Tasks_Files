@@ -57,30 +57,47 @@ public class EstoreTest {
         assertEquals("For making tea and coffee", product.getProductDescription());
     }
 
-    CreditCard creditCard = new CreditCard("Emma Adah", "63746374634676", 11, 2026, 117);
+    Billing billing = new Billing("Emma Adah", "08160509785", "63746374634676", 11, 2026, 117);
 
     @Test
     public void checkForCreditCardName (){
-        assertEquals("Emma Adah", creditCard.getCardName());
+        assertEquals("Emma Adah", billing.getCardName());
     }
 
     @Test
     public void checkForCreditCardNumber (){
-        assertEquals("63746374634676", creditCard.getCardNumber());
+        assertEquals("63746374634676", billing.getCardNumber());
     }
 
     @Test
     public void checkForCreditCardExpiryMonth (){
-        assertEquals(11, creditCard.getExpiryMonth());
+        assertEquals(11, billing.getExpiryMonth());
     }
 
     @Test
     public void checkForCreditCardExpiryYear (){
-        assertEquals(2026, creditCard.getExpiryYear());
+        assertEquals(2026, billing.getExpiryYear());
     }
 
     @Test
     public void checkForCreditCardCVV (){
-        assertEquals(117, creditCard.getCardCvv());
+        assertEquals(117, billing.getCardCvv());
+    }
+
+    @Test
+    public void checkForBillingPhoneNumber (){
+        assertEquals("08160509785", billing.getPhoneNumber());
+    }
+
+    Address address = new Address("Nigeria", "Lagos", "Yaba", "Sabo", "No 32");
+
+    @Test
+    public void checkForResidentCountry (){
+        assertEquals("Nigeria", address.getCountry());
+    }
+
+    @Test
+    public void checkForResidentState (){
+        assertEquals("Lagos", address.getState());
     }
 }
