@@ -1,9 +1,9 @@
 public class Product {
     private final String productName;
     private final String productID;
+    private final double Price;
     private final String productDescription;
     private ProductCategory productCategory;
-    private final double Price;
 
     public Product(String productName, String productID, double price, String productDescription) {
         this.productName = productName;

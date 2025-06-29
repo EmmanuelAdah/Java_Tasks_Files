@@ -57,6 +57,30 @@ public class EstoreTest {
         assertEquals("For making tea and coffee", product.getProductDescription());
     }
 
+    CreditCard creditCard = new CreditCard("Emma Adah", "63746374634676", 11, 2026, 117);
 
+    @Test
+    public void checkForCreditCardName (){
+        assertEquals("Emma Adah", creditCard.getCardName());
+    }
 
+    @Test
+    public void checkForCreditCardNumber (){
+        assertEquals("63746374634676", creditCard.getCardNumber());
+    }
+
+    @Test
+    public void checkForCreditCardExpiryMonth (){
+        assertEquals(11, creditCard.getExpiryMonth());
+    }
+
+    @Test
+    public void checkForCreditCardExpiryYear (){
+        assertEquals(2026, creditCard.getExpiryYear());
+    }
+
+    @Test
+    public void checkForCreditCardCVV (){
+        assertEquals(117, creditCard.getCardCvv());
+    }
 }
