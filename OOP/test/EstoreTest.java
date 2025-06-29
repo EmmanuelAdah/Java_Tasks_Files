@@ -62,7 +62,7 @@ public class EstoreTest {
         assertEquals(4, items.getProductQuantity());
     }
 
-    Billing billing = new Billing("Emma Adah", "08160509785", "63746374634676", 11, 2026, 117);
+    Billing billing = new Billing("Emma Adah", "08160509785", "63746374634676", 11, 2026, 117, CardType.MASTERCARD);
 
     @Test
     public void checkForCreditCardName (){
@@ -92,6 +92,11 @@ public class EstoreTest {
     @Test
     public void checkForBillingPhoneNumber (){
         assertEquals("08160509785", billing.getPhoneNumber());
+    }
+
+    @Test
+    public void checkForCardType (){
+        assertEquals("MASTERCARD", billing.getCardType());
     }
 
     Address address = new Address("Nigeria", "Lagos", "Yaba", "Sabo", "No 32");
