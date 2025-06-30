@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class PrimeNumbers {
+public class LoanAmortizationSchedule {
 
 	public static void main(String[] args){
 
@@ -20,8 +20,6 @@ public class PrimeNumbers {
 
 	double annualInterest = loanAmount * (Math.pow(1 + actual_rate,numberOfYears));
 
-	System.out.print(f{annualInterest:.2f});
-
+	System.out.print(annualInterest);
 	}
-
 }
