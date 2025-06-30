@@ -12,7 +12,10 @@ public class Car {
     }
 
     public void setCarYear(String year) {
-        this.year = year;
+        int yearValue = Integer.parseInt(String.valueOf(year));
+        if (yearValue > 1967 && yearValue <= 2026) {
+            this.year = year;
+        }
     }
 
     public String getCarYear() {

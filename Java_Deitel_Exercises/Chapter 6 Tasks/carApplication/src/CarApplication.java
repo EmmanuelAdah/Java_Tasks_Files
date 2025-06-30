@@ -18,7 +18,6 @@ public class CarApplication {
         double price = input.nextDouble();
         car.setCarPrice(price);
 
-
-        System.out.printf("Car model: %s%nCar year: %s%nCar price at 5%%: %.2f%n", car.getCarModel(), car.getCarYear(), car.getCarPrice());
+        System.out.printf("Car model: %s%nCar year: %s%n", car.getCarModel(), car.getCarYear());
     }
 }
