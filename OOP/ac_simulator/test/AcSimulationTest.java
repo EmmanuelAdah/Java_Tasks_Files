@@ -19,9 +19,24 @@ public class AcSimulationTest {
     }
 
     @Test
-    public void acIsOnTest(){
-        ac.setTemperature(3);
-        assertEquals(3, ac.getTemperature());
+    public void acIncreaseTest(){
+        ac.setTemperature(16);
+        assertEquals(16, ac.getTemperature());
+
+        ac.setTemperature(4);
+        assertEquals(20, ac.getTemperature());
+    }
+
+    @Test
+    public void acDecreaseTest(){
+        ac.setTemperature(16);
+        assertEquals(16, ac.getTemperature());
+
+        ac.setTemperature(-4);
+        assertEquals(12, ac.getTemperature());
+
+        ac.setTemperature(-8);
+        assertEquals(4, ac.getTemperature());
     }
 
 

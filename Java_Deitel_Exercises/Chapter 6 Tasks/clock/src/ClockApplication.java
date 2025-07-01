@@ -12,6 +12,7 @@ public class ClockApplication {
         }catch (Exception e){
             System.out.println("Invalid input");
         }
+
         System.out.print("Enter minute: ");
         int minutes = 0;
         try {
@@ -20,6 +21,7 @@ public class ClockApplication {
         }catch (Exception e){
             System.out.println("Invalid input");
         }
+
         System.out.print("Enter second: ");
         int seconds = 0;
         try {
@@ -28,6 +30,6 @@ public class ClockApplication {
         } catch (Exception e){
             System.out.println("Invalid input");
         }
-        System.out.printf("%02d:%02d:%02d", clock.getHour(), clock.getMinutes(), clock.getSeconds());
+        System.out.printf("The set time is %02d:%02d:%02d", clock.getHour(), clock.getMinutes(), clock.getSeconds());
     }
 }
