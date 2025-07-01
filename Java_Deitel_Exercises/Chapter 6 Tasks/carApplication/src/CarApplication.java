@@ -25,7 +25,6 @@ public class CarApplication {
             price = input.nextDouble();
             car.setCarPrice(price);
         }catch (Exception e){
-
             System.out.println("\nInvalid price");
         }
         System.out.printf("Car model: %s%nCar year: %s%n", car.getCarModel(), car.getCarYear());

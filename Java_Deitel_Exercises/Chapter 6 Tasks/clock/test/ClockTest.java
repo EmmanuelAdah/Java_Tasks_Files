@@ -16,4 +16,24 @@ public class ClockTest {
         assertEquals(0, clock.getHour());
     }
 
+    @Test
+    public void testForValidMinuteInClock() {
+        clock.setMinutes(45);
+        assertEquals(45, clock.getMinutes());
+    }
+
+    @Test
+    public void testForInvalidMinuteInClock() {
+        clock.setMinutes(-45);
+        assertEquals(0, clock.getMinutes());
+
+        clock.setMinutes(60);
+        assertEquals(0, clock.getMinutes());
+    }
+
+    @Test
+    public void testForValidSecondInClock() {
+        clock.setSeconds(34);
+        assertEquals(34, clock.getSeconds());
+    }
 }
