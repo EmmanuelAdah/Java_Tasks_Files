@@ -18,5 +18,8 @@ public class AutomaticBikeTest {
         assertTrue(bike.getStatus());
     }
 
-
+    @Test
+    public void bikeCnaTurnTest(){
+        bike.setStatus("ON");
+    }
 }

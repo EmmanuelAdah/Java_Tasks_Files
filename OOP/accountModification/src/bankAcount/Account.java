@@ -2,13 +2,9 @@ package bankAcount;
 
 public class Account {
     private int balance;
-    private int Amount;
+    private int amount;
     private String pin = "correct";
 
-    public void Account (int balance, int amount, String pin) {
-        balance = 0;
-        amount = amount;
-    }
 
     public int getBalance() {
         return balance;
@@ -25,5 +21,4 @@ public class Account {
     public String getPin() {
         return pin;
     }
-
 }

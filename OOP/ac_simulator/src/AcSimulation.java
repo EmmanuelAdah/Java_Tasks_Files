@@ -1,7 +1,8 @@
 public class AcSimulation {
     private boolean status;
     private String state;
-    private int temperature;
+    private int temperature = 16;
+    private int userInput;
 
     public void setAcState(String state) {
         this.status = state.equalsIgnoreCase("on");
@@ -11,8 +12,9 @@ public class AcSimulation {
         return status;
     }
 
-    public void setTemperature(int temperature) {
-        this.temperature += temperature;
+    public void setTemperature(int user_input) {
+        int currentTemp = user_input + temperature;
+        if (currentTemp >= 16 && currentTemp <= 30) this.temperature += user_input;
     }
 
     public int getTemperature() {

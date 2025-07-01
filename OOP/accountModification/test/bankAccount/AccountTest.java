@@ -10,7 +10,7 @@ public class AccountTest {
 
     @BeforeEach
     public void checkIfPinIsCorrect() {
-        String pin = account.getPin();
+        assertEquals("correct", account.getPin());
     }
 
     @Test
