@@ -4,7 +4,7 @@ public class Car {
     private double price;
 
     public void setCarModel(String model) {
-        this.model = model;
+        this.model = model.toUpperCase();
     }
 
     public String getCarModel() {

@@ -11,13 +11,23 @@ public class CarApplication {
         car.setCarModel(model);
 
         System.out.print("Enter car production year: ");
-        String year = input.nextLine();
-        car.setCarYear(year);
+        String year = "";
+        try {
+            year = input.nextLine().trim();
+            car.setCarYear(year);
+        }catch (Exception e){
+            System.out.println("Invalid year");
+        }
 
         System.out.print("Enter car price: ");
-        double price = input.nextDouble();
-        car.setCarPrice(price);
+        double price = 0;
+        try {
+            price = input.nextDouble();
+            car.setCarPrice(price);
+        }catch (Exception e){
 
+            System.out.println("\nInvalid price");
+        }
         System.out.printf("Car model: %s%nCar year: %s%n", car.getCarModel(), car.getCarYear());
         car.discountAt_5_Percent(price);
         System.out.printf("Car price at 5%% discount: %.2f%n", car.getCarPrice());

@@ -7,7 +7,7 @@ public class CarApplicationTest {
 
     @Test
     public void checkForCarModel(){
-        car.setCarModel("TD5621");
+        car.setCarModel("td5621");
         assertEquals("TD5621", car.getCarModel());
     }
 
