@@ -28,5 +28,11 @@ public class AutomaticBike {
         }
     }
 
+    public void setAcceleration(int speed) {
+        this.speed = speed + gear;
+    }
 
+    public int getSpeed() {
+        return speed;
+    }
 }
