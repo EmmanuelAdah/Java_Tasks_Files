@@ -15,7 +15,7 @@ public enum PoliticalZone {
         this.politicalZones = politicalZones;
     }
 
-    public String[] getPoliticalZones(){
+    public String[] getZones(){
         return politicalZones;
     }
 }

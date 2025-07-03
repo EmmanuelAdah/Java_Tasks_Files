@@ -6,14 +6,17 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 public class PoliticalZoneTest {
-    PoliticalZone[] zones;
+    PoliticalZone[] zones = PoliticalZone.values();
 
     @Test
     public void itemIsSameTest(){
 
-    for(PoliticalZone zone : PoliticalZone.values()){
-
-        System.out.print(Arrays.toString().zone.getPoliticalZones() + " ");
+    for(PoliticalZone zone : zones){
+        for(int index = 0; index < zone.getZones().length; index++){
+            if((zone.getZones()[index]).equalsIgnoreCase("borno")){
+                System.out.printf("%s belongs to %s geo-political zone", (zone.getZones()[index]), zone);
+            }
         }
+    }
     }
 }
