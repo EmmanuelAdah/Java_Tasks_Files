@@ -9,13 +9,13 @@ public enum PoliticalZone {
     SOUTH_WEST("Ekiti","Lagos","Osun","Ondo","Ogun","Oyo")
     ;
 
-    private String[] politicalZones;
+    private final String[] politicalZones;
 
     PoliticalZone(String... politicalZones){
         this.politicalZones = politicalZones;
     }
 
-    public String[] getZones(){
+    public String[] getZone(){
         return politicalZones;
     }
 }

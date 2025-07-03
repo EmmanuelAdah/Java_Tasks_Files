@@ -27,7 +27,7 @@ public class QueueList {
     }
 
     public void removeQueueItem(String item) {
-        que.remove(item);
+        que.poll();
         size--;
     }
 }
