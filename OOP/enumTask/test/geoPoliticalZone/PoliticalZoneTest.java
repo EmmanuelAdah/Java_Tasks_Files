@@ -1,19 +1,15 @@
 package geoPoliticalZone;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PoliticalZoneTest {
-    PoliticalZone[] zones = PoliticalZone.values();
+
+    GeoPoliticalZone geoZone = new GeoPoliticalZone();
 
     @Test
     public void itemIsSameTest(){
-
-    for(PoliticalZone zone : zones){
-        for(int index = 0; index < zone.getZone().length; index++){
-            if((zone.getZone()[index]).equalsIgnoreCase("kano")){
-                System.out.printf("%s belongs to %s geo-political zone", (zone.getZone()[index]), zone);
-            }
-        }
-    }
+        geoZone.setPoliticalZone("Benue");
+    assertEquals("NORTH_CENTRAL", geoZone.getPoliticalZone());
     }
 }
