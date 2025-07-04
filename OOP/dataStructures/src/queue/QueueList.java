@@ -1,7 +1,5 @@
 package queue;
 
-import java.util.Arrays;
-
 public class QueueList {
     private String[] que = new String[4];
     private boolean state;
@@ -27,6 +25,7 @@ public class QueueList {
     public void removeQueueItem(String item) {
         for (String name : que) {
             if (item.equalsIgnoreCase(name)) { que[--size] = null; }
+            if (size == 0) throw new QueueUnderFlowException("Queue is empty");
         }
     }
 }

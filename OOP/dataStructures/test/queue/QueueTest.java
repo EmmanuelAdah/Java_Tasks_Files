@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class QueueTest {
-
     QueueList queue = new QueueList();
 
     @Test
@@ -33,5 +32,10 @@ public class QueueTest {
         queue.removeQueueItem("Kels");
 
         assertEquals(1, queue.getQueueSize());
+    }
+
+    @Test
+    public void queueUnderFlowExceptionTest(){
+        assertThrows(QueueUnderFlowException.class, () -> queue.removeQueueItem("Emma"));
     }
 }
