@@ -1,16 +1,14 @@
 package queue;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.Arrays;
 
 public class QueueList {
-    private Queue<String> que = new LinkedList<>();
+    private String[] que = new String[4];
     private boolean state;
     private int size;
 
     public void addItemToQueue(String item) {
-        que.add(item);
-        size++;
+        que[size++] = item;
         state = (size > 0);
     }
 
@@ -18,7 +16,7 @@ public class QueueList {
         return state;
     }
 
-    public Queue<String> getQueueItems() {
+    public String[] getQueueItems() {
         return que;
     }
 
@@ -27,7 +25,8 @@ public class QueueList {
     }
 
     public void removeQueueItem(String item) {
-        que.poll();
-        size--;
+        for (String name : que) {
+            if (item.equalsIgnoreCase(name)) { que[--size] = null; }
+        }
     }
 }

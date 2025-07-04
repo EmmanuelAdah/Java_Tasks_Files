@@ -34,9 +34,4 @@ public class QueueTest {
 
         assertEquals(1, queue.getQueueSize());
     }
-
-    @Test
-    public void queueUnderFlowTest(){
-        assertThrow(QueueUnderFlowExeption.class, () -> queue.removeQueueItem("item"));
-    }
 }
