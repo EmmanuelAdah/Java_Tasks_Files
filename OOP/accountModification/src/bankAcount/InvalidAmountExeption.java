@@ -1,8 +1,9 @@
 package bankAcount;
 
 public class InvalidAmountExeption extends RuntimeException {
-    private String message;
+    //private String message;
     public InvalidAmountExeption() {
-        this.message = "Invalid amount";
+        super("Invalid amount");
+        //this.message = "Invalid amount";
     }
 }

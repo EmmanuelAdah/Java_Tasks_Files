@@ -35,7 +35,16 @@ public class QueueTest {
     }
 
     @Test
-    public void queueUnderFlowExceptionTest(){
+    public void queueOverFlowExceptionTest(){
         assertThrows(QueueUnderFlowException.class, () -> queue.removeQueueItem("Emma"));
+    }
+
+    @Test
+    public void queueUnderFlowExceptionTest(){
+        queue.addItemToQueue("Emma");
+        queue.addItemToQueue("Kels");
+        queue.addItemToQueue("Emma");
+        queue.addItemToQueue("Kels");
+        assertThrows(QueueOverFlowException.class, () -> queue.addItemToQueue("Emma"));
     }
 }
