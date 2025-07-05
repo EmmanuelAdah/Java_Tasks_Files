@@ -23,39 +23,43 @@ public class AutomaticBikeTest {
 
     @Test
     public void bikeGearIncreaseTest(){
-        bike.setGear(20);
+        bike.setSpeed(12);
+        bike.setGear();
         assertEquals(1,bike.getGear());
 
-        bike.setGear(21);
+        bike.setSpeed(21);
+        bike.setGear();
         assertEquals(2,bike.getGear());
 
-        bike.setGear(32);
+        bike.setSpeed(32);
+        bike.setGear();
         assertEquals(3,bike.getGear());
 
-        bike.setGear(41);
+        bike.setSpeed(42);
+        bike.setGear();
         assertEquals(4,bike.getGear());
     }
 
     @Test
     public void bikeSpeedAccelerateTest(){
-        bike.setGear(0);
-        bike.setAcceleration(1);
-        assertEquals(1, bike.getSpeed());
+        bike.setSpeed(0);
+        bike.setGear();
+        bike.setAcceleration();
+        assertEquals(0, bike.getSpeed());
 
-        bike.setGear(12);
-        bike.setAcceleration(12);
+        bike.setSpeed(12);
+        bike.setGear();
+        bike.setAcceleration();
         assertEquals(13, bike.getSpeed());
 
-        bike.setGear(21);
-        bike.setAcceleration(21);
-        assertEquals(23, bike.getSpeed());
+        bike.setSpeed(12);
+        bike.setGear();
+        bike.setAcceleration();
+        assertEquals(27, bike.getSpeed());
 
-        bike.setGear(32);
-        bike.setAcceleration(32);
-        assertEquals(35, bike.getSpeed());
-
-        bike.setGear(43);
-        bike.setAcceleration(43);
+        bike.setSpeed(8);
+        bike.setGear();
+        bike.setAcceleration();
         assertEquals(47, bike.getSpeed());
     }
 }
