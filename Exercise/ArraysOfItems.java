@@ -14,7 +14,7 @@ public class ArraysOfItems {
 	List<String> names = Arrays.asList("Emmanuel", "Chidi", "Ada");
 	Collections.sort(names, (a, b) -> a.compareToIgnoreCase(b));
 
-	System.out.print(names);
+	System.out.println(names);
 
 	List<String> words = Arrays.asList("apple", "banana", "cherry");
         List<String> upperCaseWords = words.stream().map(String::toUpperCase).collect(Collectors.toList());
