@@ -1,15 +1,16 @@
 package movieRatings;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MovieRatingTest {
-    MovieRating movie = new MovieRating();
+    MovieRating movieRating = new MovieRating();
 
     @Test
     public void movie_isEmpty_test(){
-        assertFalse(false, String.valueOf(movie.getMovieList()));
+        assertEquals(0, movieRating.getListSize());
+        movieRating.addMovieToList("Semi");
+        assertEquals(1, movieRating.getListSize());
     }
-
 }
