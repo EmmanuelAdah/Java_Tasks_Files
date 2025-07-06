@@ -1,16 +1,6 @@
-public class Billing extends CreditCard {
-    private String phoneNumber;
+public class Billing extends Customers {
 
-    public Billing(String name, String phoneNumber, String cardNumber, int expiryMonth, int expiryYear, int cvv, CardType cardType) {
-        super(name, cardNumber, expiryMonth, expiryYear, cvv, cardType);
-
-        if (phoneNumber.chars().allMatch(Character::isDigit)) {
-            this.phoneNumber = phoneNumber;
+    public Billing(String name, int age, String email, String homeAddress, String password, String phoneNumber) {
+        super(name, age, email, homeAddress, password, phoneNumber);
         }
     }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-}
-

@@ -1,8 +1,8 @@
-public class Items extends Product{
+public class Items extends ShoppingCart{
     private final int quantity;
 
-    public Items(String productName, String productID, double price, String productDescription, int quantity, ProductCategory productCategory) {
-        super(productName, productID, price, productDescription, productCategory);
+    public Items(String name, int age, String email, String homeAddress, String password, String phoneNumber, int quantity) {
+        super(name, age, email, homeAddress, password, phoneNumber);
         this.quantity = quantity;
     }
 

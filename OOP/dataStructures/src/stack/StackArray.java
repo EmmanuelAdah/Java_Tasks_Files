@@ -2,8 +2,22 @@ package stack;
 
 public class StackArray {
     private boolean state;
+    private int[] stack = new int[4];
+    private int size;
 
-    public boolean getIsEmpty() {
+    public void setState() {
+        this.state = (stack[0] != 0);
+    }
+
+    public boolean getState() {
         return state;
+    }
+
+    public void add_item(int item) {
+        this.stack[size++] = item;
+    }
+
+    public int getStack() {
+        return stack[0];
     }
 }

@@ -1,11 +1,12 @@
-public class Product {
+public class Product extends Items{
     private final String productName;
     private final String productID;
     private final double Price;
     private final String productDescription;
     private final ProductCategory productCategory;
 
-    public Product(String productName, String productID, double price, String productDescription, ProductCategory productCategory) {
+    public Product(String name, int age, String email, String homeAddress, String password, String phoneNumber, int quantity, String productName, String productID, double price, String productDescription, ProductCategory productCategory) {
+        super(name, age, email, homeAddress, password, phoneNumber, quantity);
         this.productName = productName;
         this.productID = productID;
         this.productDescription = productDescription;

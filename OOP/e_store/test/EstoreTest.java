@@ -3,105 +3,103 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EstoreTest {
 
-    Users users = new Users("Emma", 17, "emma@gmail.com", "No 32, Sabo-Yaba", "Adah02", "0806438273");
+    Product product = new Product("Emma", 17, "emma@gmail.com", "No 32, Sabo-Yaba", "Adah02", "0806438273", 2, "Refrigerator", "TD55623", 72500, "Deep Freezer",ProductCategory.GROCERIES);
 
     @Test
     public void checkForUserName(){
-        assertEquals("Emma", users.getName());
+        assertEquals("Emma", product.getName());
     }
 
     @Test
     public void checkForUsersAge (){
-        assertEquals(17, users.getAge());
+        assertEquals(17, product.getAge());
     }
 
     @Test
     public void checkForEmail (){
-        assertEquals("emma@gmail.com", users.getEmail());
+        assertEquals("emma@gmail.com", product.getEmail());
     }
 
     @Test
     public void checkForHomeAddress (){
-        assertEquals("No 32, Sabo-Yaba", users.getHomeAddress());
+        assertEquals("No 32, Sabo-Yaba", product.getHomeAddress());
     }
 
     @Test
     public void checkForPassword (){
-        assertEquals("Adah02", users.getPassword());
+        assertEquals("Adah02", product.getPassword());
     }
 
     @Test
     public void checkForPhoneNumber (){
-        assertEquals("0806438273", users.getPhoneNumber());
+        assertEquals("0806438273", product.getPhoneNumber());
     }
-
-    Items items = new Items("tea", "IP24535", 2_000, "For making tea and coffee", 4, ProductCategory.GROCERIES);
 
     @Test
     public void checkForProductName (){
-        assertEquals("tea", items.getProductName());
+        assertEquals("Refrigerator", product.getProductName());
     }
 
     @Test
     public void checkForProductID (){
-        assertEquals("IP24535", items.getProductID());
+        assertEquals("TD55623", product.getProductID());
     }
 
     @Test
     public void checkForProductPrice (){
-        assertEquals(2_000, items.getPrice());
+        assertEquals(72500, product.getPrice());
     }
 
     @Test
     public void checkForProductDescription (){
-        assertEquals("For making tea and coffee", items.getProductDescription());
+        assertEquals("Deep Freezer", product.getProductDescription());
     }
 
     @Test
     public void checkForProductQuantity (){
-        assertEquals(4, items.getProductQuantity());
+        assertEquals(2, product.getProductQuantity());
     }
 
     @Test
     public void checkForProductCategory (){
-        assertEquals("GROCERIES", items.getProductCategory());
+        assertEquals("GROCERIES", product.getProductCategory());
     }
 
-    Billing billing = new Billing("Emma Adah", "08160509785", "63746374634676", 11, 2026, 117, CardType.MASTERCARD);
+    CreditCard user = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 13, Shoyomokun, Lawanson","1234","08160509785", "63746374634676", 11, 2026, 117, CardType.MASTERCARD);
 
     @Test
     public void checkForCreditCardName (){
-        assertEquals("Emma Adah", billing.getCardName());
+        assertEquals("Emma Adah", user.getCardName());
     }
 
     @Test
     public void checkForCreditCardNumber (){
-        assertEquals("63746374634676", billing.getCardNumber());
+        assertEquals("63746374634676", user.getCardNumber());
     }
 
     @Test
     public void checkForCreditCardExpiryMonth (){
-        assertEquals(11, billing.getExpiryMonth());
+        assertEquals(11, user.getExpiryMonth());
     }
 
     @Test
     public void checkForCreditCardExpiryYear (){
-        assertEquals(2026, billing.getExpiryYear());
+        assertEquals(2026, user.getExpiryYear());
     }
 
     @Test
     public void checkForCreditCardCVV (){
-        assertEquals(117, billing.getCardCvv());
+        assertEquals(117, user.getCardCvv());
     }
 
     @Test
     public void checkForBillingPhoneNumber (){
-        assertEquals("08160509785", billing.getPhoneNumber());
+        assertEquals("08160509785", user.getPhoneNumber());
     }
 
     @Test
     public void checkForCardType (){
-        assertEquals("MASTERCARD", billing.getCardType());
+        assertEquals("MASTERCARD", user.getCardType());
     }
 
     Address address = new Address("Nigeria", "Lagos", "Yaba", "Sabo", "No 32");

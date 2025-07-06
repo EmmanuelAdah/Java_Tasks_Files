@@ -1,4 +1,4 @@
-public class CreditCard {
+public class CreditCard extends Billing {
     private final String name;
     private final String cardNumber;
     private final int expiryMonth;
@@ -6,7 +6,8 @@ public class CreditCard {
     private final int cvv;
     private final CardType cardType;
 
-    public CreditCard(String name, String cardNumber, int expiryMonth, int expiryYear, int cvv, CardType cardType) {
+    public CreditCard(String name, int age, String email, String homeAddress, String password, String phoneNumber, String cardNumber, int expiryMonth, int expiryYear, int cvv, CardType cardType) {
+        super(name, age, email, homeAddress, password, phoneNumber);
         this.name = name;
         this.cardNumber = cardNumber;
         this.expiryMonth = expiryMonth;
