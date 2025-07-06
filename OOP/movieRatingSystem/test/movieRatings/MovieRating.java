@@ -25,7 +25,9 @@ public class MovieRating {
 
     public void setDateAndTime() {
         Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd MM yyyy  HH:mm:ss");
+        int hour = date.getHours();
+        hour =  (hour > 12) ? (hour % 12) : hour;
+        SimpleDateFormat formatter = new SimpleDateFormat("dd MM yyyy " + hour +":mm aa");
         this.dateAndTime = formatter.format(date);
     }
 

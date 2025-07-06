@@ -1,17 +1,18 @@
 package queue;
 
 public class QueueList {
-    private boolean state;
     private int size;
     private String[] que = new String[4];
 
     public void addItemToQueue(String item) {
-        if(size > que.length) {
-            throw new QueueOverFlowException("Queue is full");
-        } else { que[size++] = item;  state = (size > 0); }
+        if (size == que.length) throw new QueueOverFlowException("Queue is empty");
+        que[size++] = item;
+
     }
 
     public boolean getIsEmpty() {
+        boolean state;
+        state = (size > 0);
         return state;
     }
 
@@ -25,8 +26,8 @@ public class QueueList {
 
     public void removeQueueItem(String item) {
         for (String name : que) {
-            if (item.equalsIgnoreCase(name)) { que[--size] = null; }
             if (size == 0) throw new QueueUnderFlowException("Queue is empty");
+            if (item.equalsIgnoreCase(name)) { que[--size] = null; }
         }
     }
 }
