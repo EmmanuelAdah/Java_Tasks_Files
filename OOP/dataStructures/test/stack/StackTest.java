@@ -24,5 +24,16 @@ public class StackTest {
         assertTrue(stack.getState());
     }
 
+    @Test
+    public void itemCanBeRemovedTest() {
+        stack.add_item(2);
+        stack.add_item(3);
+        stack.removeItemFromStack(2);
+        assertEquals( 0, stack.getStack());
+    }
 
+    @Test
+    public void stackUnderFlowExceptionTest() {
+        assertThrows(StackUnderFlowException.class, () -> stack.removeItemFromStack(3));
+    }
 }

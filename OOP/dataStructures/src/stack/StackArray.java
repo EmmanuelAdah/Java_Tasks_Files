@@ -20,4 +20,9 @@ public class StackArray {
     public int getStack() {
         return stack[0];
     }
+
+    public void removeItemFromStack(int item) {
+        if (size == 0) throw new StackUnderFlowException();
+        stack[--size] = 0;
+    }
 }
