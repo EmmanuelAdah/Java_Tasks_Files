@@ -65,7 +65,7 @@ public class EstoreTest {
         assertEquals("GROCERIES", product.getProductCategory());
     }
 
-    CreditCard user = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 13, Shoyomokun, Lawanson","1234","08160509785", "63746374634676", 11, 2026, 117, CardType.MASTERCARD);
+    CreditCard user = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 32, Sabo-Yaba","1234","08160509785", "63746374634676", 11, 2026, 117, CardType.MASTERCARD);
 
     @Test
     public void checkForCreditCardName (){
@@ -102,7 +102,12 @@ public class EstoreTest {
         assertEquals("MASTERCARD", user.getCardType());
     }
 
-    Address address = new Address("Nigeria", "Lagos", "Yaba", "Sabo", "No 32");
+    Address address = new Address("James",20,"james@gmail.com","Sabo-Yaba","1234","08164834867", "Nigeria", "Lagos", "Sabo", "Macaulay Way", "No 32");
+
+    @Test
+    public void checkForAddress (){
+
+    }
 
     @Test
     public void checkForResidentCountry (){
@@ -120,12 +125,68 @@ public class EstoreTest {
     }
 
     @Test
-    public void checkForResidentStreet (){
+    public void addResidentStreet (){
         assertEquals("Sabo", address.getStreet());
     }
 
     @Test
-    public void checkForResidentHouseNumber (){
+    public void addResidentHouseNumberTest (){
         assertEquals("No 32", address.getHouseNumber());
     }
+
+    Admin admin = new Admin("Adah", 17, "adah02@gmail.com", "No 32, Sabo-Yaba", "1234", "08160509785");
+
+    @Test
+    public void addAdminNameTest (){
+        assertEquals("Adah", admin.getName());
+    }
+
+    @Test
+    public void addAdminAgeTest (){
+        assertEquals(17, admin.getAge());
+    }
+
+    @Test
+    public void addAdminEmailTest (){
+        assertEquals("adah02@gmail.com",  admin.getEmail());
+    }
+
+    @Test
+    public void setAdminPasswordTest (){
+        assertEquals("1234", admin.getPassword());
+    }
+
+    @Test
+    public void addAdminPhoneTest (){
+        assertEquals("08160509785", admin.getPhoneNumber());
+    }
+
+    @Test
+    public void addBillingAddressTest (){
+        assertEquals("No 32, Sabo-Yaba", admin.getHomeAddress());
+    }
+
+    Sellers sellers = new Sellers("John", 25, "johnchi@gmail.com", "No 32, Herbert Macaulay road, Sabo-Yaba", "08134747873", "2345");
+
+    @Test
+    public void addSellersNameTest (){
+        assertEquals("John", sellers.getName());
+    }
+
+    @Test
+    public void setSellersAgeTest (){
+        assertEquals(25, sellers.getAge());
+    }
+
+    @Test
+    public void setSellersEmailAddressTest (){
+        assertEquals("johnchi@gmail.com", sellers.getEmail());
+    }
+
+    @Test
+    public void addSellersAddressTest (){
+        assertEquals("No 32, Herbert Macaulay road, Sabo-Yaba", sellers.getHomeAddress());
+    }
+
+
 }

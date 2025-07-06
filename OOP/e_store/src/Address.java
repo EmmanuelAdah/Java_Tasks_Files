@@ -1,4 +1,4 @@
-public class Address {
+public class Address extends Billing {
 
     private final String country;
     private final String state;
@@ -6,7 +6,8 @@ public class Address {
     private final String street;
     private final String houseNumber;
 
-    public Address(String country, String state, String city, String street, String houseNumber) {
+    public Address(String name, int age, String email, String homeAddress, String password, String phoneNumber, String country, String state, String city, String street, String houseNumber) {
+        super(name, age, email, homeAddress, password, phoneNumber);
         this.country = country;
         this.state = state;
         this.city = city;
