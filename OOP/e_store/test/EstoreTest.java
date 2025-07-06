@@ -105,12 +105,32 @@ public class EstoreTest {
     Address address = new Address("James",20,"james@gmail.com","Sabo-Yaba","1234","08164834867", "Nigeria", "Lagos", "Sabo", "Macaulay Way", "No 32");
 
     @Test
-    public void checkForAddress (){
-
+    public void addUsersNameTest (){
+        assertEquals("James", address.getName());
     }
 
     @Test
-    public void checkForResidentCountry (){
+    public void setUsersEmailAddressTest (){
+        assertEquals("james@gmail.com", address.getEmail());
+    }
+
+    @Test
+    public void usersHomeAddressTest (){
+        assertEquals("Sabo-Yaba",address.getHomeAddress());
+    }
+
+    @Test
+    public void getUsersPasswordTest (){
+        assertEquals("1234", address.getPassword());
+    }
+
+    @Test
+    public void usersPhoneNumberTest (){
+        assertEquals("08164834867", address.getPhoneNumber());
+    }
+
+    @Test
+    public void getResidentCountryTest (){
         assertEquals("Nigeria", address.getCountry());
     }
 
@@ -121,12 +141,12 @@ public class EstoreTest {
 
     @Test
     public void checkForResidentCity (){
-        assertEquals("Yaba", address.getCity());
+        assertEquals("Sabo", address.getCity());
     }
 
     @Test
     public void addResidentStreet (){
-        assertEquals("Sabo", address.getStreet());
+        assertEquals("Macaulay Way", address.getStreet());
     }
 
     @Test
@@ -187,6 +207,4 @@ public class EstoreTest {
     public void addSellersAddressTest (){
         assertEquals("No 32, Herbert Macaulay road, Sabo-Yaba", sellers.getHomeAddress());
     }
-
-
 }
