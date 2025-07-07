@@ -2,8 +2,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EstoreTest {
-
-    Product product = new Product("Emma", 17, "emma@gmail.com", "No 32, Sabo-Yaba", "Adah02", "0806438273", 2, "Refrigerator", "TD55623", 72500, "Deep Freezer",ProductCategory.GROCERIES);
+    Product product = new Product("Emma", 17, "emma@gmail.com", "No 32, Sabo-Yaba", "Adah02",
+            "0806438273", 2, "Refrigerator", "TD55623", 72500, "Deep Freezer",ProductCategory.GROCERIES);
 
     @Test
     public void checkForUserName(){
@@ -65,7 +65,8 @@ public class EstoreTest {
         assertEquals("GROCERIES", product.getProductCategory());
     }
 
-    CreditCard user = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 32, Sabo-Yaba","1234","08160509785", "63746374634676", 11, 2026, 117, CardType.MASTERCARD);
+    CreditCard user = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 32, Sabo-Yaba", "1234",
+            "08160509785", "4388 5760 1841 0707", 11, 2026, 117, CardType.MASTERCARD);
 
     @Test
     public void checkForCreditCardName (){
@@ -74,7 +75,7 @@ public class EstoreTest {
 
     @Test
     public void checkForCreditCardNumber (){
-        assertEquals("63746374634676", user.getCardNumber());
+        assertEquals("4388 5760 1841 0707", user.getCardNumber());
     }
 
     @Test
@@ -102,7 +103,23 @@ public class EstoreTest {
         assertEquals("MASTERCARD", user.getCardType());
     }
 
-    Address address = new Address("James",20,"james@gmail.com","Sabo-Yaba","1234","08164834867", "Nigeria", "Lagos", "Sabo", "Macaulay Way", "No 32");
+    @Test
+    public void cardIsValidTest(){
+        user.validateCreditCard();
+        assertEquals("4388576018410707", user.getCardNumber());
+    }
+
+    CreditCard card = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 32, Sabo-Yaba", "1234",
+            "08160509785", "4388 6760 1841 0707", 11, 2026, 117, CardType.MASTERCARD);
+
+    @Test
+    public void cardIsInvalidTest(){
+        card.validateCreditCard();
+        assertEquals("Invalid", card.getCardNumber());
+    }
+
+    Address address = new Address("James",20,"james@gmail.com","Sabo-Yaba","1234",
+            "08164834867", "Nigeria", "Lagos", "Sabo", "Macaulay Way", "No 32");
 
     @Test
     public void addUsersNameTest (){
@@ -154,7 +171,8 @@ public class EstoreTest {
         assertEquals("No 32", address.getHouseNumber());
     }
 
-    Admin admin = new Admin("Adah", 17, "adah02@gmail.com", "No 32, Sabo-Yaba", "1234", "08160509785");
+    Admin admin = new Admin("Adah", 17, "adah02@gmail.com",
+            "No 32, Sabo-Yaba", "1234", "08160509785");
 
     @Test
     public void addAdminNameTest (){
@@ -186,7 +204,8 @@ public class EstoreTest {
         assertEquals("No 32, Sabo-Yaba", admin.getHomeAddress());
     }
 
-    Sellers sellers = new Sellers("John", 25, "johnchi@gmail.com", "No 32, Herbert Macaulay road, Sabo-Yaba", "08134747873", "2345");
+    Sellers sellers = new Sellers("John", 25, "johnchi@gmail.com", "No 32," +
+            " Herbert Macaulay road, Sabo-Yaba", "08134747873", "2345");
 
     @Test
     public void addSellersNameTest (){

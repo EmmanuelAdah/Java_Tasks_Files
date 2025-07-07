@@ -1,6 +1,6 @@
 public class CreditCard extends Billing {
     private final String name;
-    private final String cardNumber;
+    private String cardNumber;
     private final int expiryMonth;
     private final int expiryYear;
     private final int cvv;
@@ -14,6 +14,30 @@ public class CreditCard extends Billing {
         this.expiryYear = expiryYear;
         this.cvv = cvv;
         this.cardType = cardType;
+    }
+
+    public void validateCreditCard(){
+        String cardNumbers = cardNumber.replaceAll("\\s+", "");
+        int sumOfEven = 0;
+        int sumOfOdd = 0;
+
+        try{
+            for(int index = cardNumbers.length() - 1; index >= 0; index--){
+                sumOfOdd += Integer.parseInt(String.valueOf(cardNumbers.charAt(index)));
+                if (index > 0) index -= 1;
+
+                int multiple = Integer.parseInt(String.valueOf(cardNumbers.charAt(index))) * 2;
+                if (multiple > 9){
+                    int firstDigit = multiple / 10;
+                    int secondDigit =  multiple % 10;
+                    sumOfEven += (firstDigit + secondDigit);
+                } else {  sumOfEven += multiple;  }
+            }
+        } catch (InvalidCardException e){
+            cardNumber = "Invalid credit card";
+        }
+        int total = sumOfEven + sumOfOdd;
+        cardNumber = (total % 10 == 0 && total != 0) ? cardNumbers : "Invalid";
     }
 
     public String getCardName() {
