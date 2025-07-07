@@ -1,17 +1,15 @@
 package movieRatings;
 
-import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class MovieRating {
     private ArrayList<String[]> movieList = new ArrayList<>();
-    private ArrayList<Double> ratings = new ArrayList<>();
+    private ArrayList<ArrayList<Double>> ratingList = new ArrayList<>();
     private String dateAndTime;
-    private String title;
-    private String rating;
     private int listSize;
+    private boolean movieInList;
     private int count;
 
     public ArrayList<String[]> getMovieList() {
@@ -19,32 +17,64 @@ public class MovieRating {
     }
 
     public void addMovieToList(String title) {
-        setDateAndTime();
+        validateDateAndTime();
         this.movieList.add(new String[]{title, getDateAndTime()});
+        this.ratingList.add(new ArrayList<>());
     }
 
-    public void setDateAndTime() {
-        Date date = new Date();
-        int hour = date.getHours();
-        hour =  (hour > 12) ? (hour % 12) : hour;
-        SimpleDateFormat formatter = new SimpleDateFormat("dd MM yyyy " + hour +":mm aa");
+    private void validateDateAndTime() {
+        LocalDateTime date = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy hh:mm");
         this.dateAndTime = formatter.format(date);
     }
 
-    public void compareMovieTitle(String title) {
+    public void addMovieRatings(String title, double rating) {
+        int count = 0;
         for(String[] movie : movieList){
-            if(movie[0].equalsIgnoreCase(title)){
-                ratings.add(Double.parseDouble(movie[1]));
-            }
+            if(movie[0].equalsIgnoreCase(title)) this.ratingList.get(count).add(rating);
             count++;
+        }
+    }
+
+    private void validateMovieInList(String title) {
+        for(String[] movie : movieList) {
+            if (movie[0].equalsIgnoreCase(title)){
+                this.movieInList = true;
+            } this.count++;
         }
     }
 
     public String getDateAndTime() {
         return dateAndTime;
     }
+
     public int getListSize() {
         this.listSize = movieList.size();
         return listSize;
+    }
+
+    public void removeMovieFromList(String title) {
+        int count = 0;
+        for(String[] movie : movieList){
+            if(movie[0].equalsIgnoreCase(title)) {
+                this.ratingList.remove(count);
+                this.movieList.remove(count);
+            }
+            count++;
+        }
+    }
+
+    public void rateMovie(String title, double rating) {
+        int count = 0;
+        for(String[] movie : movieList) {
+            if (movie[0].equalsIgnoreCase(title)) {
+                if (rating < 0 || rating > 5) throw new RatingOutOfBoundException("Rating is from 1-5");
+                ratingList.get(count).add(rating);
+            } count++;
+        }
+    }
+
+    public ArrayList<ArrayList<Double>> getRatingList() {
+        return this.ratingList;
     }
 }
