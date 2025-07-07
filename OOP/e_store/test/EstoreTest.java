@@ -66,7 +66,7 @@ public class EstoreTest {
     }
 
     CreditCard user = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 32, Sabo-Yaba", "1234",
-            "08160509785", "4388 5760 1841 0707", 11, 2026, 117, CardType.MASTERCARD);
+            "08160509785", "4388 5760 1841 0707", 11, 2026, 117);
 
     @Test
     public void checkForCreditCardName (){
@@ -110,7 +110,7 @@ public class EstoreTest {
     }
 
     CreditCard card = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 32, Sabo-Yaba", "1234",
-            "08160509785", "4388 6760 1841 0707", 11, 2026, 117, CardType.MASTERCARD);
+            "08160509785", "4388 6760 1841 0707", 11, 2026, 117);
 
     @Test
     public void cardIsInvalidTest(){
