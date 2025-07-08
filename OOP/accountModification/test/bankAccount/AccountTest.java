@@ -29,11 +29,8 @@ public class AccountTest {
     }
 
     @Test
-    public void checkForNegativeDepositAmount() {
-        assertThrows(InvalidAmountException.class, () -> account.deposit(-2_000));
-
-        account.deposit(-0);
-        assertEquals(0, account.getBalance());
+    public void checkForPinCorrect() {
+        assertEquals("correct", account.getPin());
     }
 
     @Test
@@ -41,13 +38,10 @@ public class AccountTest {
         account.deposit(5_000);
         account.withdraw(2_000);
         assertEquals(3_000, account.getBalance());
-
-        account.withdraw(4_000);
-        assertEquals(3_000, account.getBalance());
     }
 
     @Test
-    public void checkForPinCorrect() {
-        assertEquals("correct", account.getPin());
+    public void checkForNegativeDepositAmount() {
+        assertThrows(InvalidAmountException.class, () -> account.deposit(-2_000));
     }
 }

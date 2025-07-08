@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/OOP.iml" filepath="$PROJECT_DIR$/.idea/OOP.iml" />
       <module fileurl="file://$PROJECT_DIR$/ac_simulator/ac_simulator.iml" filepath="$PROJECT_DIR$/ac_simulator/ac_simulator.iml" />
       <module fileurl="file://$PROJECT_DIR$/accountModification/accountModification.iml" filepath="$PROJECT_DIR$/accountModification/accountModification.iml" />
-      <module fileurl="file://$PROJECT_DIR$/automaticBike/automaticBike.iml" filepath="$PROJECT_DIR$/automaticBike/automaticBike.iml" />
+      <module fileurl="file://$PROJECT_DIR$/automaticBikeApp/automaticBike.iml" filepath="$PROJECT_DIR$/automaticBikeApp/automaticBike.iml" />
       <module fileurl="file://$PROJECT_DIR$/dataStructures/dataStructures.iml" filepath="$PROJECT_DIR$/dataStructures/dataStructures.iml" />
       <module fileurl="file://$PROJECT_DIR$/e_store/e_store.iml" filepath="$PROJECT_DIR$/e_store/e_store.iml" />
       <module fileurl="file://$PROJECT_DIR$/enumTask/enumTask.iml" filepath="$PROJECT_DIR$/enumTask/enumTask.iml" />

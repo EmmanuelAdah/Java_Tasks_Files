@@ -11,13 +11,15 @@ public class Account {
     }
 
     public void deposit(int amount) {
-        if (amount <= 0) throw new InvalidAmountException("Amount must not be <= zero");
-        this.balance += amount;
+        if (amount > 0){
+            this.balance += amount;
+        } throw new InvalidAmountException("Invalid amount");
     }
 
     public void withdraw(int amount) {
-        if (0 < amount && amount > balance) throw new InvalidAmountException("Amount must not be greater or less than balance");
-        this.balance -= amount;
+        if(balance >= amount){
+            this.balance -= amount;
+        } throw new InvalidAmountException("Insufficient Balance");
     }
 
     public String getPin() {

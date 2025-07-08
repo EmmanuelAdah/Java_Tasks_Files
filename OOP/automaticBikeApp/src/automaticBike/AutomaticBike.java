@@ -1,3 +1,5 @@
+package automaticBike;
+
 public class AutomaticBike {
     private boolean status;
     private int gear;
