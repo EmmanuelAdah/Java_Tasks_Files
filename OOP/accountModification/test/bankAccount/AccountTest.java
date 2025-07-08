@@ -1,6 +1,8 @@
 package bankAccount;
 
 import bankAcount.Account;
+import bankAcount.GtBank;
+import bankAcount.InsufficientBalanceException;
 import bankAcount.InvalidAmountException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AccountTest {
     Account account = new Account();
+    GtBank gtBank = new GtBank();
 
     @BeforeEach
     public void checkIfPinIsCorrect() {
@@ -20,7 +23,7 @@ public class AccountTest {
     }
 
     @Test
-    public void checkForDepositInAccount() {
+    public void makeDepositInAccountTest() {
         account.deposit(2_000);
         assertEquals(2_000, account.getBalance());
 
@@ -43,5 +46,17 @@ public class AccountTest {
     @Test
     public void checkForNegativeDepositAmount() {
         assertThrows(InvalidAmountException.class, () -> account.deposit(-2_000));
+    }
+
+    @Test
+    public void makeGreaterWithdrawalAmountTest() {
+        account.deposit(2_000);
+        assertThrows(InsufficientBalanceException.class, () -> account.withdraw(3_000));
+    }
+
+    @Test
+    public void makeDepositInGtBankTest() {
+        gtBank.deposit(3_000);
+        assertEquals(3_000, gtBank.getBalance());
     }
 }
