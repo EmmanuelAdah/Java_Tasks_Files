@@ -66,7 +66,7 @@ public class EstoreTest {
     }
 
     CreditCard user = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 32, Sabo-Yaba", "1234",
-            "08160509785", "4388 5760 1841 0707", 11, 2026, 117);
+            "08160509785", "5399 5760 1841 0707", 11, 2026, 117);
 
     @Test
     public void checkForCreditCardName (){
@@ -75,7 +75,7 @@ public class EstoreTest {
 
     @Test
     public void checkForCreditCardNumber (){
-        assertEquals("4388 5760 1841 0707", user.getCardNumber());
+        assertEquals("5399 5760 1841 0707", user.getCardNumber());
     }
 
     @Test
@@ -100,22 +100,25 @@ public class EstoreTest {
 
     @Test
     public void checkForCardType (){
-        assertEquals("MASTERCARD", user.getCardType());
+        assertEquals(CardType.MASTERCARD, user.getCardType());
     }
-
-    @Test
-    public void cardIsValidTest(){
-        user.validateCreditCard();
-        assertEquals("4388576018410707", user.getCardNumber());
-    }
-
-    CreditCard card = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 32, Sabo-Yaba", "1234",
-            "08160509785", "4388 6760 1841 0707", 11, 2026, 117);
 
     @Test
     public void cardIsInvalidTest(){
-        card.validateCreditCard();
-        assertEquals("Invalid", card.getCardNumber());
+        assertEquals("Invalid", user.getCardNumber());
+    }
+
+    CreditCard card = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 32, Sabo-Yaba", "1234",
+            "08160509785", "4388 5760 1841 0707", 11, 2026, 117);
+
+    @Test
+    public void cardIsValidTest(){
+        assertEquals("4388576018410707", card.getCardNumber());
+    }
+
+    @Test
+    public void cardTypeIsValidTest(){
+        assertEquals(CardType.VISACARD, card.getCardType());
     }
 
     Address address = new Address("James",20,"james@gmail.com","Sabo-Yaba","1234",

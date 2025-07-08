@@ -10,17 +10,20 @@ public class CreditCard extends Billing {
                       String phoneNumber, String cardNumber, int expiryMonth, int expiryYear, int cvv) {
         super(name, age, email, homeAddress, password, phoneNumber);
         this.name = name;
+        validateCreditCard();
         this.cardNumber = cardNumber;
         this.expiryMonth = expiryMonth;
         this.expiryYear = expiryYear;
         this.cvv = cvv;
         }
+    public String validCardNumber = validateCreditCard();
 
     private void validateCardType() {
-        String pan = cardNumber.replaceAll("\\s+", "");
+        String pan = "";
+        if (cardNumber != null) pan = cardNumber.replaceAll("\\s+", "");
 
         for (int index = 0; index < pan.length(); index++){
-            if (pan.charAt(index) < '0' || pan.charAt(index) > '9' &&  pan.charAt(index) != ' ') throw new InvalidCardException("Invalid card number");
+            if (pan.charAt(index) < '0' || pan.charAt(index) > '9') throw new InvalidCardException("Invalid card number");
         }
         if (pan.length() >= 13 && pan.length() <= 16){
             if (pan.charAt(0) == '4') {
@@ -32,11 +35,14 @@ public class CreditCard extends Billing {
             } else if (pan.charAt(0) == '3' && pan.charAt(1) == '7'){
                 this.cardType = CardType.AMERICAEXPRESS;
             }
-        } throw new InvalidCardException("Invalid card number");
+        }
     }
 
-    public void validateCreditCard(){
-        String pan = cardNumber.replaceAll("\\s+", "");
+    private String validateCreditCard(){
+
+        String pan = "";
+        if (cardNumber != null) pan = cardNumber.replaceAll("\\s+", "");
+
         int sumOfEven = 0;
         int sumOfOdd = 0;
 
@@ -52,11 +58,11 @@ public class CreditCard extends Billing {
                     sumOfEven += (firstDigit + secondDigit);
                 } else {  sumOfEven += multiple;  }
             }
-        } catch (InvalidCardException e){
-            cardNumber = "Invalid";
+        } catch (InvalidCardException _){
         }
         int total = sumOfEven + sumOfOdd;
         cardNumber = (total % 10 == 0 && total != 0) ? pan : "Invalid";
+        return pan;
     }
 
     public String getCardName() {
@@ -79,7 +85,7 @@ public class CreditCard extends Billing {
         return cvv;
     }
 
-    public String getCardType() {
-        return cardType.toString();
+    public CardType getCardType() {
+        return cardType;
     }
 }
