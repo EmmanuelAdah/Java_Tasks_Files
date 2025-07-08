@@ -37,7 +37,6 @@ public class CreditCard extends Billing {
         return cardType;
     }
 
-
     private String validateCreditCard(){
         String pan = "";
         if (cardNumber != null) pan = cardNumber.replaceAll("\\s+", "");

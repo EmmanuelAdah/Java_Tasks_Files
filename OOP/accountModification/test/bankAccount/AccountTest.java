@@ -1,11 +1,10 @@
 package bankAccount;
 
 import bankAcount.Account;
-import bankAcount.InvalidAmountExeption;
+import bankAcount.InvalidAmountException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AccountTest {
     Account account = new Account();
@@ -31,7 +30,7 @@ public class AccountTest {
 
     @Test
     public void checkForNegativeDepositAmount() {
-        assertThrows(InvalidAmountExeption.class, () -> account.deposit(-2_000));
+        assertThrows(InvalidAmountException.class, () -> account.deposit(-2_000));
 
         account.deposit(-0);
         assertEquals(0, account.getBalance());
@@ -51,6 +50,4 @@ public class AccountTest {
     public void checkForPinCorrect() {
         assertEquals("correct", account.getPin());
     }
-
-
 }

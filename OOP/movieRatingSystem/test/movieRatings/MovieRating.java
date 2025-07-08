@@ -9,8 +9,6 @@ public class MovieRating {
     private ArrayList<ArrayList<Double>> ratingList = new ArrayList<>();
     private String dateAndTime;
     private int listSize;
-    private boolean movieInList;
-    private int count;
 
     public ArrayList<String[]> getMovieList() {
         return movieList;
@@ -33,14 +31,6 @@ public class MovieRating {
         for(String[] movie : movieList){
             if(movie[0].equalsIgnoreCase(title)) this.ratingList.get(count).add(rating);
             count++;
-        }
-    }
-
-    private void validateMovieInList(String title) {
-        for(String[] movie : movieList) {
-            if (movie[0].equalsIgnoreCase(title)){
-                this.movieInList = true;
-            } this.count++;
         }
     }
 
