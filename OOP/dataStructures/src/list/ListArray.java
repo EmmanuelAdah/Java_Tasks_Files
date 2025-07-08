@@ -1,5 +1,7 @@
 package list;
 
+import java.util.Objects;
+
 public class ListArray {
     private int[] list = new int[3];
     private boolean listSize;
@@ -14,11 +16,17 @@ public class ListArray {
     }
 
     public void addItemToList(int item) {
-        list[count++] = item;
-        listSize = true;
+        if (Objects.equals(count, list.length)) throw new ListOverFlowException("List is Full");
+        this.list[count++] = item;
+        this.listSize = true;
     }
 
     public int getCount() {
-        return count;
+        return this.count;
+    }
+
+    public void removeItemFromList(int item) {
+        if (Objects.equals(count, 0)) throw new ListUnderFlowException("List is empty");
+        list[count--] = 0;
     }
 }

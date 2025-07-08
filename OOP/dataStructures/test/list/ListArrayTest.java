@@ -23,4 +23,25 @@ public class ListArrayTest {
         list.addItemToList(4);
         assertEquals(2, list.getCount());
     }
+
+    @Test
+    public void popItemFromListTest() {
+        list.addItemToList(3);
+        list.addItemToList(7);
+        list.removeItemFromList(7);
+        assertEquals(1, list.getCount());
+    }
+
+    @Test
+    public void listUnderFlowTest() {
+        assertThrows(ListUnderFlowException.class, () -> list.removeItemFromList(7));
+    }
+
+    @Test
+    public void addItemToFullListTest() {
+        list.addItemToList(3);
+        list.addItemToList(7);
+        list.addItemToList(3);
+        assertThrows(ListOverFlowException.class, ()-> list.addItemToList(3));
+    }
 }
