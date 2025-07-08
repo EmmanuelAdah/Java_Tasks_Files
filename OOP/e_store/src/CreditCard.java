@@ -10,15 +10,13 @@ public class CreditCard extends Billing {
                       String phoneNumber, String cardNumber, int expiryMonth, int expiryYear, int cvv) {
         super(name, age, email, homeAddress, password, phoneNumber);
         this.name = name;
-        validateCreditCard();
         this.cardNumber = cardNumber;
         this.expiryMonth = expiryMonth;
         this.expiryYear = expiryYear;
         this.cvv = cvv;
         }
-    public String validCardNumber = validateCreditCard();
 
-    private void validateCardType() {
+    private CardType validateCardType() {
         String pan = "";
         if (cardNumber != null) pan = cardNumber.replaceAll("\\s+", "");
 
@@ -36,16 +34,16 @@ public class CreditCard extends Billing {
                 this.cardType = CardType.AMERICAEXPRESS;
             }
         }
+        return cardType;
     }
 
-    private String validateCreditCard(){
 
+    private String validateCreditCard(){
         String pan = "";
         if (cardNumber != null) pan = cardNumber.replaceAll("\\s+", "");
 
         int sumOfEven = 0;
         int sumOfOdd = 0;
-
         try{
             for(int index = pan.length() - 1; index >= 0; index--){
                 sumOfOdd += Integer.parseInt(String.valueOf(pan.charAt(index)));
@@ -61,7 +59,7 @@ public class CreditCard extends Billing {
         } catch (InvalidCardException _){
         }
         int total = sumOfEven + sumOfOdd;
-        cardNumber = (total % 10 == 0 && total != 0) ? pan : "Invalid";
+        this.cardNumber = (total % 10 == 0 && total != 0) ? pan : "Invalid";
         return pan;
     }
 
@@ -70,7 +68,7 @@ public class CreditCard extends Billing {
     }
 
     public String getCardNumber() {
-        return cardNumber;
+        return validateCreditCard();
     }
 
     public int getExpiryMonth() {
@@ -86,6 +84,6 @@ public class CreditCard extends Billing {
     }
 
     public CardType getCardType() {
-        return cardType;
+        return validateCardType();
     }
 }

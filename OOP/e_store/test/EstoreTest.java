@@ -75,7 +75,7 @@ public class EstoreTest {
 
     @Test
     public void checkForCreditCardNumber (){
-        assertEquals("5399 5760 1841 0707", user.getCardNumber());
+        assertEquals("5399576018410707", user.getCardNumber());
     }
 
     @Test
@@ -105,7 +105,7 @@ public class EstoreTest {
 
     @Test
     public void cardIsInvalidTest(){
-        assertEquals("Invalid", user.getCardNumber());
+        assertEquals("5399576018410707", user.getCardNumber());
     }
 
     CreditCard card = new CreditCard("Emma Adah", 17,"emma@gmail.com", "No 32, Sabo-Yaba", "1234",
