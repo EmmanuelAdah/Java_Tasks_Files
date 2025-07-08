@@ -18,7 +18,7 @@ public class AccountTest {
     }
 
     @Test
-    public void checkForAccountDefaultBalance() {
+    public void accountAtDefaultBalanceTest() {
         assertEquals(0, account.getBalance());
     }
 
@@ -55,8 +55,31 @@ public class AccountTest {
     }
 
     @Test
+    public void gtBankAccountIsEmptyTest() {
+        assertEquals(0, gtBank.getBalance());
+    }
+
+    @Test
     public void makeDepositInGtBankTest() {
         gtBank.deposit(3_000);
         assertEquals(3_000, gtBank.getBalance());
+    }
+
+    @Test
+    public void makeWithdrawalFromGtBankTest() {
+        gtBank.deposit(6_000);
+        gtBank.withdraw(2_000);
+        assertEquals(4_000, gtBank.getBalance());
+    }
+
+    @Test
+    public void negativeDepositAmountTest() {
+        assertThrows(InvalidAmountException.class, () -> gtBank.deposit(-2_000));
+    }
+
+    @Test
+    public void withdrawGreaterAmountFromAccountTest() {
+        gtBank.deposit(2_000);
+        assertThrows(InsufficientBalanceException.class, () -> gtBank.withdraw(3_000));
     }
 }

@@ -15,4 +15,10 @@ public class GtBank {
     public double getBalance() {
         return balance;
     }
+
+    public void withdraw(int amount) {
+        if (amount > 0 && balance >= amount) {
+            this.balance -= amount;
+        }  else { throw new InsufficientBalanceException("Insufficient balance"); }
+    }
 }
