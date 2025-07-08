@@ -4,7 +4,7 @@ public class CreditCard extends Billing {
     private final int expiryMonth;
     private final int expiryYear;
     private final int cvv;
-    private CardType CardType;
+    private CardType cardType;
 
     public CreditCard(String name, int age, String email, String homeAddress, String password,
                       String phoneNumber, String cardNumber, int expiryMonth, int expiryYear, int cvv) {
@@ -14,8 +14,7 @@ public class CreditCard extends Billing {
         this.expiryMonth = expiryMonth;
         this.expiryYear = expiryYear;
         this.cvv = cvv;
-        this.CardType = CardType;
-    }
+        }
 
     private void validateCardType() {
         String pan = cardNumber.replaceAll("\\s+", "");
@@ -25,13 +24,13 @@ public class CreditCard extends Billing {
         }
         if (pan.length() >= 13 && pan.length() <= 16){
             if (pan.charAt(0) == '4') {
-                this.CardType = CardType.VISACARD;
-            } else if (pan.charAt(0) == '5'){
-                this.CardType = CardType.MASTERCARD;
-            } else if (pan.charAt(0) == '6'){
-                CardType = "DISCOVERCARD";
+                this.cardType = CardType.VISACARD;
+            } else if (pan.charAt(0) == '5' && pan.charAt(1) == '3'){
+                this.cardType = CardType.MASTERCARD;
+            } else if (pan.charAt(0) == '5' && pan.charAt(1) == '0' || pan.charAt(1) == '1'){
+                this.cardType = CardType.VERVE;
             } else if (pan.charAt(0) == '3' && pan.charAt(1) == '7'){
-                this.CardType = CardType.AMERICAEXPRESS;
+                this.cardType = CardType.AMERICAEXPRESS;
             }
         } throw new InvalidCardException("Invalid card number");
     }
@@ -81,6 +80,6 @@ public class CreditCard extends Billing {
     }
 
     public String getCardType() {
-        return CardType.toString();
+        return cardType.toString();
     }
 }

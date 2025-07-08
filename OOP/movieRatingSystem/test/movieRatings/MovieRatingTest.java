@@ -1,9 +1,7 @@
 package movieRatings;
 
 import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MovieRatingTest {
@@ -27,7 +25,6 @@ public class MovieRatingTest {
         movieRating.addMovieToList("Baghban");
         assertEquals(2, movieRating.getListSize());
     }
-
 
     @Test
     public void rateMovieInListTest(){
