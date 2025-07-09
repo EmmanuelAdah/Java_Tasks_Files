@@ -2,14 +2,15 @@ package healthProfile;
 import java.time.LocalDateTime;
 
 public class HealthProfile {
-    private int age;
     private String firstName;
     private String lastName;
     private int birthDay;
     private int birthMonth;
     private int birthYear;
-    private int height;
-    private int weight;
+    private double height;
+    private double weight;
+    private double bmi;
+    private int age;
 
     public int getAge() {
         return age;
@@ -26,5 +27,14 @@ public class HealthProfile {
         } else if (currentYear > birthYear && currentMonth == birthMonth && currentDay < birthDay) {
             this.age = (currentYear - birthYear) - 1;
         }
+    }
+
+    public void setBmi(double height, double weight) {
+        int CONSTANT = 703;
+        this.bmi = CONSTANT * (weight / (height * height));
+    }
+
+    public double getBmi() {
+        return bmi;
     }
 }
