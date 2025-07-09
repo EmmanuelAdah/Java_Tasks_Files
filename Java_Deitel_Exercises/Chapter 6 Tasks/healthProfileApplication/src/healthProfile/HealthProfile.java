@@ -23,8 +23,9 @@ public class HealthProfile {
 
         if (birthMonth >= currentMonth && birthDay >= currentDay && birthYear >= currentYear) {
             this.age =currentYear - birthYear;
-        } else if (birthYear >= currentYear && birthMonth >= currentMonth) {
-            this.age = currentYear - birthYear;
+        } else if (birthYear >= currentYear && birthMonth <= currentMonth && birthDay < currentDay) {
+            this.age = (currentYear - birthYear) - 1;
         }
+        throw new InvalidDateOfBirthException("Date must be in the past");
     }
 }
