@@ -9,6 +9,6 @@ public class HealthProfileTest {
     @Test
     public void ageInYearsIsCorrectTest(){
         profile.setAge(23, 6, 1995);
-        assertEquals(23, profile.getAge());
+        assertEquals(30, profile.getAge());
     }
 }

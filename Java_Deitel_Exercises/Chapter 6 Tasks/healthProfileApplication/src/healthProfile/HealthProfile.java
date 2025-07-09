@@ -21,11 +21,10 @@ public class HealthProfile {
         int currentMonth = date.getMonthValue();
         int currentDay = date.getDayOfMonth();
 
-        if (birthMonth >= currentMonth && birthDay >= currentDay && birthYear >= currentYear) {
-            this.age =currentYear - birthYear;
-        } else if (birthYear >= currentYear && birthMonth <= currentMonth && birthDay < currentDay) {
+        if (birthMonth < currentMonth && birthYear <= currentYear) {
+            this.age = currentYear - birthYear;
+        } else if (currentYear > birthYear && currentMonth == birthMonth && currentDay < birthDay) {
             this.age = (currentYear - birthYear) - 1;
         }
-        throw new InvalidDateOfBirthException("Date must be in the past");
     }
 }
