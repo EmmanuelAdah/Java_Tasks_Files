@@ -2,38 +2,29 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ClockTest {
-    Clock clock = new Clock();
+
 
     @Test
-    public void testForValidHourInClock() {
-        clock.setHour(23);
+    public void validTimeParameterInClockTest() {
+        Clock clock = new Clock(23, 45, 34);
         assertEquals(23, clock.getHour());
-    }
-
-    @Test
-    public void testForInvalidHourInClock() {
-        clock.setHour(56);
-        assertEquals(0, clock.getHour());
-    }
-
-    @Test
-    public void testForValidMinuteInClock() {
-        clock.setMinutes(45);
         assertEquals(45, clock.getMinutes());
-    }
-
-    @Test
-    public void testForInvalidMinuteInClock() {
-        clock.setMinutes(-45);
-        assertEquals(0, clock.getMinutes());
-
-        clock.setMinutes(60);
-        assertEquals(0, clock.getMinutes());
-    }
-
-    @Test
-    public void testForValidSecondInClock() {
-        clock.setSeconds(34);
         assertEquals(34, clock.getSeconds());
+    }
+
+    @Test
+    public void invalidTimeParameterInClockTest() {
+        Clock clock = new Clock(56, 65, 63);
+        assertEquals(0, clock.getHour());
+        assertEquals(0, clock.getMinutes());
+        assertEquals(0, clock.getSeconds());
+    }
+
+    @Test
+    public void negativeTimeParameterInClockTest() {
+        Clock clock = new Clock(-1, -5, -6);
+        assertEquals(0, clock.getHour());
+        assertEquals(0, clock.getMinutes());
+        assertEquals(0, clock.getSeconds());
     }
 }
