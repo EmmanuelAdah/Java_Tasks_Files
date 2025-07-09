@@ -32,4 +32,8 @@ public class Clock {
     public int getSeconds() {
         return second;
     }
+
+    public String displayTime(){
+       return String.format("%02d:%02d:%02d", hour, minute, second);
+    }
 }

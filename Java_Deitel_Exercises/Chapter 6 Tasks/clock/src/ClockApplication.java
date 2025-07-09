@@ -5,31 +5,28 @@ public class ClockApplication {
         Clock clock = new Clock();
 
         System.out.print("Enter hour: ");
-        int hour = 0;
         try {
-            hour = input.nextInt();
+            int hour = input.nextInt();
             clock.setHour(hour);
         }catch (Exception e){
             System.out.println("Invalid input");
         }
 
         System.out.print("Enter minute: ");
-        int minutes = 0;
         try {
-            minutes = input.nextInt();
+            int minutes = input.nextInt();
             clock.setMinutes(minutes);
         }catch (Exception e){
             System.out.println("Invalid input");
         }
 
         System.out.print("Enter second: ");
-        int seconds = 0;
         try {
-            seconds = input.nextInt();
+            int seconds = input.nextInt();
             clock.setSeconds(seconds);
         } catch (Exception e){
             System.out.println("Invalid input");
         }
-        System.out.printf("The set time is %02d:%02d:%02d", clock.getHour(), clock.getMinutes(), clock.getSeconds());
+        System.out.printf("The set time is %s", clock.displayTime());
     }
 }
