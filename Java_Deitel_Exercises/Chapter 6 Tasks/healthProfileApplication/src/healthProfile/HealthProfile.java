@@ -1,4 +1,5 @@
 package healthProfile;
+import java.time.LocalDateTime;
 
 public class HealthProfile {
     private int age;
@@ -15,8 +16,15 @@ public class HealthProfile {
     }
 
     public void setAge(int birthDay, int birthMonth, int birthYear) {
-        if (birthDay < 1 || birthMonth < 1 || birthYear < 1) {
+        LocalDateTime date = LocalDateTime.now();
+        int currentYear = date.getYear();
+        int currentMonth = date.getMonthValue();
+        int currentDay = date.getDayOfMonth();
 
+        if (birthMonth >= currentMonth && birthDay >= currentDay && birthYear >= currentYear) {
+            this.age =currentYear - birthYear;
+        } else if (birthYear >= currentYear && birthMonth >= currentMonth) {
+            this.age = currentYear - birthYear;
         }
     }
 }
