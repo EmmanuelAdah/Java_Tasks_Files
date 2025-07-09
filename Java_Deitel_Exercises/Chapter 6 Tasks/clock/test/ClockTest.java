@@ -3,7 +3,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ClockTest {
 
-
     @Test
     public void validTimeParameterInClockTest() {
         Clock clock = new Clock(23, 45, 34);
