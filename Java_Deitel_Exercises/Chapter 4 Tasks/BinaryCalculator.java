@@ -5,7 +5,7 @@ public class BinaryCalculator {
 
 	Scanner input = new Scanner(System.in);
 
-	System.out.print("Enter a five digit binary number: ");
+	System.out.print("Enter binary number to convert to base 10: ");
 	int binaryInteger = input.nextInt();
 	
 	int binaryNumber = binaryInteger;
