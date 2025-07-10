@@ -9,8 +9,9 @@ public class HealthProfile {
     private int birthYear;
     private double height;
     private double weight;
-    private double bmi;
+    private float bmi;
     private int age;
+    private float maxiHeartRate;
 
     public int getAge() {
         return age;
@@ -31,10 +32,26 @@ public class HealthProfile {
 
     public void setBmi(double height, double weight) {
         int CONSTANT = 703;
-        this.bmi = CONSTANT * (weight / (height * height));
+        this.bmi = (float)(CONSTANT * (weight / (height * height)));
     }
 
-    public double getBmi() {
+    public float getBmi() {
         return bmi;
+    }
+
+    public void setMaxHeartRate(int age) {
+        int CONSTANT = 207;
+        float maximumHeartRate = CONSTANT - (float)(age * 0.7);
+        this.maxiHeartRate = (int)maximumHeartRate;
+    }
+
+    public float getMaxHeartRate() {
+        return maxiHeartRate;
+    }
+
+    public void setTargetHeartRate(float maxHeartRate) {
+        int PERCENTAGE = 100;
+         float targetHeartRateZone = getMaxHeartRate() * 0.65f;
+
     }
 }

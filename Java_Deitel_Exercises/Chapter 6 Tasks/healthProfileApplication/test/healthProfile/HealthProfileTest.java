@@ -26,7 +26,21 @@ public class HealthProfileTest {
 
     @Test
     public void bmiCalculatorTest(){
-        profile.setBmi(67.72, 60);
-        assertEquals(60, profile.getBmi());
+        profile.setBmi(85, 132);
+        assertEquals(12, profile.getBmi());
+    }
+
+    @Test
+    public void maxHeartRateTest(){
+        profile.setAge(23, 7, 1995);
+        profile.setMaxHeartRate(profile.getAge());
+        assertEquals(186, profile.getMaxHeartRate());
+    }
+
+    @Test
+    public void targetHeartRangeTest(){
+        profile.setAge(23, 7, 1995);
+        profile.setMaxHeartRate(profile.getAge());
+        profile.setTargetHeartRate(profile.getMaxHeartRate());
     }
 }
