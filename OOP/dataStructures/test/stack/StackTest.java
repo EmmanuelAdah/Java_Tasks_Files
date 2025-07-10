@@ -11,6 +11,8 @@ public class StackTest {
         assertFalse(stack.getState());
     }
 
+
+
     @Test
     public void itemsCanBeAddedToStackTest() {
         stack.add_item(2);
