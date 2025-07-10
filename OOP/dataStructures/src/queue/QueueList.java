@@ -7,7 +7,6 @@ public class QueueList {
     public void addItemToQueue(String item) {
         if (size == que.length) throw new QueueOverFlowException("Queue is empty");
         que[size++] = item;
-
     }
 
     public boolean getIsEmpty() {

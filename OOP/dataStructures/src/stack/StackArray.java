@@ -19,10 +19,6 @@ public class StackArray {
         } this.stack[size++] = item;
     }
 
-    public int[] getStack() {
-        return stack;
-    }
-
     public void removeItemFromStack(int item) {
         if (size == 0) throw new StackUnderFlowException("stack is empty");
         stack[--size] = 0;
