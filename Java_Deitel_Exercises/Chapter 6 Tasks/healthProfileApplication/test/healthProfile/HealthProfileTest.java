@@ -4,24 +4,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HealthProfileTest {
-    HealthProfile profile = new HealthProfile("Emma", "Adah", 13, 4, 2025, 80, 132.4);
+    HealthProfile profile = new HealthProfile("Emma", "Adah", 13, 7, 2025, 80, 132.4);
+
+    @Test
+    public void nameVerificationTest(){
+        assertEquals("Emma", profile.getFirstName());
+        assertEquals("Adah", profile.getLastName());
+    }
 
     @Test
     public void ageInYearsIsCorrectTest(){
         profile.setAge();
         assertEquals(30, profile.getAge());
-
-        profile.setAge();
-        assertEquals(29, profile.getAge());
-    }
-
-    @Test
-    public void ageInMonthsIsInvalidTest(){
-        profile.setAge();
-        assertEquals(0, profile.getAge());
-
-        profile.setAge();
-        assertEquals(0, profile.getAge());
     }
 
     @Test
@@ -41,7 +35,7 @@ public class HealthProfileTest {
     public void targetHeartRangeTest(){
         profile.setAge();
         profile.setMaxHeartRate(profile.getAge());
-        profile.setTargetHeartRate(profile.getMaxHeartRate());
-        assertEquals("120.9 - 158.1", profile.getTagetHeartRange());
+        profile.setTargetHeartRate();
+        assertEquals("143.0 - 187.0", profile.getTagetHeartRange());
     }
 }

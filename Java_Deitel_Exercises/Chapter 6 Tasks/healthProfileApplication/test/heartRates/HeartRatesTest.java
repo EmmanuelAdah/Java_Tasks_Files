@@ -16,4 +16,5 @@ public class HeartRatesTest {
         rates.setAge();
         assertEquals(30, rates.getAge());
     }
+
 }
