@@ -1,34 +1,17 @@
 package healthProfile;
-import java.time.LocalDateTime;
+import heartRates.HeartRates;
 
-public class HealthProfile {
-    private String firstName;
-    private String lastName;
-    private int birthDay;
-    private int birthMonth;
-    private int birthYear;
-    private double height;
-    private double weight;
+public class HealthProfile extends HeartRates {
+    private final double height;
+    private final double weight;
     private float bmi;
-    private int age;
     private float maxiHeartRate;
     private String targetHeartRange;
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int birthDay, int birthMonth, int birthYear) {
-        LocalDateTime date = LocalDateTime.now();
-        int currentYear = date.getYear();
-        int currentMonth = date.getMonthValue();
-        int currentDay = date.getDayOfMonth();
-
-        if (birthMonth < currentMonth && birthYear <= currentYear) {
-            this.age = currentYear - birthYear;
-        } else if (currentYear > birthYear && currentMonth == birthMonth && currentDay < birthDay) {
-            this.age = (currentYear - birthYear) - 1;
-        }
+    public HealthProfile(String firstName, String lastName, int birthDay, int birthMonth, int birthYear, double height, double weight) {
+        super(firstName, lastName, birthDay, birthMonth, birthYear);
+        this.height = height;
+        this.weight = weight;
     }
 
     public void setBmi(double height, double weight) {
@@ -38,12 +21,6 @@ public class HealthProfile {
 
     public float getBmi() {
         return bmi;
-    }
-
-    public void setMaxHeartRate(int age) {
-        int CONSTANT = 207;
-        float maximumHeartRate = CONSTANT - (float)(age * 0.7);
-        this.maxiHeartRate = (int)maximumHeartRate;
     }
 
     public float getMaxHeartRate() {
