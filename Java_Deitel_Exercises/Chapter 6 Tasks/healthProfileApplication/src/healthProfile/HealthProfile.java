@@ -23,10 +23,6 @@ public class HealthProfile extends HeartRates {
         return bmi;
     }
 
-    public float getMaxHeartRate() {
-        return maxiHeartRate;
-    }
-
     public void setTargetHeartRate(float maxHeartRate) {
         float targetHeartRateZone1 = getMaxHeartRate() * 0.65f;
         float targetHeartRateZone2 = getMaxHeartRate() * 0.85f;
