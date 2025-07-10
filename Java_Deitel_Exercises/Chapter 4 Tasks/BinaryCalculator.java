@@ -10,10 +10,11 @@ public class BinaryCalculator {
 	
 	int binaryNumber = binaryInteger;
 	int binary = 0;
+
 	int counter = 0;
 	while (binaryNumber != 0){
 		int remainder = binaryNumber % 10;
-		binary += remainder * (Math.pow(2,counter));
+		binary += remainder * (Math.pow(2, counter));
 		binaryNumber /= 10;
 	counter++;
 	}

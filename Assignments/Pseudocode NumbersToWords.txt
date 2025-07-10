@@ -1,0 +1,24 @@
+Pseudocode NumbersToWords
+
+import scanner 
+declear class
+declear method main
+declear scanner
+prompt input from user
+initialize values to the variable 'number'
+
+if (number == 1) print 'one'
+else if (number == 2) print 'two'
+else if (number == 3) print 'three'
+else if (number == 4) print 'four'
+else if (number == 5) print 'five'
+else if (number == 6) print 'six'
+else if (number == 7) print 'seven'
+else if (number == 8) print 'eight'
+else if (number == 9) print 'nine'
+else if (number == 10) print 'ten'
+else - print 'invalid number'
+
+end method main
+end class NumbersToWords
+

@@ -43,9 +43,9 @@ public class HeartRates {
         return age;
     }
 
-    public void setMaxHeartRate(int age) {
+    public void setMaxHeartRate() {
         int CONSTANT = 220;
-        this.maxHeartRate = (float) (CONSTANT - age);
+        this.maxHeartRate = (float) (CONSTANT - getAge());
     }
 
     public float getMaxHeartRate() {

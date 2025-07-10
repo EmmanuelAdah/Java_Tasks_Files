@@ -27,14 +27,16 @@ public class HealthProfileTest {
     @Test
     public void maxHeartRateTest(){
         profile.setAge();
-        profile.setMaxHeartRate(profile.getAge());
+        profile.getAge();
+        profile.setMaxHeartRate();
         assertEquals(186, profile.getMaxHeartRate());
     }
 
     @Test
     public void targetHeartRangeTest(){
         profile.setAge();
-        profile.setMaxHeartRate(profile.getAge());
+        profile.getAge();
+        profile.setMaxHeartRate();
         profile.setTargetHeartRate();
         assertEquals("143.0 - 187.0", profile.getTagetHeartRange());
     }

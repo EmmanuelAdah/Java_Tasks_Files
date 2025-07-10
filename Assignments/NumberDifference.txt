@@ -1,0 +1,53 @@
+Pseudocode NumberDifference
+
+import scanner 
+declear class
+declear method main
+declear scanner
+
+*prompt input from user
+initialize values to the variable 'number1'
+*prompt input from user
+initialize values to the variable 'number2'
+*prompt input from user
+initialize values to the variable 'number3'
+*prompt input from user
+initialize values to the variable 'number4'
+*prompt input from user
+initialize values to the variable 'number5'
+---------------------------------------------------------------------
+if (number1 > number2 && number1 > number3 && number1 > number4 && number1 > number5)
+print - largest: number1 
+
+if (number2 > number1 && number2 > number3 && number2 > number4 && number2 > number5)
+print - Largest: number2 
+
+if (number3 > number1 && number3 > number2 && number3 > number4 && number3 > number5)
+print - Largest: number3 
+
+if (number4 > number1 && number4 > number2 && number4 > number3 && number4 > number5)
+print - Largest: number4 
+
+if (number5 > number1 && number5 > number2 && number5 > number3 && number5 > number4)
+print - Largest: number5 
+----------------------------------------------------------------------
+if (number1 < number2 && number1 < number3 && number1 < number4 && number1 < number5)
+print - Smallest: number1 
+
+if (number2 < number1 && number2 < number3 && number2 < number4 && number2 < number5)
+print - Smallest: number2 
+
+if (number3 < number1 && number3 < number2 && number3 < number4 && number3 < number5)
+print - Smallest: number3 
+
+if (number4 < number1 && number4 < number2 && number4 < number3 && number4 < number5)
+print - Smallest: number4 
+
+if (number5 < number1 && number5 < number2 && number5 < number3 && number5 < number4)
+print - Smallest: number5 
+----------------------------------------------------------------------
+
+
+
+
+
