@@ -7,18 +7,20 @@ public class StackTest {
     StackArray stack = new StackArray();
 
     @Test
-    public void test_that_stack_is_empty() {
+    public void stackIsEmptyTest() {
         assertFalse(stack.getState());
     }
 
     @Test
-    public void test_that_numbers_can_be_added_to_stack() {
+    public void itemsCanBeAddedToStackTest() {
         stack.add_item(2);
-        assertEquals(2, stack.getStack());
+        assertEquals(1, stack.getSize());
+        stack.add_item(6);
+        assertEquals(2, stack.getSize());
     }
 
     @Test
-    public void test_that_stack_is_not_empty() {
+    public void stackIsNotEmptyTest() {
         stack.add_item(2);
         stack.setState();
         assertTrue(stack.getState());
@@ -29,11 +31,19 @@ public class StackTest {
         stack.add_item(2);
         stack.add_item(3);
         stack.removeItemFromStack(2);
-        assertEquals( 0, stack.getStack());
+        assertEquals( 1, stack.getSize());
     }
 
     @Test
     public void stackUnderFlowExceptionTest() {
         assertThrows(StackUnderFlowException.class, () -> stack.removeItemFromStack(3));
+    }
+
+    @Test
+    public void stackOverFlowTest() {
+        stack.add_item(2);
+        stack.add_item(3);
+        stack.add_item(7);
+        assertThrows(StackOverFlowException.class, () -> stack.add_item(6));
     }
 }

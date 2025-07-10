@@ -2,7 +2,7 @@ package stack;
 
 public class StackArray {
     private boolean state;
-    private int[] stack = new int[4];
+    private int[] stack = new int[3];
     private int size;
 
     public void setState() {
@@ -14,15 +14,21 @@ public class StackArray {
     }
 
     public void add_item(int item) {
-        this.stack[size++] = item;
+        if (size == stack.length) {
+            throw new StackOverFlowException("stack is full");
+        } this.stack[size++] = item;
     }
 
-    public int getStack() {
-        return stack[0];
+    public int[] getStack() {
+        return stack;
     }
 
     public void removeItemFromStack(int item) {
-        if (size == 0) throw new StackUnderFlowException();
+        if (size == 0) throw new StackUnderFlowException("stack is empty");
         stack[--size] = 0;
+    }
+
+    public int getSize() {
+        return size;
     }
 }
