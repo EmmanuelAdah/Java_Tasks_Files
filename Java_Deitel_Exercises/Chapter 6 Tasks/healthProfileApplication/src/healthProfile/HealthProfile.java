@@ -12,6 +12,7 @@ public class HealthProfile {
     private float bmi;
     private int age;
     private float maxiHeartRate;
+    private String targetHeartRange;
 
     public int getAge() {
         return age;
@@ -50,8 +51,12 @@ public class HealthProfile {
     }
 
     public void setTargetHeartRate(float maxHeartRate) {
-        int PERCENTAGE = 100;
-         float targetHeartRateZone = getMaxHeartRate() * 0.65f;
+        float targetHeartRateZone1 = getMaxHeartRate() * 0.65f;
+        float targetHeartRateZone2 = getMaxHeartRate() * 0.85f;
+        targetHeartRange = String.format("%.1f - %.1f",targetHeartRateZone1, targetHeartRateZone2);
+    }
 
+    public String getTagetHeartRange() {
+        return targetHeartRange;
     }
 }

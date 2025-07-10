@@ -42,5 +42,6 @@ public class HealthProfileTest {
         profile.setAge(23, 7, 1995);
         profile.setMaxHeartRate(profile.getAge());
         profile.setTargetHeartRate(profile.getMaxHeartRate());
+        assertEquals("120.9 - 158.1", profile.getTagetHeartRange());
     }
 }
