@@ -26,12 +26,24 @@ public class AccountMain {
                     System.out.print("Enter deposit amount: ");
                     int depositAmount = input.nextInt();
                     account.deposit(depositAmount);
-                    transaction = true;
                 }
                 case 3: {
                     System.out.print("Enter withdrawal amount: ");
                     int withdrawAmount = input.nextInt();
                     account.withdraw(withdrawAmount);
+                }
+                case 4: {
+                    System.out.print("Enter amount to transfer: ");
+                    int amount = input.nextInt();
+
+                    System.out.print("Enter account number: ");
+                    int accountNumber = input.nextInt();
+
+                    System.out.print("Enter pin: ");
+                    String pin = input.next();
+                }
+                case 5: {
+                    transaction = false;
                 }
             }
         }
