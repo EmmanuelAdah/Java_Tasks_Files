@@ -17,4 +17,14 @@ public class HeartRatesTest {
         assertEquals(30, rates.getAge());
     }
 
+    @Test
+    public void maxHeartRateTest(){
+        rates.setAge();
+        rates.getAge();
+        rates.setMaxHeartRate();
+        assertEquals(190, rates.getMaxHeartRate());
+    }
+
+
+
 }
