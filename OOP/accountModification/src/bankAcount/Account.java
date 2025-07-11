@@ -3,6 +3,7 @@ package bankAcount;
 public class Account {
     private double balance;
     private int amount;
+    private int accountNumber = 3311;
     private final String pin = "correct";
 
     public double getBalance() {

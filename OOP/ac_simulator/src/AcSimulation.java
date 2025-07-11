@@ -1,8 +1,6 @@
 public class AcSimulation {
     private boolean status;
-    private String state;
     private int temperature = 16;
-    private int userInput;
 
     public void setAcState(String state) {
         this.status = state.equalsIgnoreCase("on");

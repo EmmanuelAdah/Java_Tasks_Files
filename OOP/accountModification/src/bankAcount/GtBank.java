@@ -2,7 +2,7 @@ package bankAcount;
 
 public class GtBank {
     private double balance;
-    private String accountNumber;
+    private int accountNumber = 1122;
     private String pin;
 
 

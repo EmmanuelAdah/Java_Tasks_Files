@@ -22,7 +22,7 @@ public class MovieRating {
 
     private void validateDateAndTime() {
         LocalDateTime date = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy hh:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy hh:mm a");
         this.dateAndTime = formatter.format(date);
     }
 
