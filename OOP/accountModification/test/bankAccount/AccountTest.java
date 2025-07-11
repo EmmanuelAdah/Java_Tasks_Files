@@ -15,6 +15,7 @@ public class AccountTest {
     @BeforeEach
     public void checkIfPinIsCorrect() {
         assertEquals("correct", account.getPin());
+        assertEquals("correct", gtBank.getPin());
     }
 
     @Test
@@ -81,5 +82,14 @@ public class AccountTest {
     public void withdrawGreaterAmountFromAccountTest() {
         gtBank.deposit(2_000);
         assertThrows(InsufficientBalanceException.class, () -> gtBank.withdraw(3_000));
+    }
+
+    @Test
+    public void transferBetweenAccountsTest() {
+        account.deposit(10_000);
+        account.withdraw(2_000);
+        gtBank.deposit(2_000);
+        assertEquals(2_000, gtBank.getBalance());
+        assertEquals(8_000, account.getBalance());
     }
 }

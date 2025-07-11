@@ -3,7 +3,7 @@ package bankAcount;
 public class GtBank {
     private double balance;
     private int accountNumber = 1122;
-    private String pin;
+    private String pin = "correct";
 
 
     public void deposit(int amount) {
@@ -20,5 +20,9 @@ public class GtBank {
         if (amount > 0 && balance >= amount) {
             this.balance -= amount;
         }  else { throw new InsufficientBalanceException("Insufficient balance"); }
+    }
+
+    public String getPin() {
+        return pin;
     }
 }
