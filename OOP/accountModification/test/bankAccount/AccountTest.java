@@ -13,9 +13,9 @@ public class AccountTest {
     GtBank gtBank = new GtBank();
 
     @BeforeEach
-    public void checkIfPinIsCorrect() {
-        assertEquals("correct", account.getPin());
-        assertEquals("correct", gtBank.getPin());
+    public void pinIsCorrectTest() {
+        assertEquals(1234, account.getPin());
+        assertEquals(1234, gtBank.getPin());
     }
 
     @Test

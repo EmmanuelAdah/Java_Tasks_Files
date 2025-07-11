@@ -1,10 +1,10 @@
 package bankAcount;
 
 public class GtBank {
+    private String name = "Emma";
     private double balance;
     private int accountNumber = 1122;
-    private String pin = "correct";
-
+    private int pin = 1234;
 
     public void deposit(int amount) {
         if (amount > 0) {
@@ -22,7 +22,11 @@ public class GtBank {
         }  else { throw new InsufficientBalanceException("Insufficient balance"); }
     }
 
-    public String getPin() {
+    public int getPin() {
         return pin;
+    }
+
+    public String getName() {
+        return name;
     }
 }

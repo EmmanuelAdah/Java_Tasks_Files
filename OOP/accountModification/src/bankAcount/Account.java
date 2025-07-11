@@ -1,10 +1,11 @@
 package bankAcount;
 
 public class Account {
+    private String name = "Adah";
     private double balance;
     private int amount;
     private int accountNumber = 3311;
-    private final String pin = "correct";
+    private final int pin = 1234;
 
     public double getBalance() {
         return balance;
@@ -22,7 +23,11 @@ public class Account {
         } else { throw new InsufficientBalanceException("Insufficient Balance"); }
     }
 
-    public String getPin() {
+    public int getPin() {
         return pin;
+    }
+
+    public String getName() {
+        return name;
     }
 }
