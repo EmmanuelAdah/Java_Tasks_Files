@@ -1,5 +1,4 @@
 package bankAcount;
-
 import java.util.Scanner;
 
 public class AccountMain {
@@ -23,18 +22,20 @@ public class AccountMain {
             System.out.printf("%s%nEnter selection: ",accountMenu);
             int choice = input.nextInt();
             switch (choice) {
-                case 1: System.out.println(account.getBalance());
-                case 2: {
+                case 1: System.out.println("Your balance is: " + account.getBalance()); break;
+                case 2:
                     System.out.print("Enter deposit amount: ");
                     int depositAmount = input.nextInt();
                     account.deposit(depositAmount);
-                }
-                case 3: {
+                    break;
+
+                case 3:
                     System.out.print("Enter withdrawal amount: ");
                     int withdrawAmount = input.nextInt();
                     account.withdraw(withdrawAmount);
-                } break;
-                case 4: {
+                    break;
+
+                case 4:
                     System.out.print("Enter amount to transfer: ");
                     int amount = input.nextInt();
 
@@ -42,11 +43,20 @@ public class AccountMain {
                     int accountNumber = input.nextInt();
 
                     System.out.print("Enter pin: ");
-                    String pin = input.next();
-                }
-                case 5: {
-                    transaction = false;
-                }
+                    int pin = input.nextInt();
+
+                        if (accountNumber == gtBank.getAccountNumber()) {
+                            if (account.getPin() == pin) {
+                                account.withdraw(amount);
+                                gtBank.deposit(amount);
+                            } System.out.println("Incorrect Pin! Try again!");
+                        } System.out.println("Account number not found");
+                        break;
+
+                case 5: System.out.print("Good bye!...");  transaction = false;
+
+                default:
+                    break;
             }
         }
     }

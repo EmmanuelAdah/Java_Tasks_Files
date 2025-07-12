@@ -29,4 +29,8 @@ public class GtBank {
     public String getName() {
         return name;
     }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
 }
