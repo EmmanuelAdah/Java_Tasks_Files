@@ -4,7 +4,7 @@ public class GtBank {
     private String name = "Emma";
     private double balance;
     private int accountNumber = 1122;
-    private int pin = 1234;
+    private final int pin = 1234;
 
     public void deposit(int amount) {
         if (amount > 0) {

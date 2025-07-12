@@ -4,7 +4,7 @@ public class Account {
     private String name = "Adah";
     private double balance;
     private int amount;
-    private int accountNumber = 3311;
+    private final int accountNumber = 3311;
     private final int pin = 1234;
 
     public double getBalance() {
