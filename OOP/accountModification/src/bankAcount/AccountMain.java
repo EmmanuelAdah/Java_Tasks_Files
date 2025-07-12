@@ -1,4 +1,5 @@
 package bankAcount;
+
 import java.util.Scanner;
 
 public class AccountMain {
@@ -19,6 +20,7 @@ public class AccountMain {
                 """;
         boolean transaction = true;
         while (transaction) {
+            System.out.printf("%s%nEnter selection: ",accountMenu);
             int choice = input.nextInt();
             switch (choice) {
                 case 1: System.out.println(account.getBalance());
@@ -31,7 +33,7 @@ public class AccountMain {
                     System.out.print("Enter withdrawal amount: ");
                     int withdrawAmount = input.nextInt();
                     account.withdraw(withdrawAmount);
-                }
+                } break;
                 case 4: {
                     System.out.print("Enter amount to transfer: ");
                     int amount = input.nextInt();
