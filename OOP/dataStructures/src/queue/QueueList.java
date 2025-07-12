@@ -23,10 +23,16 @@ public class QueueList {
         return size;
     }
 
-    public void removeQueueItem(String item) {
+    public void pollQueueItem(String item) {
         for (String name : que) {
             if (size == 0) throw new QueueUnderFlowException("Queue is empty");
-            if (item.equalsIgnoreCase(name)) { que[--size] = null; }
+            if (item.equalsIgnoreCase(name)) { que[0] = null;
+                size--;
+            }
         }
+    }
+
+    public String peekItemFromList() {
+        return que[0];
     }
 }

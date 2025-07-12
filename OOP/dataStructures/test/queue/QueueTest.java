@@ -26,17 +26,17 @@ public class QueueTest {
     }
 
     @Test
-    public void removeItemFromQueueTest(){
+    public void pollItemFromQueueTest(){
         queue.addItemToQueue("Emma");
         queue.addItemToQueue("Kels");
-        queue.removeQueueItem("Kels");
+        queue.pollQueueItem("Kels");
 
         assertEquals(1, queue.getQueueSize());
     }
 
     @Test
     public void queueOverFlowExceptionTest(){
-        assertThrows(QueueUnderFlowException.class, () -> queue.removeQueueItem("Emma"));
+        assertThrows(QueueUnderFlowException.class, () -> queue.pollQueueItem("Emma"));
     }
 
     @Test
@@ -46,5 +46,12 @@ public class QueueTest {
         queue.addItemToQueue("Emma");
         queue.addItemToQueue("Kels");
         assertThrows(QueueOverFlowException.class, () -> queue.addItemToQueue("Emma"));
+    }
+
+    @Test
+    public void peekItemFromQueueTest(){
+        queue.addItemToQueue("Emma");
+        queue.addItemToQueue("Kels");
+        assertEquals("Emma", queue.peekItemFromList());
     }
 }

@@ -67,4 +67,15 @@ public class MovieRating {
     public ArrayList<ArrayList<Double>> getRatingList() {
         return this.ratingList;
     }
+
+    public float averageRatingForMovie(String title) {
+        int count = 0;
+        float average = 0;
+        for(String[] movie : movieList){
+            if (movie[0].equalsIgnoreCase(title)) {
+                average = sum(ratingList.get(count)) / ratingList.get(count).size();
+            }
+        }
+        return average;
+    }
 }
