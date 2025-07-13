@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MovieRatingTest {
     movieRatings.Movie movie = new movieRatings.Movie();
+    movieRatings.Rating rating = new movieRatings.Rating();
 
     @Test
     public void movieListIsEmptyTest(){
@@ -40,5 +41,10 @@ public class MovieRatingTest {
         movie.addMovieToList("Coco");
         movie.removeMovie("coco");
         assertEquals(2, movie.movieListSize());
+    }
+
+    @Test
+    public void ratingListIsEmptyTest(){
+        assertTrue(rating.getRatingListSize());
     }
 }
