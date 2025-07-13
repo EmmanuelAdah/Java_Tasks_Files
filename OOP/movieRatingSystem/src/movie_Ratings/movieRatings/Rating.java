@@ -15,13 +15,22 @@ public class Rating extends Movie {
     public void averageMovieRating() {
         int count = 0;
         for (String[] movie : getMovieList()){
-            double total = 0;
-            for (int index = 0; index < ratingList.get(count).size(); index++) {
-                total += ratingList.get(count).get(index);
+            double sum = 0;
+            for (int index = 0; index < ratingList.get(count).size(); index++){
+                sum += ratingList.get(count).get(index);
             }
-            double average = total / ratingList.get(count).size();
+            float average = (float) (sum / ratingList.get(count).size());
             System.out.printf("%s  %.1f%n", movie[0], average);
             count++;
+        }
+    }
+
+    public void addMovieRating(String title, float rating) {
+        int count = 0;
+        for (String[] movie : getMovieList()){
+            if (movie[0].equalsIgnoreCase(title)){
+                this.ratingList.get(count).add(rating);
+            } count++;
         }
     }
 }

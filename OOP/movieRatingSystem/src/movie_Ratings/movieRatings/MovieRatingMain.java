@@ -28,13 +28,19 @@ public class MovieRatingMain {
                     String title = sc.next();
                     rating.addMovieToList(title);
                     rating.addListToRatingList();
+                    System.out.printf("%s was added successfully!...%n", title);
                     break;
                 case 2:
                     System.out.print("Enter movie name: ");
-                    String name = sc.next();
-                    System.out.print("Enter movie rating: ");
-                    float rate = sc.nextFloat();
-                    break;
+                    String movieName = sc.next();
+                    if (rating.getMovieList().stream().noneMatch(movie -> movie[0].equalsIgnoreCase(movieName))){
+                        System.out.println("Movie does not exist!");
+                    } else {
+                        System.out.print("Enter movie rating: ");
+                        float rate = sc.nextFloat();
+                        rating.addMovieToList(movieName);
+                        rating.addMovieRating(movieName, rate);
+                    } break;
                 case 3:
                     if (!rating.movieListIsEmpty()){
                         rating.averageMovieRating();

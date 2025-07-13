@@ -20,6 +20,7 @@ public class Movie {
 
     public void addMovieToList(String title) {
         this.movieList.add(new String[]{title, dateAndTime});
+
     }
 
     public int movieListSize() {
