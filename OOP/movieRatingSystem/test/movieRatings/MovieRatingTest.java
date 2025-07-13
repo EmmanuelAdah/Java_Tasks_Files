@@ -1,40 +1,44 @@
 package movieRatings;
 
 import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MovieRatingTest {
-    MovieRating movieRating = new MovieRating();
+    movieRatings.Movie movie = new movieRatings.Movie();
 
     @Test
     public void movieListIsEmptyTest(){
-        assertFalse(movieRating.getListSize() > 0);
+        assertTrue(movie.movieListIsEmpty());
     }
 
     @Test
     public void movieListIsNotEmptyTest(){
-        movieRating.addMovieToList("Semi");
-        assertTrue(movieRating.getListSize() > 0);
+        movie.addMovieToList("Semi");
+        assertFalse(movie.movieListIsEmpty());
     }
 
     @Test
     public void addMovieToListTest(){
-        movieRating.addMovieToList("Coco");
-        assertEquals(1, movieRating.getListSize());
-        movieRating.addMovieToList("Baghban");
-        assertEquals(2, movieRating.getListSize());
+        movie.addMovieToList("Semi");
+        movie.addMovieToList("coco");
+        assertEquals(2, movie.movieListSize());
     }
 
     @Test
-    public void rateMovieInListTest(){
-        movieRating.addMovieToList("Semi");
-        movieRating.addMovieToList("Coco");
-        movieRating.addMovieToList("Baghban");
-        movieRating.rateMovie("semi",2.3);
-        movieRating.rateMovie("coco",4.5);
-        movieRating.rateMovie("coco",4.2);
-        ArrayList<ArrayList<Double>> list = movieRating.getRatingList();
-        assertEquals(list, movieRating.getRatingList());
+    public void removeMovieFromListTest(){
+        movie.addMovieToList("Semi");
+        movie.addMovieToList("Race");
+        movie.removeMovie("Semi");
+        assertEquals(1, movie.movieListSize());
+    }
+
+    @Test
+    public void removeMovieWithSameNameFromListTest(){
+        movie.addMovieToList("Semi");
+        movie.addMovieToList("coco");
+        movie.addMovieToList("Race");
+        movie.addMovieToList("Coco");
+        movie.removeMovie("coco");
+        assertEquals(2, movie.movieListSize());
     }
 }

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eda0287e-2fec-4b50-b032-224727dca76d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/movieRatings/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/movieRatings/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercise/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercise/Practice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercise/out/production/Exercise/Practice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercise/out/production/Exercise/Practice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Deitel_Exercises/Chapter 4 Tasks/SumOfIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Deitel_Exercises/Chapter 4 Tasks/SumOfIntegers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Deitel_Exercises/Chapter 6 Tasks/healthProfileApplication/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Deitel_Exercises/Chapter 6 Tasks/healthProfileApplication/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Deitel_Exercises/Chapter 6 Tasks/healthProfileApplication/src/heartRates/HeartRates.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Deitel_Exercises/Chapter 6 Tasks/healthProfileApplication/src/heartRates/HeartRates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Deitel_Exercises/Chapter 6 Tasks/healthProfileApplication/test/heartRates/HeartRatesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Deitel_Exercises/Chapter 6 Tasks/healthProfileApplication/test/heartRates/HeartRatesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/OOP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/OOP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movieRatings/MovieRatingMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/movieRatings/MovieRating.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/movieRatings/MovieRatingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/movieRatings/MovieRatingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/movieRatings/RatingOutOfBoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/OOP/MovieRatingMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ac_simulator/AcSimulation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/accountModification/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/accountModification/bankAcount/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/accountModification/bankAcount/AccountMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/accountModification/bankAcount/AccountNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/accountModification/bankAcount/GtBank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/accountModification/bankAcount/InsufficientBalanceException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/accountModification/bankAcount/InvalidAmountException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/automaticBike/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/automaticBike/automaticBike/AutomaticBike.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/Television.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/list/ListArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/list/ListOverFlowException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/list/ListUnderFlowException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/queue/QueueList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/queue/QueueOverFlowException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/queue/QueueUnderFlowException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/stack/PrintingAlphabets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/stack/StackArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/stack/StackOverFlowException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dataStructures/stack/StackUnderFlowException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/Billing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/CardType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/CreditCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/Customers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/InvalidCardException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/Items.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/Practice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/ProductCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/Sellers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/ShoppingCart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/e_store/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/enumTask/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/enumTask/PoliticalZoneMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/enumTask/geoPoliticalZone/GeoPoliticalZone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/enumTask/geoPoliticalZone/PoliticalZone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/OOP/movieRatings/MovieRating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/OOP/movieRatings/MovieRatingTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/OOP/movieRatings/RatingOutOfBoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/ac_simulator/AcSimulationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/accountModification/bankAccount/AccountTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/automaticBike/automaticBike/AutomaticBikeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/dataStructures/TelevisionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/dataStructures/list/ListArrayTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/dataStructures/queue/QueueTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/dataStructures/stack/StackTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/test/enumTask/geoPoliticalZone/PoliticalZoneTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2zonq8lf70X1AKwnO0FodGVMRmD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.MovieRatingTest.addMovieToListTest.executor": "Run",
+    "JUnit.MovieRatingTest.executor": "Run",
+    "JUnit.MovieRatingTest.movieListIsEmptyTest.executor": "Run",
+    "JUnit.MovieRatingTest.movieListIsNotEmptyTest.executor": "Run",
+    "JUnit.MovieRatingTest.removeMovieFromListTest.executor": "Run",
+    "JUnit.MovieRatingTest.removeMovieWithSameNameFromListTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/DELL/OneDrive/Documents/Java_Files/OOP/movieRatingSystem/src/Main.java",
+    "settings.editor.selected.configurable": "editor.preferences.folding",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="movieRatings" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MovieRatingTest.removeMovieWithSameNameFromListTest">
+    <configuration name="MovieRatingTest.addMovieToListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movieRatingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="movieRatings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="movieRatings" />
+      <option name="MAIN_CLASS_NAME" value="movieRatings.MovieRatingTest" />
+      <option name="METHOD_NAME" value="addMovieToListTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieRatingTest.movieListIsEmptyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movieRatingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="movieRatings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="movieRatings" />
+      <option name="MAIN_CLASS_NAME" value="movieRatings.MovieRatingTest" />
+      <option name="METHOD_NAME" value="movieListIsEmptyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieRatingTest.movieListIsNotEmptyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movieRatingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="movieRatings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="movieRatings" />
+      <option name="MAIN_CLASS_NAME" value="movieRatings.MovieRatingTest" />
+      <option name="METHOD_NAME" value="movieListIsNotEmptyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieRatingTest.removeMovieFromListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movieRatingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="movieRatings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="movieRatings" />
+      <option name="MAIN_CLASS_NAME" value="movieRatings.MovieRatingTest" />
+      <option name="METHOD_NAME" value="removeMovieFromListTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieRatingTest.removeMovieWithSameNameFromListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movieRatingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="movieRatings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="movieRatings" />
+      <option name="MAIN_CLASS_NAME" value="movieRatings.MovieRatingTest" />
+      <option name="METHOD_NAME" value="removeMovieWithSameNameFromListTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MovieRatingTest.removeMovieWithSameNameFromListTest" />
+        <item itemvalue="JUnit.MovieRatingTest.removeMovieFromListTest" />
+        <item itemvalue="JUnit.MovieRatingTest.addMovieToListTest" />
+        <item itemvalue="JUnit.MovieRatingTest.movieListIsNotEmptyTest" />
+        <item itemvalue="JUnit.MovieRatingTest.movieListIsEmptyTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eda0287e-2fec-4b50-b032-224727dca76d" name="Changes" comment="" />
+      <created>1752406483082</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752406483082</updated>
+      <workItem from="1752406484476" duration="5308000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/movieRatingSystem$MovieRatingTest_movieListIsEmptyTest.ic" NAME="MovieRatingTest.movieListIsEmptyTest Coverage Results" MODIFIED="1752407958357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>movieRatings.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/movieRatingSystem$MovieRatingTest_removeMovieFromListTest.ic" NAME="MovieRatingTest.removeMovieFromListTest Coverage Results" MODIFIED="1752411998092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>movieRatings.*</FILTER>
+    </SUITE>
+  </component>
+</project>
