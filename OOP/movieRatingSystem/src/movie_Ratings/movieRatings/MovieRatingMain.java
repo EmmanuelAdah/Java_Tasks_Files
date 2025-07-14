@@ -21,16 +21,16 @@ public class MovieRatingMain {
         boolean movies = true;
         while(movies){
             System.out.printf("%s%nEnter your choice: ",movieMenu);
-            int choice = sc.nextInt();
+            String choice = sc.next();
             switch(choice){
-                case 1:
+                case "1":
                     System.out.print("Enter movie title: ");
                     String title = sc.next();
                     rating.addMovieToList(title);
                     rating.addListToRatingList();
                     System.out.printf("%s was added successfully!...%n", title);
                     break;
-                case 2:
+                case "2":
                     System.out.print("Enter movie name: ");
                     String movieName = sc.next();
                     if (rating.getMovieList().stream().noneMatch(movie -> movie[0].equalsIgnoreCase(movieName))){
@@ -41,15 +41,18 @@ public class MovieRatingMain {
                         rating.addMovieToList(movieName);
                         rating.addMovieRating(movieName, rate);
                     } break;
-                case 3:
+                case "3":
                     if (!rating.movieListIsEmpty()){
                         rating.averageMovieRating();
                     } else {
                         System.out.println("There is no movie in the list");
                     } break;
-                case 4:
+                case "4":
                     System.out.println("Thank you for using Vince Movies \nGoodBye!...");
                     movies = false;
+                    break;
+                default:
+                    System.out.println("Invalid option. try again!...");
             }
         }
     }
