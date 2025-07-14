@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public class RunwayLength {
-
+public class RunwayLength_ {
 	public static void main(String[] args) {
 
 	Scanner input = new Scanner(System.in);

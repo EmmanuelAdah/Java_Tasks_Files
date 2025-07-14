@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public class SumOfEvenAndOddIntegers {
-
+public class SumOfEvenAndOddIntegers1 {
 	public static void main(String[] args) {
 
 	Scanner input = new Scanner(System.in);

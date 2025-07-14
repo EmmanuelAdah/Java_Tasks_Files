@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class IntegerDifference {
+public class IntegerDifference_ {
 	public static void main(String[] args){
 
 	Scanner input = new Scanner(System.in);

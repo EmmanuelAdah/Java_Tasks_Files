@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public class FeetToMeterConverter {
-
+public class FeetToMeterConverter_ {
 	public static void main(String[] args) {
 
 	Scanner input = new Scanner(System.in);

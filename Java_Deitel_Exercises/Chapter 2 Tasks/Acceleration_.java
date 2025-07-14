@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public class Acceleration {
-
+public class Acceleration_ {
 	public static void main(String[] args) {
 
 	Scanner input = new Scanner(System.in);

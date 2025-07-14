@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public class DriveCostCalculator {
-
+public class DriveCostCalculator1 {
 	public static void main(String[] args) {
 
 	Scanner input = new Scanner(System.in);
