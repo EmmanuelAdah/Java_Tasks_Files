@@ -1,7 +1,7 @@
 package bankAcount;
 import java.util.Scanner;
 
-public class AccountMain {
+public class Bank {
     public static void main(String... args) {
         Scanner input = new Scanner(System.in);
 
@@ -9,13 +9,17 @@ public class AccountMain {
         GtBank gtBank = new GtBank();
 
         String accountMenu = """
+                ==========================
                 Welcome to Mobile Banking
+                ==========================
                 Press :-
+                --------------------------
                 1 > Balance
                 2 > Deposit
                 3 > Withdraw
                 4 > Transfer
                 5 > Exit
+                ===========================
                 """;
         boolean transaction = true;
         while (transaction) {
