@@ -19,6 +19,13 @@ public class BookTest {
     }
 
     @Test
+    public void bookDetailTest(){
+        book.setBookTitle("Peace");
+        book.setBookAuthor("Mr. Dapo");
+        System.out.println(book.toString());
+    }
+
+    @Test
     public void bookIsbnTest(){
         book.setIsbn("27327TR623");
         assertEquals("27327TR623", book.getIsbn());

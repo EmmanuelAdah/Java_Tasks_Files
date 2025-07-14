@@ -19,4 +19,9 @@ public class Book {
     public String getBookAuthor() {
         return bookAuthor;
     }
+
+    public String toString() {
+        String bookDetails = String.format("Book Title: %s %nAuthor: %s %n", bookTitle, bookAuthor);
+        return bookDetails;
+    }
 }
