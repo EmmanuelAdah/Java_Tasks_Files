@@ -29,4 +29,24 @@ public class BookTest {
         book.setPublisher("WatchTower's Lmt");
         assertEquals("WatchTower's Lmt", book.getPublisher());
     }
+
+    AudioBook books = new AudioBook();
+
+    @Test
+    public void audioBookSizeTest(){
+        books.setArtistName("Jack Ma");
+        assertEquals("Jack Ma", books.getArtistName());
+    }
+
+    @Test
+    public void audioBookPlayLengthTest(){
+        books.setPlayLength("45:08");
+        assertEquals("45:08", books.getPlayLength());
+    }
+
+    @Test
+    public void validBookSizeTest(){
+        books.setBookSize("56 MB");
+        assertEquals("56 MB", books.getBookSize());
+    }
 }
