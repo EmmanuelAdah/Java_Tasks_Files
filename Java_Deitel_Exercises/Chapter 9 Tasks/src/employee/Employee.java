@@ -10,24 +10,13 @@ public class Employee {
         this.lastName = lastName;
         this.socialSecurityNumber = socialSecurityNumber;
     }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getLastName() {
         return lastName;
-    }
-
-    public void setSocialSecurityNumber(String securityNumber) {
-        this.socialSecurityNumber = securityNumber;
     }
 
     public String getSocialSecurityNumber() {

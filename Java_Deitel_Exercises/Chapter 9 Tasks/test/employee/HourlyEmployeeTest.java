@@ -8,20 +8,17 @@ public class HourlyEmployeeTest {
 
     @Test
     public void employeeFirstNameTest(){
-        employee.setFirstName("Emma");
-        assertEquals("Emma", employee.getFirstName());
+        assertEquals("Dapo", employee.getFirstName());
     }
 
     @Test
     public void employeeLastNameTest(){
-        employee.setLastName("James");
-        assertEquals("James", employee.getLastName());
+        assertEquals("Oluwatosin", employee.getLastName());
     }
 
     @Test
     public void employeeSocialSecurityNumberTest(){
-        employee.setSocialSecurityNumber("NT345");
-        assertEquals("NT345", employee.getSocialSecurityNumber());
+        assertEquals("GN356", employee.getSocialSecurityNumber());
     }
 
     @Test
@@ -34,6 +31,4 @@ public class HourlyEmployeeTest {
         assertEquals(176.4, employee.earnings());
         System.out.println(employee.toString());
     }
-
-
 }

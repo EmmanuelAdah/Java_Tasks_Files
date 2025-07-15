@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d171318-cdb4-4cbf-aa7b-baa09f9da3cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/employee/CommissionCompensationModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/employee/InvalidCommissionRateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/employee/InvalidSalesAmountException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/employee/CommissionCompensationModelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Exercise/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercise/Practice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Exercise/out/production/Exercise/Practice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercise/out/production/Exercise/Practice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
@@ -13,7 +17,9 @@
       <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/src/heartRates/HeartRates.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/src/heartRates/HeartRates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/test/heartRates/HeartRatesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/test/heartRates/HeartRatesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employee/HourlyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/HourlyEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/employee/HourlyEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/employee/HourlyEmployeeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Java_Files.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../OOP/ac_simulator/ac_simulator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/ac_simulator/ac_simulator.iml" afterDir="false" />
@@ -57,6 +63,8 @@
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.BookTest.detailsToStringTest.executor": "Run",
     "JUnit.BookTest.executor": "Run",
+    "JUnit.CommissionCompensationModelTest.employeeEarningsTest.executor": "Coverage",
+    "JUnit.CommissionCompensationModelTest.executor": "Coverage",
     "JUnit.HourlyEmployeeTest.employeeSocialSecurityNumberTest.executor": "Run",
     "JUnit.HourlyEmployeeTest.employeeTotalWageTest.executor": "Run",
     "JUnit.HourlyEmployeeTest.employeeWorkHoursTest.executor": "Coverage",
@@ -82,18 +90,33 @@
       <recent name="employee" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HourlyEmployeeTest.employeeTotalWageTest">
-    <configuration name="BookTest.detailsToStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.HourlyEmployeeTest">
+    <configuration name="CommissionCompensationModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Chapter 9 Tasks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="book.*" />
+          <option name="PATTERN" value="employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="book" />
-      <option name="MAIN_CLASS_NAME" value="book.BookTest" />
-      <option name="METHOD_NAME" value="detailsToStringTest" />
+      <option name="PACKAGE_NAME" value="employee" />
+      <option name="MAIN_CLASS_NAME" value="employee.CommissionCompensationModelTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommissionCompensationModelTest.employeeEarningsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Chapter 9 Tasks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="employee" />
+      <option name="MAIN_CLASS_NAME" value="employee.CommissionCompensationModelTest" />
+      <option name="METHOD_NAME" value="employeeEarningsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,22 +133,6 @@
       <option name="PACKAGE_NAME" value="employee" />
       <option name="MAIN_CLASS_NAME" value="employee.HourlyEmployeeTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HourlyEmployeeTest.employeeSocialSecurityNumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Chapter 9 Tasks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="employee" />
-      <option name="MAIN_CLASS_NAME" value="employee.HourlyEmployeeTest" />
-      <option name="METHOD_NAME" value="employeeSocialSecurityNumberTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HourlyEmployeeTest.employeeTotalWageTest" />
         <item itemvalue="JUnit.HourlyEmployeeTest" />
+        <item itemvalue="JUnit.CommissionCompensationModelTest.employeeEarningsTest" />
+        <item itemvalue="JUnit.CommissionCompensationModelTest" />
+        <item itemvalue="JUnit.HourlyEmployeeTest.employeeTotalWageTest" />
         <item itemvalue="JUnit.HourlyEmployeeTest.employeeWorkHoursTest" />
-        <item itemvalue="JUnit.HourlyEmployeeTest.employeeSocialSecurityNumberTest" />
-        <item itemvalue="JUnit.BookTest.detailsToStringTest" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +186,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752568500330</updated>
-      <workItem from="1752568501672" duration="8060000" />
+      <workItem from="1752568501672" duration="14211000" />
     </task>
     <servers />
   </component>
@@ -202,6 +209,12 @@
       <FILTER>employee.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Chapter_9_Tasks$HourlyEmployeeTest_employeeWorkHoursTest.ic" NAME="HourlyEmployeeTest.employeeWorkHoursTest Coverage Results" MODIFIED="1752572167943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>employee.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Chapter_9_Tasks$CommissionCompensationModelTest_employeeEarningsTest.ic" NAME="CommissionCompensationModelTest.employeeEarningsTest Coverage Results" MODIFIED="1752590724328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>employee.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Chapter_9_Tasks$CommissionCompensationModelTest.ic" NAME="CommissionCompensationModelTest Coverage Results" MODIFIED="1752589980066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>employee.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Chapter_9_Tasks$BookTest.ic" NAME="BookTest Coverage Results" MODIFIED="1752568968270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
