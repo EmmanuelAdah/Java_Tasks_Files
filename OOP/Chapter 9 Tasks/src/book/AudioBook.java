@@ -2,10 +2,10 @@ package book;
 
 public class AudioBook extends Book{
     private String artistName;
-    private String bookSize;
+    private float bookSize;
     private String playLength;
 
-    public AudioBook(String bookTitle, String bookAuthor, String artistName, String bookSize, String playLength) {
+    public AudioBook(String bookTitle, String bookAuthor, String artistName, float bookSize, String playLength) {
         super(bookTitle, bookAuthor);
         this.artistName = artistName;
         this.bookSize = bookSize;
@@ -28,17 +28,17 @@ public class AudioBook extends Book{
         return playLength;
     }
 
-    public void setBookSize(String bookSize) {
+    public void setBookSize(float bookSize) {
         this.bookSize = bookSize;
     }
 
     public String getBookSize() {
-        return bookSize;
+        return String.format("%.1f MB", bookSize);
     }
 
     @Override
     public String toString() {
-        String bookDetails = String.format("%s %n%s %n%s %n%s %n%s", getBookTitle(), getBookAuthor(), getArtistName(), getBookSize(), getPlayLength());
+        String bookDetails = String.format("Book Tittle: %s %nBook Author: %s %nArtist Name: %s %nBook Size: %.1f %nPlay Length: %s%n", getBookTitle(), getBookAuthor(), getArtistName(), getBookSize(), getPlayLength());
         return bookDetails;
     }
 }

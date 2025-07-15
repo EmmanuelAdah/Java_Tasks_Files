@@ -35,12 +35,6 @@ public class BookTest {
         assertEquals("Wale J.K", book.getBookAuthor());
     }
 
-    @Test
-    public void bookDetailTest(){
-        book.setBookTitle("Peace");
-        book.setBookAuthor("Mr. Dapo");
-        System.out.println(book.toString());
-    }
 
     @Test
     public void bookIsbnTest(){
@@ -69,7 +63,7 @@ public class BookTest {
         System.out.println(book.toString());
     }
 
-    AudioBook books = new AudioBook("Rich Mindset", "The Mind", "MIND", "23 MB", "23:34");
+    AudioBook books = new AudioBook("Rich Mindset", "The Mind", "MIND", 23.0f, "23:34");
 
     @Test
     public void audioBookArtistTest(){
@@ -95,8 +89,8 @@ public class BookTest {
 
     @Test
     public void validBookSizeTest(){
-        books.setBookSize("23 MB");
-        assertEquals("23 MB", books.getBookSize());
+        books.setBookSize(23.4F);
+        assertEquals("23.4 MB", books.getBookSize());
     }
 
     @Test

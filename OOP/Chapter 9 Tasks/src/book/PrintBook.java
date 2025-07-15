@@ -28,7 +28,7 @@ public class PrintBook extends Book {
 
     @Override
     public String toString() {
-        String bookDetails = String.format("Book Tittle: %s %nBook Author: %s %nPublisher: %s %nISBN: %s", getBookTitle(), getBookAuthor(), getPublisher(), getIsbn());
+        String bookDetails = String.format("Book Tittle: %s %nBook Author: %s %nPublisher: %s %nISBN: %s%n", getBookTitle(), getBookAuthor(), getPublisher(), getIsbn());
         return bookDetails;
     }
 }
