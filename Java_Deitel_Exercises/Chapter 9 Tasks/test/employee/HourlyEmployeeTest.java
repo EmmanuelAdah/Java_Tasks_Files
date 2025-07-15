@@ -31,8 +31,10 @@ public class HourlyEmployeeTest {
 
     @Test
     public void employeeTotalWageTest(){
-        employee.setEmployeeTotalWage();
+        employee.earnings();
         assertEquals(176.4, employee.getEmployeeTotalWages());
         System.out.println(employee.toString());
     }
+
+
 }

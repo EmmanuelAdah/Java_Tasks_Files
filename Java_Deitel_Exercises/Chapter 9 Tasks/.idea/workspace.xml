@@ -13,9 +13,6 @@
       <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/src/heartRates/HeartRates.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/src/heartRates/HeartRates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/test/heartRates/HeartRatesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/test/heartRates/HeartRatesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employee/HourlyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/HourlyEmployee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/employee/HourlyEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/employee/HourlyEmployeeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Java_Files.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../OOP/ac_simulator/ac_simulator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/ac_simulator/ac_simulator.iml" afterDir="false" />
@@ -84,7 +81,7 @@
       <recent name="employee" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HourlyEmployeeTest">
+  <component name="RunManager" selected="JUnit.HourlyEmployeeTest.employeeTotalWageTest">
     <configuration name="BookTest.detailsToStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Chapter 9 Tasks" />
       <extension name="coverage">
@@ -166,8 +163,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HourlyEmployeeTest" />
         <item itemvalue="JUnit.HourlyEmployeeTest.employeeTotalWageTest" />
+        <item itemvalue="JUnit.HourlyEmployeeTest" />
         <item itemvalue="JUnit.HourlyEmployeeTest.employeeWorkHoursTest" />
         <item itemvalue="JUnit.HourlyEmployeeTest.employeeSocialSecurityNumberTest" />
         <item itemvalue="JUnit.BookTest.detailsToStringTest" />
@@ -181,7 +178,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752568500330</updated>
-      <workItem from="1752568501672" duration="7039000" />
+      <workItem from="1752568501672" duration="7581000" />
     </task>
     <servers />
   </component>
@@ -200,7 +197,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Chapter_9_Tasks$HourlyEmployeeTest.ic" NAME="HourlyEmployeeTest Coverage Results" MODIFIED="1752571821361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Chapter_9_Tasks$HourlyEmployeeTest.ic" NAME="HourlyEmployeeTest Coverage Results" MODIFIED="1752576018943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>employee.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Chapter_9_Tasks$HourlyEmployeeTest_employeeWorkHoursTest.ic" NAME="HourlyEmployeeTest.employeeWorkHoursTest Coverage Results" MODIFIED="1752572167943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

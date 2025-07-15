@@ -26,7 +26,7 @@ public class HourlyEmployee extends Employee{
         return hours;
     }
 
-    public void setEmployeeTotalWage() {
+    public void earnings() {
         this.wage = wage * (hours * 1.5);
     }
 
