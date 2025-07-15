@@ -25,4 +25,10 @@ public class PrintBook extends Book {
     public String getPublisher() {
         return publisher;
     }
+
+    @Override
+    public String toString() {
+        String bookDetails = String.format("Book Tittle: %s %nBook Author: %s %nPublisher: %s %nISBN: %s", getBookTitle(), getBookAuthor(), getPublisher(), getIsbn());
+        return bookDetails;
+    }
 }

@@ -4,6 +4,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BookTest {
+    Book bok = new Book("The Beauty Of Design", "I AM");
+
+    @Test
+    public void printBookDetailTest() {
+        System.out.println(bok.toString());
+    }
+
     PrintBook book = new PrintBook("Design", "Mr. Dapo", "WatchTower's Lmt","27327TR623");
 
     @Test
@@ -57,6 +64,11 @@ public class BookTest {
         assertEquals("The Women's publishers", book.getPublisher());
     }
 
+    @Test
+    public void printBookDetailToStringTest(){
+        System.out.println(book.toString());
+    }
+
     AudioBook books = new AudioBook("Rich Mindset", "The Mind", "MIND", "23 MB", "23:34");
 
     @Test
@@ -85,5 +97,10 @@ public class BookTest {
     public void validBookSizeTest(){
         books.setBookSize("23 MB");
         assertEquals("23 MB", books.getBookSize());
+    }
+
+    @Test
+    public void detailsToStringTest(){
+        System.out.println(books.toString());
     }
 }
