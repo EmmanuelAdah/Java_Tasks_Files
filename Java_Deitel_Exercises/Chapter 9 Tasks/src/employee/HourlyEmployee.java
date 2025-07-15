@@ -26,16 +26,12 @@ public class HourlyEmployee extends Employee{
         return hours;
     }
 
-    public void earnings() {
-        this.wage = wage * (hours * 1.5);
-    }
-
-    public double getEmployeeTotalWages() {
-        return wage;
+    public double earnings() {
+        return wage * (hours * 1.5);
     }
 
     @Override
     public String toString() {
-        return String.format("%sWork Hours: %d %nWages: %.1f%n",super.toString(), getWorkHours(), getEmployeeTotalWages());
+        return String.format("%sWork Hours: %d %nWages: %.1f%n",super.toString(), getWorkHours(), earnings());
     }
 }
