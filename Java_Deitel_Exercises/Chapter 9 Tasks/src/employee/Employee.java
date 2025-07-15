@@ -33,4 +33,8 @@ public class Employee {
     public String getSocialSecurityNumber() {
         return socialSecurityNumber;
     }
+
+    public String toString() {
+        return String.format("First Name: %s %nLast Name: %s %nSocial Security Number: %s%n", getFirstName(), getLastName(), getSocialSecurityNumber());
+    }
 }

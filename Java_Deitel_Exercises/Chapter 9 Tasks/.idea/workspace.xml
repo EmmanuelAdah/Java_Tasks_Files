@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d171318-cdb4-4cbf-aa7b-baa09f9da3cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/employee/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/employee/HourlyEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/employee/HourlyEmployeeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Exercise/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercise/Practice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Exercise/out/production/Exercise/Practice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercise/out/production/Exercise/Practice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
@@ -17,9 +14,9 @@
       <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/src/heartRates/HeartRates.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/src/heartRates/HeartRates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/test/heartRates/HeartRatesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/test/heartRates/HeartRatesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/book/AudioBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/book/AudioBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/book/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/book/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/book/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/employee/HourlyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/HourlyEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/employee/HourlyEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/employee/HourlyEmployeeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Java_Files.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../OOP/ac_simulator/ac_simulator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/ac_simulator/ac_simulator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../OOP/accountModification/accountModification.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/accountModification/accountModification.iml" afterDir="false" />
@@ -63,6 +60,7 @@
     "JUnit.BookTest.detailsToStringTest.executor": "Run",
     "JUnit.BookTest.executor": "Run",
     "JUnit.HourlyEmployeeTest.employeeSocialSecurityNumberTest.executor": "Run",
+    "JUnit.HourlyEmployeeTest.employeeTotalWageTest.executor": "Run",
     "JUnit.HourlyEmployeeTest.employeeWorkHoursTest.executor": "Coverage",
     "JUnit.HourlyEmployeeTest.executor": "Coverage",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -86,22 +84,7 @@
       <recent name="employee" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HourlyEmployeeTest.employeeWorkHoursTest">
-    <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Chapter 9 Tasks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="book.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="book" />
-      <option name="MAIN_CLASS_NAME" value="book.BookTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.HourlyEmployeeTest">
     <configuration name="BookTest.detailsToStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Chapter 9 Tasks" />
       <extension name="coverage">
@@ -149,6 +132,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HourlyEmployeeTest.employeeTotalWageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Chapter 9 Tasks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="employee" />
+      <option name="MAIN_CLASS_NAME" value="employee.HourlyEmployeeTest" />
+      <option name="METHOD_NAME" value="employeeTotalWageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HourlyEmployeeTest.employeeWorkHoursTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Chapter 9 Tasks" />
       <extension name="coverage">
@@ -167,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HourlyEmployeeTest.employeeWorkHoursTest" />
         <item itemvalue="JUnit.HourlyEmployeeTest" />
+        <item itemvalue="JUnit.HourlyEmployeeTest.employeeTotalWageTest" />
+        <item itemvalue="JUnit.HourlyEmployeeTest.employeeWorkHoursTest" />
         <item itemvalue="JUnit.HourlyEmployeeTest.employeeSocialSecurityNumberTest" />
         <item itemvalue="JUnit.BookTest.detailsToStringTest" />
-        <item itemvalue="JUnit.BookTest" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +181,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752568500330</updated>
-      <workItem from="1752568501672" duration="3631000" />
+      <workItem from="1752568501672" duration="7039000" />
     </task>
     <servers />
   </component>
@@ -202,6 +201,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Chapter_9_Tasks$HourlyEmployeeTest.ic" NAME="HourlyEmployeeTest Coverage Results" MODIFIED="1752571821361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>employee.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Chapter_9_Tasks$HourlyEmployeeTest_employeeWorkHoursTest.ic" NAME="HourlyEmployeeTest.employeeWorkHoursTest Coverage Results" MODIFIED="1752572167943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>employee.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Chapter_9_Tasks$BookTest.ic" NAME="BookTest Coverage Results" MODIFIED="1752568968270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

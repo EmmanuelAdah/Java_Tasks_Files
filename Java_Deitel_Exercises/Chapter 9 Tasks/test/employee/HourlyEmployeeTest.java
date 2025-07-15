@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HourlyEmployeeTest {
-    HourlyEmployee employee = new HourlyEmployee("Dapo", "Oluwatosin", "GN356", 56, 2.3);
+    HourlyEmployee employee = new HourlyEmployee("Dapo", "Oluwatosin", "GN356", 56, 2.1);
 
     @Test
     public void employeeFirstNameTest(){
@@ -29,5 +29,10 @@ public class HourlyEmployeeTest {
         assertEquals(56, employee.getWorkHours());
     }
 
-
+    @Test
+    public void employeeTotalWageTest(){
+        employee.setEmployeeTotalWage();
+        assertEquals(176.4, employee.getEmployeeTotalWages());
+        System.out.println(employee.toString());
+    }
 }
