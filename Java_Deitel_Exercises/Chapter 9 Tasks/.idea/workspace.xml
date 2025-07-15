@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5d171318-cdb4-4cbf-aa7b-baa09f9da3cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../OOP/automaticBikeApp/automaticBikeApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercise/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercise/Practice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercise/out/production/Exercise/Practice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercise/out/production/Exercise/Practice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 2 Tasks/Mr. Chi's Excercises/MinutesConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 2 Tasks/Mr. Chi's Excercises/MinutesConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 4 Tasks/SumOfIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 4 Tasks/SumOfIntegers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/src/heartRates/HeartRates.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/src/heartRates/HeartRates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/test/heartRates/HeartRatesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 6 Tasks/healthProfileApplication/test/heartRates/HeartRatesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/Chapter 9 Tasks.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/src/book/AudioBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/book/AudioBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/src/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/src/book/PrintBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/book/PrintBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/Chapter 9 Tasks/test/book/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/book/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/ac_simulator/ac_simulator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/ac_simulator/ac_simulator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/accountModification/accountModification.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/accountModification/accountModification.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/dataStructures/dataStructures.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/dataStructures/dataStructures.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/enumTask/enumTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/enumTask/enumTask.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/movieRatingSystem/movieRatingSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/movieRatingSystem/movieRatingSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/movieRatingSystem/src/movie_Ratings/movieRatings/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/movieRatingSystem/src/movie_Ratings/movieRatings/Rating.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2zu6ENvVQX8XKrER7shbR4is9fB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.BookTest.detailsToStringTest.executor": "Run",
+    "JUnit.BookTest.executor": "Coverage",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/DELL/OneDrive/Documents/Java_Files/Java_Deitel_Exercises/Chapter 9 Tasks/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Chapter 9 Tasks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="book.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="book" />
+      <option name="MAIN_CLASS_NAME" value="book.BookTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookTest.detailsToStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Chapter 9 Tasks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="book.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="book" />
+      <option name="MAIN_CLASS_NAME" value="book.BookTest" />
+      <option name="METHOD_NAME" value="detailsToStringTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BookTest.detailsToStringTest" />
+        <item itemvalue="JUnit.BookTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d171318-cdb4-4cbf-aa7b-baa09f9da3cb" name="Changes" comment="" />
+      <created>1752568500330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752568500330</updated>
+      <workItem from="1752568501672" duration="713000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Chapter_9_Tasks$BookTest.ic" NAME="BookTest Coverage Results" MODIFIED="1752568968270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>book.*</FILTER>
+    </SUITE>
+  </component>
+</project>

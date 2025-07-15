@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java_Deitel_Exercises/Chapter 9 Tasks/Chapter 9 Tasks.iml" filepath="$PROJECT_DIR$/Java_Deitel_Exercises/Chapter 9 Tasks/Chapter 9 Tasks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Files.iml" filepath="$PROJECT_DIR$/Java_Files.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/ac_simulator/ac_simulator.iml" filepath="$PROJECT_DIR$/OOP/ac_simulator/ac_simulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/accountModification/accountModification.iml" filepath="$PROJECT_DIR$/OOP/accountModification/accountModification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/automaticBikeApp/automaticBikeApp.iml" filepath="$PROJECT_DIR$/OOP/automaticBikeApp/automaticBikeApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/dataStructures/dataStructures.iml" filepath="$PROJECT_DIR$/OOP/dataStructures/dataStructures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/e_store/e_store.iml" filepath="$PROJECT_DIR$/OOP/e_store/e_store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/enumTask/enumTask.iml" filepath="$PROJECT_DIR$/OOP/enumTask/enumTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/movieRatingSystem/movieRatingSystem.iml" filepath="$PROJECT_DIR$/OOP/movieRatingSystem/movieRatingSystem.iml" />
+    </modules>
+  </component>
+</project>

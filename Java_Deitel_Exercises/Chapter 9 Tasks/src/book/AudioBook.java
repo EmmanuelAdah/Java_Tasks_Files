@@ -38,7 +38,6 @@ public class AudioBook extends Book{
 
     @Override
     public String toString() {
-        String bookDetails = String.format("Book Tittle: %s %nBook Author: %s %nArtist Name: %s %nBook Size: %.1f %nPlay Length: %s%n", getBookTitle(), getBookAuthor(), getArtistName(), getBookSize(), getPlayLength());
-        return bookDetails;
+        return String.format("Book Tittle: %s %nBook Author: %s %nArtist Name: %s %nBook Size: %s %nPlay Length: %s%n", getBookTitle(), getBookAuthor(), getArtistName(), getBookSize(), getPlayLength());
     }
 }
