@@ -5,6 +5,12 @@ public class AudioBook extends Book{
     private String bookSize;
     private String playLength;
 
+    public AudioBook(String bookTitle, String bookAuthor, String artistName, String bookSize, String playLength) {
+        super(bookTitle, bookAuthor);
+        this.artistName = artistName;
+        this.bookSize = bookSize;
+        this.playLength = playLength;
+    }
 
     public void setArtistName(String artistName) {
         this.artistName = artistName;

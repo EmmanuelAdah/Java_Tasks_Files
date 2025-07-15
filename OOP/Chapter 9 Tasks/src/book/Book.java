@@ -4,6 +4,11 @@ public class Book {
     private String bookTitle;
     private String bookAuthor;
 
+    public Book(String bookTitle, String bookAuthor) {
+        this.bookTitle = bookTitle;
+        this.bookAuthor = bookAuthor;
+    }
+
     public void setBookTitle(String title) {
         this.bookTitle = title;
     }

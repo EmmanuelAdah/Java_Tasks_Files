@@ -4,18 +4,28 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BookTest {
-    PrintBook book = new PrintBook();
+    PrintBook book = new PrintBook("Design", "Mr. Dapo", "WatchTower's Lmt","27327TR623");
 
     @Test
     public void bookTitleTest(){
-        book.setBookTitle("Peace");
-        assertEquals("Peace", book.getBookTitle());
+        assertEquals("Design", book.getBookTitle());
+    }
+
+    @Test
+    public void setBookTitleTest(){
+        book.setBookTitle("The Art Of Design");
+        assertEquals("The Art Of Design", book.getBookTitle());
     }
 
     @Test
     public void bookAuthorTest(){
-        book.setBookAuthor("Mr. Dapo");
         assertEquals("Mr. Dapo", book.getBookAuthor());
+    }
+
+    @Test
+    public void setBookAuthorTest(){
+        book.setBookAuthor("Wale J.K");
+        assertEquals("Wale J.K", book.getBookAuthor());
     }
 
     @Test
@@ -27,33 +37,53 @@ public class BookTest {
 
     @Test
     public void bookIsbnTest(){
-        book.setIsbn("27327TR623");
         assertEquals("27327TR623", book.getIsbn());
     }
 
     @Test
+    public void setBookIsbnTest(){
+        book.setIsbn("TN43748338");
+        assertEquals("TN43748338", book.getIsbn());
+    }
+
+    @Test
     public void bookPublisherTest(){
-        book.setPublisher("WatchTower's Lmt");
         assertEquals("WatchTower's Lmt", book.getPublisher());
     }
 
-    AudioBook books = new AudioBook();
+    @Test
+    public void setBookPublisherTest(){
+        book.setPublisher("The Women's publishers");
+        assertEquals("The Women's publishers", book.getPublisher());
+    }
+
+    AudioBook books = new AudioBook("Rich Mindset", "The Mind", "MIND", "23 MB", "23:34");
 
     @Test
-    public void audioBookSizeTest(){
-        books.setArtistName("Jack Ma");
-        assertEquals("Jack Ma", books.getArtistName());
+    public void audioBookArtistTest(){
+        assertEquals("MIND", books.getArtistName());
+    }
+
+    @Test
+    public void setAudioBookArtistTest(){
+        books.setArtistName("Art D.E");
+        assertEquals("Art D.E", books.getArtistName());
     }
 
     @Test
     public void audioBookPlayLengthTest(){
-        books.setPlayLength("45:08");
-        assertEquals("45:08", books.getPlayLength());
+        assertEquals("23:34", books.getPlayLength());
+    }
+
+    @Test
+    public void setAudioBookPlayLengthTest(){
+        books.setPlayLength("43:14");
+        assertEquals("43:14", books.getPlayLength());
     }
 
     @Test
     public void validBookSizeTest(){
-        books.setBookSize("56 MB");
-        assertEquals("56 MB", books.getBookSize());
+        books.setBookSize("23 MB");
+        assertEquals("23 MB", books.getBookSize());
     }
 }
