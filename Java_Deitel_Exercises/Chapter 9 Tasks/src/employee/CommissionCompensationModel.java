@@ -20,11 +20,30 @@ public class CommissionCompensationModel extends Employee {
         this.commissionRate = commissionRate;
     }
 
+    public void setGrossSales(double grossSales) {
+        validateGrossSales(grossSales);
+        this.grossSales = grossSales;
+    }
+
+    public void setCommissionRate(double commissionRate) {
+        validateCommissionRate(commissionRate);
+        this.commissionRate = commissionRate;
+    }
+
+    public double getGrossSales(){
+        return grossSales;
+    }
+
+    public double getCommissionRate(){
+        return commissionRate;
+    }
+
     public double earnings(){
         return grossSales * commissionRate;
     }
 
     public String toString(){
-        return String.format("First Name: %s %nLast Name: %s %nSocial Security Number: %s %nWages: %.2f%n", getFirstName(), getLastName(), getSocialSecurityNumber(), earnings());
+        return String.format("First Name: %s %nLast Name: %s %nSocial Security Number: %s %nGross Sales: $%,.2f %nCommission Rate: %.1f %nWages: $%,.2f%n",
+                getFirstName(), getLastName(), getSocialSecurityNumber(), getGrossSales(), getCommissionRate(), earnings());
     }
 }
