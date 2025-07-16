@@ -36,4 +36,12 @@ public class Diary {
     boolean isLocked() {
         return isLocked;
     }
+
+    void createEntry(String userName, String password) {
+        this.entries.add(new Entry(userName, password));
+    }
+
+    void deleteEntry(int userId) {
+
+    }
 }
