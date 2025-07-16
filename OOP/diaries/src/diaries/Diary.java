@@ -11,10 +11,29 @@ public class Diary {
     public Diary(String userName, String password){
         validateUserName(userName);
         this.userName = userName;
+        validatePassword(password);
+        this.password = password;
     }
 
-    public void validateUserName(String userName) {
+    private void validateUserName(String userName) {
         if (userName.length() < 4 || userName.length() > 20) throw new InvalidUserNameLengthException("Username must be between 4 and 20");
         this.userName = userName;
+    }
+
+    private void validatePassword(String password) {
+        if (password.length() > 16 || password.length() < 4) throw new InvalidPasswordLengthException("Password must be between 4 and 16");
+        this.password = password;
+    }
+
+    void unlockDiary(String passKey) {
+        isLocked = !password.equals(passKey);
+    }
+
+    void lockDiary() {
+        this.isLocked = true;
+    }
+
+    boolean isLocked() {
+        return isLocked;
     }
 }
