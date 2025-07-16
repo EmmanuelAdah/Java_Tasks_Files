@@ -1,6 +1,7 @@
 package diaries;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Diary {
     private String userName;
@@ -42,6 +43,10 @@ public class Diary {
     }
 
     void deleteEntry(int userId) {
+        this.entries.removeIf(entry -> Objects.equals(entry, userId));
+    }
 
+    String getPassword() {
+        return password;
     }
 }

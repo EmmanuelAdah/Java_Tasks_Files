@@ -1,6 +1,5 @@
 package diaries;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,9 +10,14 @@ public class Diaries {
         this.diaries.add(new Diary(userName, password));
     }
 
-    void findByUserName(String userName){
+    Diary findByUserName(String userName){
         for (Diary diary : this.diaries) {
-            if (Objects.equals(diary[0], userName)) return diary[0];
+            if (Objects.equals(diary, userName)) return diary;
         }
+        return null;
+    }
+
+    void delete(String userName, String passKey){
+        this.diaries.removeIf(diary -> Objects.equals(diary, userName) && Objects.equals(passKey, password));
     }
 }
