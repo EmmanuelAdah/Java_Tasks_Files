@@ -49,4 +49,33 @@ public class CommissionCompensationModelTest {
     public void invalidCommissionRateTest(){
         assertThrows(InvalidCommissionRateException.class, () -> model.setCommissionRate(1.2));
     }
+
+    BasePlusCommissionCompensationModel commission = new BasePlusCommissionCompensationModel(
+            "Cole", "Palmer", "0", 34_345.26, .3, 400);
+
+    @Test
+    public void validGrossSalesTest(){
+        assertEquals(34_345.26, commission.getGrossSales());
+    }
+
+    @Test
+    public void invalidGrossSalesTest(){
+        assertThrows(InvalidSalesAmountException.class, () -> commission.setGrossSales(-45_432.56));
+    }
+
+    @Test
+    public void validCommissionRateTest(){
+        assertEquals(0.3, commission.getCommissionRate());
+    }
+
+    @Test
+    public void validBaseSalaryTest(){
+        assertEquals(400.00, commission.getBaseSalary());
+    }
+
+    @Test
+    public void invalidBaseSalaryTest(){
+        assertThrows(InvalidAmountException.class, () -> commission.setBaseSalary(-1));
+        System.out.println(commission.toString());
+    }
 }

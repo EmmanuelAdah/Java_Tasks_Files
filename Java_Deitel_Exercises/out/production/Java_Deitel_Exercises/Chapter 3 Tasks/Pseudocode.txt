@@ -1,0 +1,21 @@
+steps
+1. import scanner
+2. declear class CostOfShipping
+3. declare the method main
+4. declear scanner input
+5. prompt user to input weight in pounds 
+6. declear a variable 'weight' to initialize your value
+7. if - statement to print result/outcome
+	if (0 < w && w <= 1) print (3.5 * w)
+	if (1 < w && w <= 3) print (5.5 * w)
+	if (3 < w && w <= 10) print (8.5 * w)
+	if (10 < w && w <= 20) print (10.5 * w)
+	if (w > 20) print (The package cannot be shipped)
+	if (w < 0) print (Invalid input)
+8. end method main
+9. end class CostOfShipping
+	
+	
+
+
+

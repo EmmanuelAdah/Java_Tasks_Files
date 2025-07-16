@@ -5,6 +5,8 @@ public class BasePlusCommissionCompensationModel extends CommissionCompensationM
 
     public BasePlusCommissionCompensationModel(String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate, double baseSalary) {
         super(firstName, lastName, socialSecurityNumber, grossSales, commissionRate);
+        validateBaseSalary(baseSalary);
+        this.baseSalary = baseSalary;
     }
 
     public void validateBaseSalary(double baseSalary) {
@@ -22,12 +24,12 @@ public class BasePlusCommissionCompensationModel extends CommissionCompensationM
 
     @Override
     public double earnings() {
-        return getGrossSales() + (getCommissionRate() * baseSalary);
+        return baseSalary + super.earnings();
     }
 
     @Override
     public String toString() {
-        return String.format("First Name: %s %nLast Name: %s %nGross Sales: %,.2f %nCommission Rate: %,.2f %nBase Salary: %,.2f %nWages: %,.2f%n",
+        return String.format("First Name: %s %nLast Name: %s %nGross Sales: $%,.2f %nCommission Rate: %.1f %nBase Salary: $%,.2f %nWages: $%,.2f%n",
                 getFirstName(), getLastName(), getGrossSales(), getCommissionRate(), getBaseSalary(), earnings());
     }
 }

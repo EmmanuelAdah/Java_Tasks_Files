@@ -24,7 +24,4 @@ public class HeartRatesTest {
         rates.setMaxHeartRate();
         assertEquals(190, rates.getMaxHeartRate());
     }
-
-
-
 }

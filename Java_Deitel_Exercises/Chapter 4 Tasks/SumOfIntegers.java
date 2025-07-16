@@ -14,13 +14,12 @@ public class SumOfIntegers {
 
 	do{
 		System.out.print("Enter first number: ");
-		int userInput1 = input.nextInt();
+		userInput1 = input.nextInt();
 
 		System.out.print("Enter second number: ");
-		int userInput2 = input.nextInt();
-		counter ++
-	
-	}
+		userInput2 = input.nextInt();
+		counter ++;
+	} while(counter != 10);
 	
 
 	}

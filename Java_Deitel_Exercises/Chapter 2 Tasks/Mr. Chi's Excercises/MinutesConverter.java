@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class MinutesConverter {
-
 	public static void main(String[] args) {
 
 	Scanner input = new Scanner(System.in);
@@ -12,7 +11,7 @@ public class MinutesConverter {
 	double dailyConstant = 1440;
 	double yearlyConstant = 525600;
 	
-	double days = minutes / dailyConstant;
+//	double days = minutes / dailyConstant;
 	double years = minutes / yearlyConstant;
 	double remainder = minutes % yearlyConstant;
 	double dayRemains = remainder / dailyConstant;

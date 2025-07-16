@@ -11,6 +11,9 @@ public class HeartRates {
     private float maxHeartRate;
 
     public HeartRates(String firstName, String lastName, int dayOfBirth, int monthOfBirth, int yearOfBirth) {
+        if (dayOfBirth > 0 && dayOfBirth <= 31) {
+            this.dayOfBirth = dayOfBirth;
+        }
         this.firstName = firstName;
         this.lastName = lastName;
         this.dayOfBirth = dayOfBirth;
