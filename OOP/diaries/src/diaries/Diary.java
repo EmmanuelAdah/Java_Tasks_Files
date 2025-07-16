@@ -37,8 +37,8 @@ public class Diary {
         return isLocked;
     }
 
-    void createEntry(String userName, String password) {
-        this.entries.add(new Entry(userName, password));
+    void createEntry(int userID, String userName, String password) {
+        this.entries.add(new Entry(userID, userName, password));
     }
 
     void deleteEntry(int userId) {

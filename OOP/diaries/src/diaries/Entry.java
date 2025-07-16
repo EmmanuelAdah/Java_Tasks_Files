@@ -8,7 +8,9 @@ public class Entry {
     private String body;
     private LocalDateTime dateCreated = LocalDateTime.now();
 
-    public Entry(String title, String body) {
+    public Entry(int id, String title, String body) {
+        validateId(id);
+        this.id = id;
         validateTitle(title);
         this.title = title;
         this.body = body;
@@ -20,7 +22,7 @@ public class Entry {
     }
 
     private void validateId(int id) {
-        if (id < 0) throw new IllegalArgumentException("ID cannot be negative");
+        if (id < 0) throw new IllegalArgumentException("UserID cannot be negative");
         this.id = id;
     }
 
