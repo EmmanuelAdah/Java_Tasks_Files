@@ -21,7 +21,7 @@ public class Diaries {
     void delete(String userName, String passKey){
         Diary dairy = new Diary(userName, passKey);
         dairy.unlockDiary(passKey);
-        this.diaries.removeIf(diary -> Objects.equals(diary, userName) && dairy.isLocked());
+        this.diaries.removeIf(diary -> Objects.equals(diary.getUserName(), userName) && dairy.isLocked());
         throw new UsernameMismatchException ("No match for this username");
     }
 

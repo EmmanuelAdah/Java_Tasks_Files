@@ -45,7 +45,7 @@ public class Diary {
 
     public void deleteEntry(int userId) {
         for (Entry entry : entries) {
-            this.entries.removeIf(id -> Objects.equals(entry, userId));
+            this.entries.removeIf(id -> Objects.equals(entry.getId(), userId));
         }
     }
 
@@ -55,6 +55,10 @@ public class Diary {
 
     public List<Entry> getEntry(){
         return this.entries;
+    }
+
+    public String getUserName(){
+        return this.userName;
     }
 
     public String toString(){

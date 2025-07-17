@@ -52,6 +52,10 @@ public class Entry {
         return body;
     }
 
+    public int getId() {
+        return this.id;
+    }
+
     public String toString() {
         return String.format("ID: %d, Title: %s, Body: %s", id, title, body);
     }

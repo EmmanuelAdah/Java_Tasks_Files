@@ -13,7 +13,7 @@ public class DiaryMain {
         ent.deleteEntry(2443);
 
         for (Entry entry : ent.getEntry()) {
-            System.out.println(entry.toString());
+            System.out.println(entry.getId());
         }
     }
 }
