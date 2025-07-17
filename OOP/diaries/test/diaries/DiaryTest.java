@@ -20,5 +20,29 @@ public class DiaryTest {
         assertFalse(diary.isLocked());
     }
 
+    @Test
+    public void entryIsEmptyTest(){
+        assertTrue(diary.entryIsEmpty());
+    }
+
+    @Test
+    public void entryIsNotEmptyTest(){
+        diary.createEntry(1704, "Adah02", "trey5");
+        assertFalse(diary.entryIsEmpty());
+    }
+
+    @Test
+    public void deleteEntryTest(){
+        diary.createEntry(1704, "Adah02", "trey5");
+        diary.deleteEntry(1704);
+        assertTrue(diary.entryIsEmpty());
+    }
+
+    @Test
+    public void deleteEntryFailedTest2(){
+        diary.createEntry(1704, "Adah02", "trey5");
+        diary.deleteEntry(1701);
+        assertFalse(diary.entryIsEmpty());
+    }
 
 }

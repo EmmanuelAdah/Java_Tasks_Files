@@ -1,5 +1,6 @@
 package diaries;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -7,7 +8,7 @@ public class Diary {
     private String userName;
     private String password;
     private boolean isLocked;
-    private List<Entry> entries;
+    private List<Entry> entries = new ArrayList<>();
 
     public Diary(String userName, String password){
         validateUserName(userName);
@@ -38,11 +39,25 @@ public class Diary {
         return isLocked;
     }
 
-    void createEntry(int userID, String userName, String password) {
+    public void createEntry(int userID, String userName, String password) {
         this.entries.add(new Entry(userID, userName, password));
     }
 
-    void deleteEntry(int userId) {
-        this.entries.removeIf(entry -> Objects.equals(entry, userId));
+    public void deleteEntry(int userId) {
+        for (Entry entry : entries) {
+            this.entries.removeIf(id -> Objects.equals(entry, userId));
+        }
+    }
+
+    boolean entryIsEmpty(){
+        return this.entries.isEmpty();
+    }
+
+    public List<Entry> getEntry(){
+        return this.entries;
+    }
+
+    public String toString(){
+        return String.format("Username: %s, Password: %s", userName, password);
     }
 }
