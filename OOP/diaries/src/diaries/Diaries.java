@@ -18,6 +18,8 @@ public class Diaries {
     }
 
     void delete(String userName, String passKey){
-        this.diaries.removeIf(diary -> Objects.equals(diary, userName) && Objects.equals(passKey, password));
+        Diary dairy = new Diary(userName, passKey);
+        dairy.unlockDiary(passKey);
+        this.diaries.removeIf(diary -> Objects.equals(diary, userName) && dairy.isLocked());
     }
 }

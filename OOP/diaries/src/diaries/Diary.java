@@ -45,8 +45,4 @@ public class Diary {
     void deleteEntry(int userId) {
         this.entries.removeIf(entry -> Objects.equals(entry, userId));
     }
-
-    String getPassword() {
-        return password;
-    }
 }
