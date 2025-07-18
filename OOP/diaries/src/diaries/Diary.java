@@ -44,8 +44,9 @@ public class Diary {
     }
 
     public void deleteEntry(int userId) {
-        for (Entry entry : entries) {
-            if (Objects.equals(entry.getId(),userId)) entries.remove(entry);
+        for (Entry entry : this.entries) {
+            if (Objects.equals(entry.getId(), userId)) this.entries.remove(entry);
+            break;
         }
     }
 

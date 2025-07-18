@@ -35,7 +35,7 @@ public class DiaryTest {
     public void deleteEntryTest(){
         diary.createEntry(1704, "Adah02", "trey5");
         diary.deleteEntry(1704);
-        assertFalse(diary.entryIsEmpty());
+        assertTrue(diary.entryIsEmpty());
     }
 
     @Test
