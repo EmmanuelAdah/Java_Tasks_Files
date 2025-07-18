@@ -13,16 +13,15 @@ public class Diaries {
 
     Diary findByUserName(String userName){
         for (Diary diary : this.diaries) {
-            if (Objects.equals(diary, userName)) return diary;
+            if (Objects.equals(diary.getUserName(), userName)) return diary;
         }
         return null;
     }
 
     void delete(String userName, String passKey){
-        Diary dairy = new Diary(userName, passKey);
-        dairy.unlockDiary(passKey);
-        this.diaries.removeIf(diary -> Objects.equals(diary.getUserName(), userName) && dairy.isLocked());
-        throw new UsernameMismatchException ("No match for this username");
+        Diary dair = new Diary(userName, passKey);
+        dair.unlockDiary(passKey);
+        this.diaries.removeIf(diary -> Objects.equals(diary.getUserName(), userName) && dair.isLocked());
     }
 
     public boolean diaryIsEmpty(){
