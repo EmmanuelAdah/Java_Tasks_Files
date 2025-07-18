@@ -18,7 +18,7 @@ public class Diary {
     }
 
     private void validateUserName(String userName) {
-        if (userName.length() < 4 || userName.length() > 20) throw new diaries.InvalidUserNameLengthException("Username must be between 4 and 20");
+        if (userName.length() < 4 || userName.length() > 20) throw new InvalidUserNameLengthException("Username must be between 4 and 20");
         this.userName = userName;
     }
 
@@ -28,7 +28,7 @@ public class Diary {
     }
 
     void unlockDiary(String passKey) {
-        isLocked = !password.equals(passKey);
+        this.isLocked = !password.equals(passKey);
     }
 
     void lockDiary() {
@@ -44,9 +44,13 @@ public class Diary {
     }
 
     public void deleteEntry(int userId) {
+        boolean isFound = false;
         for (Entry entry : this.entries) {
-            if (Objects.equals(entry.getId(), userId)) this.entries.remove(entry);
-            break;
+            if (Objects.equals(entry.getId(), userId)) {
+                this.entries.remove(entry);
+                isFound = true;
+            }
+            if (isFound) break;
         }
     }
 

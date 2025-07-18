@@ -21,7 +21,12 @@ public class Diaries {
     void delete(String userName, String passKey){
         Diary dair = new Diary(userName, passKey);
         dair.unlockDiary(passKey);
-        this.diaries.removeIf(diary -> Objects.equals(diary.getUserName(), userName) && dair.isLocked());
+        for (Diary diary : this.diaries) {
+            if (Objects.equals(diary.getUserName(), userName) && !dair.isLocked()){
+                this.diaries.remove(diary);
+                break;
+            }
+        }
     }
 
     public boolean diaryIsEmpty(){
