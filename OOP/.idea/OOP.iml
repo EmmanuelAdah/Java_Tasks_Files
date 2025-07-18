@@ -6,6 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/movieRatingSystem/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/movieRatingsSystem/movieRatings/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/movieRatingSystem/src/movie_Ratings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/diaries/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/diaries/src/diaries.." isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/diaries/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

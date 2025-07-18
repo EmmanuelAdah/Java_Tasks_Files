@@ -18,7 +18,7 @@ public class Diary {
     }
 
     private void validateUserName(String userName) {
-        if (userName.length() < 4 || userName.length() > 20) throw new InvalidUserNameLengthException("Username must be between 4 and 20");
+        if (userName.length() < 4 || userName.length() > 20) throw new diaries.InvalidUserNameLengthException("Username must be between 4 and 20");
         this.userName = userName;
     }
 

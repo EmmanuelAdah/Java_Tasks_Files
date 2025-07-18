@@ -15,12 +15,14 @@ public class Rating extends Movie {
     public void averageMovieRating() {
         int count = 0;
         for (String[] movie : getMovieList()){
-            double sum = 0;
-            for (int index = 0; index < ratingList.get(count).size(); index++){
-                sum += ratingList.get(count).get(index);
+            for (ArrayList<Float> rating : ratingList){
+                double total = 0;
+                for (Float ratingValue : rating){
+                    total += ratingValue;
+                }
+                float average = (float) (total / ratingList.get(count).size());
+                System.out.printf("%s  %.1f%n", movie[0], average);
             }
-            float average = (float) (sum / ratingList.get(count).size());
-            System.out.printf("%s  %.1f%n", movie[0], average);
             count++;
         }
     }
