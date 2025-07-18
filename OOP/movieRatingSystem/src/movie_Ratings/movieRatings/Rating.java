@@ -20,8 +20,8 @@ public class Rating extends Movie {
                 for (Float ratingValue : rating){
                     total += ratingValue;
                 }
-                float average = (float) (total / ratingList.get(count).size());
-                System.out.printf("%s  %.1f%n", movie[0], average);
+                float average = (float)(total / ratingList.get(count).size());
+                System.out.printf("Movie Name: %s  Average rating: %.1f%n", movie[0], average);
             }
             count++;
         }
