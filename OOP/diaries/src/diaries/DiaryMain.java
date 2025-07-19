@@ -4,14 +4,6 @@ import java.util.Scanner;
 
 public class DiaryMain {
 
-    private static void print(String userInput){
-        System.out.println(userInput);
-    }
-
-    public static String input(){
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
-    }
     public static void main(String[] args) {
 
         Diary ent = new Diary("userName", "passKey");
@@ -24,11 +16,18 @@ public class DiaryMain {
         ent.deleteEntry(243);
 
 
-
         for (Entry entry : ent.getEntry()) {
             print(String.valueOf(entry));
         }
         print("Enter your name: ");
         double userName = Double.parseDouble(input());
+    }
+    private static void print(String userInput){
+        System.out.println(userInput);
+    }
+
+    private static String input(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
     }
 }

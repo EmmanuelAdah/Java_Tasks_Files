@@ -23,7 +23,7 @@ public class Diary {
     }
 
     private void validatePassword(String password) {
-        if (password.length() > 16 || password.length() < 4) throw new InvalidPasswordLengthException("Password must be between 4 and 16");
+        if (password.length() < 4 || password.length() > 16) throw new InvalidPasswordLengthException("Password must be between 4 and 16");
         this.password = password;
     }
 
@@ -36,7 +36,7 @@ public class Diary {
     }
 
     boolean isLocked() {
-        return isLocked;
+        return this.isLocked;
     }
 
     public void createEntry(int userID, String userName, String password) {

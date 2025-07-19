@@ -30,7 +30,12 @@ public class DiariesTest {
     @Test
     public void deleteDiaryTest(){
         diaries.add("Adah02", "trey5");
-        diaries.delete("Adah02", "trey4");
+        diaries.delete("Adah02", "trey5");
         assertTrue(diaries.diaryIsEmpty());
+
+        diaries.add("Adah02", "trey5");
+        diaries.add("Adah03", "trey6");
+        diaries.delete("Adah02", "trey5");
+        assertFalse(diaries.diaryIsEmpty());
     }
 }

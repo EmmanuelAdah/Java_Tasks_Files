@@ -19,13 +19,14 @@ public class Diaries {
     }
 
     void delete(String userName, String passKey){
-        Diary dair = new Diary(userName, passKey);
-        dair.unlockDiary(passKey);
+        boolean isFound = false;
         for (Diary diary : this.diaries) {
-            if (Objects.equals(diary.getUserName(), userName) && !dair.isLocked()){
+            diary.unlockDiary(passKey);
+            if (Objects.equals(diary.getUserName(), userName) && !diary.isLocked()){
                 this.diaries.remove(diary);
-                break;
+                isFound = true;
             }
+            if (isFound) break;
         }
     }
 
