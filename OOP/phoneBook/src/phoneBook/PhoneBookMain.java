@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class PhoneBookMain {
     public static void main(String... args) {
         Contacts contacts = new Contacts();
-        Name names = new Name("First Name", "Last Name");
+        Name names = new Name("","");
 
         String phoneBookMenu = """
             Welcome to the Phone Book!
@@ -72,8 +72,9 @@ public class PhoneBookMain {
                 } break;
 
                 case "7": {
-                    for (Name name : contacts.getContactList()){
-                        print(name.toString());
+                    for (Contact contact : names.getContactsList()){
+                        print(names.toString());
+                        print(contact.toString());
                     }
                 } break;
 
