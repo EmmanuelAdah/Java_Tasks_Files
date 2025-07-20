@@ -2,10 +2,10 @@ package phoneBook;
 
 public class Contact {
     private String address;
-    private long phoneNumber;
+    private String phoneNumber;
     private String email;
 
-    public Contact(String address, long phoneNumber, String email) {
+    public Contact(String address, String phoneNumber, String email) {
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -19,7 +19,7 @@ public class Contact {
         this.address = address;
     }
 
-    public long getPhoneNumber() {
+    public String getPhoneNumber() {
         return this.phoneNumber;
     }
 

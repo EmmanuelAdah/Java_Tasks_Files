@@ -26,4 +26,9 @@ public class Contacts {
             if (contact.getLastName().equalsIgnoreCase(name)) return String.valueOf(contact);
         return String.format("No match for %s", name);
     }
+
+    public void deleteContact(String firstName, String lastName) {
+        this.names.removeIf(contact ->
+                contact.getFirstName().equalsIgnoreCase(firstName) && contact.getLastName().equalsIgnoreCase(lastName));
+    }
 }

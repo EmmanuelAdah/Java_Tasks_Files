@@ -31,4 +31,11 @@ public class ContactsTest {
         contacts.addName("John", "Chi");
         assertEquals("First Name: John Last Name: Chi", contacts.findContactByLastName("Chi"));
     }
+
+    @Test
+    public void deleteContactFromListTest(){
+        contacts.addName("Emma", "Adah");
+        contacts.deleteContact("emma", "adah");
+        assertTrue(contacts.isEmpty());
+    }
 }

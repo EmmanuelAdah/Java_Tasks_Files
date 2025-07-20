@@ -19,11 +19,11 @@ public class Name {
         return this.isEmpty = contacts.isEmpty();
     }
 
-    public void addContact(String address, long telephone, String email) {
+    public void addContact(String address, String telephone, String email) {
         this.contacts.add(new Contact(address, telephone, email));
     }
 
-    public String findContactByPhoneNumber(long phone) {
+    public String findContactByPhoneNumber(String phone) {
         for (Contact contact : this.contacts) {
             if (Objects.equals(phone, contact.getPhoneNumber())) {
                 return String.valueOf(contact);
