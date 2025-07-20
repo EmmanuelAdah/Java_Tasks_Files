@@ -11,12 +11,22 @@ public class Name {
     private List<Contact> contacts = new ArrayList<>();
 
     public Name(String firstName, String lastName) {
+        validateName(firstName);
         this.firstName = firstName;
+        validateName(lastName);
         this.lastName = lastName;
     }
 
     public boolean isEmpty() {
         return this.isEmpty = contacts.isEmpty();
+    }
+
+    private void validateName(String name) {
+        for (char letter : name.toCharArray()) {
+            if (!Character.isLetter(letter)) {
+                throw new InvalidNameFormatException (name +" contains invalid characters");
+            }
+        }
     }
 
     public void addContact(String address, String telephone, String email) {
@@ -49,6 +59,6 @@ public class Name {
     }
 
     public String toString() {
-        return String.format("First Name: %s Last Name: %s", this.firstName, this.lastName);
+        return String.format("First Name: %s %nLast Name: %s%n", getFirstName(), getLastName());
     }
 }

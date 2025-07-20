@@ -19,6 +19,11 @@ public class ContactsTest {
     }
 
     @Test
+    public void addInvalidContactTest(){
+        assertThrows(InvalidNameFormatException.class, () -> contacts.addName("Emma007", "Adah"));
+    }
+
+    @Test
     public void findContactByFirstNameTest(){
         contacts.addName("John", "Chi");
         contacts.addName("Jan", "Doe");
@@ -29,7 +34,7 @@ public class ContactsTest {
     public void findContactByLastNameTest(){
         contacts.addName("Emma", "Adah");
         contacts.addName("John", "Chi");
-        assertEquals("First Name: John Last Name: Chi", contacts.findContactByLastName("Chi"));
+        assertEquals(String.format("First Name: %s %nLast Name: %s%n", "John", "Chi"), contacts.findContactByLastName("Chi"));
     }
 
     @Test

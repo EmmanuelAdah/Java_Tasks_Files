@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Contacts {
     private boolean isEmpty;
-    private boolean isLocked;
     private List<Name> names = new ArrayList<>();
 
     public void addName(String firstName, String lastName) {
@@ -37,5 +36,9 @@ public class Contacts {
             }
             if (found) break;
         }
+    }
+
+    public List<Name> getContactList(){
+        return this.names;
     }
 }

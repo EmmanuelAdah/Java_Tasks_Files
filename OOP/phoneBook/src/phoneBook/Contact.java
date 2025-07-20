@@ -7,8 +7,14 @@ public class Contact {
 
     public Contact(String address, String phone, String email) {
         this.address = address;
+        validatePhoneNumber(phone);
         this.phoneNumber = phone;
         this.email = email;
+    }
+
+    private void validatePhoneNumber(String phone) {
+        for (char number : phone.toCharArray())
+            if (!Character.isDigit(number)) throw new InvalidNumberFormatException ("Phone number contains other characters");
     }
 
     public String getAddress() {

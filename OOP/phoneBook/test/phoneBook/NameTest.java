@@ -18,6 +18,11 @@ public class NameTest {
     }
 
     @Test
+    public void invalidPhoneNumberTest(){
+        assertThrows(InvalidNumberFormatException.class, () -> name.addContact("Theo", "090734634hf", "Dan"));
+    }
+
+    @Test
     public void findContactByPhoneNumberTest(){
         name.addContact("No 13, Sabo", "09430034994", "uquwiqwquiw");
         name.addContact("John", "090", "chi@gmail.com");
@@ -31,5 +36,4 @@ public class NameTest {
         name.deleteContactByPhoneNumber("090");
         assertTrue(name.isEmpty());
     }
-
 }

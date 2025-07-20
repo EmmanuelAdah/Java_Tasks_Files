@@ -61,14 +61,9 @@ public class PhoneBookMain {
                 }
 
                 case "7": {
-                    print("Enter first name: ");
-                    String firstName = input();
-
-                    print("Enter phone number: ");
-                    String phoneNumber = input();
-
-                    contacts.findContactByFirstName(firstName);
-                    names.findContactByPhoneNumber(phoneNumber);
+                    for (Name name : contacts.getContactList()){
+                        System.out.println(name.toString());
+                    }
                 } break;
 
                 case "8":
@@ -83,7 +78,6 @@ public class PhoneBookMain {
     private static void print(String userInput){
         System.out.println(userInput);
     }
-
     private static String input() {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
