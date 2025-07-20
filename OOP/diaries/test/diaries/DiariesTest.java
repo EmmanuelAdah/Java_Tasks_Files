@@ -28,7 +28,7 @@ public class DiariesTest {
     }
 
     @Test
-    public void deleteDiaryTest(){
+    public void deleteDiaryWithCorrectPasswordTest(){
         diaries.add("Adah02", "trey5");
         diaries.delete("Adah02", "trey5");
         assertTrue(diaries.diaryIsEmpty());
@@ -36,6 +36,21 @@ public class DiariesTest {
         diaries.add("Adah02", "trey5");
         diaries.add("Adah03", "trey6");
         diaries.delete("Adah02", "trey5");
+        assertFalse(diaries.diaryIsEmpty());
+    }
+
+    @Test
+    public void deleteDiaryWithWrongPasswordTest(){
+        diaries.add("Adah02", "trey5");
+        diaries.delete("Adah02", "trey6");
+        assertFalse(diaries.diaryIsEmpty());
+
+        diaries.add("Eliot", "ellie");
+        diaries.delete("Eliot", "elliE");
+        assertFalse(diaries.diaryIsEmpty());
+
+        diaries.add("John", "john");
+        diaries.delete("John", "John");
         assertFalse(diaries.diaryIsEmpty());
     }
 }

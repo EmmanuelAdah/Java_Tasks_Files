@@ -16,4 +16,20 @@ public class NameTest {
         name.addContact("No 2, Sabo-Yaba", "09073463473", "edo@gmail.com");
         assertFalse(name.isEmpty());
     }
+
+    @Test
+    public void findContactByPhoneNumberTest(){
+        name.addContact("No 13, Sabo", "09430034994", "uquwiqwquiw");
+        name.addContact("John", "090", "chi@gmail.com");
+        assertEquals(String.format("Address: %s %nPhone Number: %s %nEmail: %s%n", "John", "090", "chi@gmail.com"),
+                name.findContactByPhoneNumber("090"));
+    }
+
+    @Test
+    public void deletingContactByPhoneNumberTest(){
+        name.addContact("John", "090", "chi@gmail.com");
+        name.deleteContactByPhoneNumber("090");
+        assertTrue(name.isEmpty());
+    }
+
 }

@@ -66,7 +66,11 @@ public class Diary {
         return this.userName;
     }
 
+    private String getPassword() {
+        return this.password;
+    }
+
     public String toString(){
-        return String.format("Username: %s, Password: %s", userName, password);
+        return String.format("Username: %s, Password: %s", getUserName(), getPassword());
     }
 }

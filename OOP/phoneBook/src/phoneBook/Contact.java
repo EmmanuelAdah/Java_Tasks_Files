@@ -5,9 +5,9 @@ public class Contact {
     private String phoneNumber;
     private String email;
 
-    public Contact(String address, String phoneNumber, String email) {
+    public Contact(String address, String phone, String email) {
         this.address = address;
-        this.phoneNumber = phoneNumber;
+        this.phoneNumber = phone;
         this.email = email;
     }
 
@@ -24,6 +24,6 @@ public class Contact {
     }
 
     public String toString(){
-        return String.format("Address: %s %nPhone Number: %s %nEmail: %s", this.address, this.phoneNumber, this.email);
+        return String.format("Address: %s %nPhone Number: %s %nEmail: %s%n", this.address, this.phoneNumber, this.email);
     }
 }

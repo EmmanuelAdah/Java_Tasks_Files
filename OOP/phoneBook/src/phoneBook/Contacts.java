@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Contacts {
     private boolean isEmpty;
+    private boolean isLocked;
     private List<Name> names = new ArrayList<>();
 
     public void addName(String firstName, String lastName) {
@@ -28,7 +29,13 @@ public class Contacts {
     }
 
     public void deleteContact(String firstName, String lastName) {
-        this.names.removeIf(contact ->
-                contact.getFirstName().equalsIgnoreCase(firstName) && contact.getLastName().equalsIgnoreCase(lastName));
+        boolean found = false;
+        for (Name contacts : this.names) {
+            if (contacts.getFirstName().equalsIgnoreCase(firstName) && contacts.getLastName().equalsIgnoreCase(lastName)) {
+                this.names.remove(new Name(firstName, lastName));
+                found = true;
+            }
+            if (found) break;
+        }
     }
 }

@@ -24,11 +24,24 @@ public class Name {
     }
 
     public String findContactByPhoneNumber(String phone) {
+        for (Contact contact : this.contacts)
+            if (contact.getPhoneNumber() == phone) return String.valueOf(contact);
+        return null;
+    }
+
+    public void deleteContactByPhoneNumber(String phone) {
+        boolean found = false;
         for (Contact contact : this.contacts) {
             if (Objects.equals(phone, contact.getPhoneNumber())) {
-                return String.valueOf(contact);
+                this.contacts.remove(contact);
+                found = true;
             }
-        } return String.format("%s", phone);
+            if (found) break; else System.out.println("Contact not found");
+        }
+    }
+
+    public String getLastName() {
+        return this.lastName;
     }
 
     public String getFirstName() {
@@ -37,9 +50,5 @@ public class Name {
 
     public String toString() {
         return String.format("First Name: %s Last Name: %s", this.firstName, this.lastName);
-    }
-
-    public String getLastName() {
-        return this.lastName;
     }
 }
