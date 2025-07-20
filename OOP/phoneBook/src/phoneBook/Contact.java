@@ -22,4 +22,8 @@ public class Contact {
     public long getPhoneNumber() {
         return this.phoneNumber;
     }
+
+    public String toString(){
+        return String.format("Address: %s %nPhone Number: %s %nEmail: %s", this.address, this.phoneNumber, this.email);
+    }
 }
