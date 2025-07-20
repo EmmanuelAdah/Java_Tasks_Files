@@ -19,11 +19,23 @@ public class Contact {
         this.address = address;
     }
 
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
     public String toString(){
-        return String.format("Address: %s %nPhone Number: %s %nEmail: %s%n", this.address, this.phoneNumber, this.email);
+        return String.format("Address: %s %nPhone Number: %s %nEmail: %s%n", this.getAddress(), this.getPhoneNumber(), this.getEmail());
     }
 }

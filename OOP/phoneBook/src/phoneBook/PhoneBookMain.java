@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class PhoneBookMain {
     public static void main(String... args) {
         Contacts contacts = new Contacts();
+        Name names = new Name("First Name", "Last Name");
 
         String phoneBookMenu = """
             Welcome to the Phone Book!
@@ -20,20 +21,62 @@ public class PhoneBookMain {
             """;
 
         boolean phoneBook = true;
-        while (true) {
+        while (phoneBook) {
             print(phoneBookMenu);
             print("Enter an option: ");
             String choice = input();
 
             switch (choice) {
-                case "1":
+                case "1": {
+                    print("Enter first name: ");
+                    String firstName = input();
 
+                    print("Enter last name: ");
+                    String lastName = input();
+
+                    print("Enter address: ");
+                    String address = input();
+
+                    print("Enter phone number: ");
+                    String phoneNumber = input();
+
+                    print("Enter email address: ");
+                    String emailAddress = input();
+                    contacts.addName(firstName, lastName);
+                    names.addContact(address, phoneNumber, emailAddress);
                     break;
+                }
+                case "2": {
+                    print("Enter first name: ");
+                    String firstName = input();
+
+                    print("Enter last name: ");
+                    String lastName = input();
+
+                    print("Enter phone number: ");
+                    String phoneNumber = input();
+                    contacts.deleteContact(firstName, lastName);
+                    names.deleteContactByPhoneNumber(phoneNumber);
+                    break;
+                }
+
+                case "7": {
+                    print("Enter first name: ");
+                    String firstName = input();
+
+                    print("Enter phone number: ");
+                    String phoneNumber = input();
+
+                    contacts.findContactByFirstName(firstName);
+                    names.findContactByPhoneNumber(phoneNumber);
+                } break;
 
                 case "8":
+                    print("GoodBye...");
                     phoneBook = false;
+                    break;
                 default:
-                    phoneBook = true;
+                    print("Invalid option! Try again.");
             }
         }
     }
@@ -41,7 +84,7 @@ public class PhoneBookMain {
         System.out.println(userInput);
     }
 
-    private static String input(){
+    private static String input() {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }

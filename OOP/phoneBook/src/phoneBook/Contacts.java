@@ -32,7 +32,7 @@ public class Contacts {
         boolean found = false;
         for (Name contacts : this.names) {
             if (contacts.getFirstName().equalsIgnoreCase(firstName) && contacts.getLastName().equalsIgnoreCase(lastName)) {
-                this.names.remove(new Name(firstName, lastName));
+                this.names.remove(contacts);
                 found = true;
             }
             if (found) break;
