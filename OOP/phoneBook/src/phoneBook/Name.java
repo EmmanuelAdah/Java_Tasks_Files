@@ -22,9 +22,11 @@ public class Name {
     }
 
     private void validateName(String name) {
-        for (char letter : name.toCharArray()) {
-            if (!Character.isLetter(letter)) {
-                throw new InvalidNameFormatException (name +" contains invalid characters");
+        if (name == null) {
+            for (char letter : name.toCharArray()) {
+                if (!Character.isLetter(letter)) {
+                    throw new InvalidNameFormatException(name + " contains invalid characters");
+                }
             }
         }
     }
@@ -58,7 +60,11 @@ public class Name {
         return this.firstName;
     }
 
+    public List<Contact> getContactsList() {
+        return this.contacts;
+    }
+
     public String toString() {
-        return String.format("First Name: %s %nLast Name: %s%n", getFirstName(), getLastName());
+        return String.format("First Name: %s %nLast Name: %s", getFirstName(), getLastName());
     }
 }

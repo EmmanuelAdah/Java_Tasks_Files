@@ -17,6 +17,10 @@ public class Contact {
             if (!Character.isDigit(number)) throw new InvalidNumberFormatException ("Phone number contains other characters");
     }
 
+//    private void validateEmail(String email) {
+//        EmailValidator
+//    }
+
     public String getAddress() {
         return this.address;
     }

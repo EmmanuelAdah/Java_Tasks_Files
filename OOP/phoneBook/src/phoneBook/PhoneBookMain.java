@@ -60,9 +60,20 @@ public class PhoneBookMain {
                     break;
                 }
 
+                case "3": {
+                    print("Enter phone number: ");
+                    String phoneNumber = input();
+
+                    for (Contact contact : names.getContactsList()){
+                        if (contact.getPhoneNumber().equals(phoneNumber))
+                            print(names.toString());
+                            print(contact.toString());
+                    }
+                } break;
+
                 case "7": {
                     for (Name name : contacts.getContactList()){
-                        System.out.println(name.toString());
+                        print(name.toString());
                     }
                 } break;
 
