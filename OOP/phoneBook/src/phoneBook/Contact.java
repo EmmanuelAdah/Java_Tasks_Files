@@ -6,7 +6,6 @@ public class Contact {
     private String address;
     private String phoneNumber;
     private String email;
-    private boolean isEmpty;
 
     public Contact(String firstName, String lastName, String address, String phone, String email) {
         validateName(firstName);
@@ -20,12 +19,8 @@ public class Contact {
     }
 
     private void validateName(String name) {
-        if (name == null) {
-            for (char letter : name.toCharArray()) {
-                if (!Character.isLetter(letter)) {
-                    throw new InvalidNameFormatException(name + " contains invalid characters");
-                }
-            }
+        if (name != null) for (char letter : name.toCharArray()) {
+            if (!Character.isLetter(letter)) throw new InvalidNameFormatException(name + " contains invalid characters");
         }
     }
 

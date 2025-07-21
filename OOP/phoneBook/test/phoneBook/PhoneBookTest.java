@@ -25,6 +25,12 @@ public class PhoneBookTest {
     }
 
     @Test
+    public void addInvalidPhoneNumberTest(){
+        assertThrows(InvalidNumberFormatException.class, () -> contacts.addContact("Emma",
+                "Adah", "No 2, Sabo-Yaba", "090hshdh", "edo@gmail.com"));
+    }
+
+    @Test
     public void findContactByFirstNameTest(){
         contacts.addContact("John", "Chi", "No 32, Sabo", "090", "uquwiqwquiw");
         contacts.addContact("Jan", "Doe", "No 13, yaba", "091", "hjjk");
@@ -37,7 +43,7 @@ public class PhoneBookTest {
         contacts.addContact("Emma", "Adah", "No 32, Sabo", "090", "uquwiqwquiw");
         contacts.addContact("John", "Chi", "No 13, yaba", "091", "hjjk");
         assertEquals(String.format("First Name: %s %nLast Name: %s %nAddress: %s %nPhone Number: %s %nEmail: %s%n",
-                "Jan", "Doe", "No 13, yaba", "091", "hjjk"), contacts.findContactByLastName("Chi"));
+                "John", "Chi", "No 13, yaba", "091", "hjjk"), contacts.findContactByLastName("Chi"));
     }
 
     @Test

@@ -34,8 +34,8 @@ public class PhoneBookMain {
                     print("Enter email address: ");  String emailAddress = input();
 
                     contacts.addContact(firstName, lastName, address, phoneNumber, emailAddress);
-                    break;
-                }
+                }  break;
+
                 case "2": {
                     print("Enter first name: ");
                     String firstName = input();
@@ -46,31 +46,27 @@ public class PhoneBookMain {
                     print("Enter phone number: ");
                     String phoneNumber = input();
                     contacts.deleteContact(firstName, lastName, phoneNumber);
-                    break;
-                }
+                } break;
 
                 case "3": {
                     print("Enter phone number: "); String phoneNumber = input();
-
-                    for (Contact contact : contacts.getContactList()){
-                        if (contact.getPhoneNumber().equals(phoneNumber))  print(contact.toString());
-                    }
+                    print(contacts.findContactByPhoneNumber(phoneNumber));
                 } break;
 
                 case "4": {
                     print("Enter first name: "); String firstName = input();
+                    print(contacts.findContactByFirstName(firstName));
+                } break;
 
-                    boolean contactFound = false;
-                    for (Contact contact : contacts.getContactList()){
-                        if (contact.getFirstName().equalsIgnoreCase(firstName)) {
-                            print(contact.toString());
-                            contactFound = true;
-                        }
-                    }
-                    if (!contactFound) print("No matching contact for " + firstName);
+                case "5":{
+                    print("Enter last name: "); String lastName = input();
+                    print(contacts.findContactByLastName(lastName));
                 } break;
 
                 case "6": {
+                    print("Enter phone number: "); String phoneNumber = input();
+                    print(contacts.findContactByPhoneNumber(phoneNumber));
+
 
                 }
 
@@ -83,7 +79,7 @@ public class PhoneBookMain {
                     print("GoodBye...");  phoneBook = false;
                     break;
                 default:
-                    print("Invalid option! Try again.");
+                    print("Invalid option! Try  again.");
             }
         }
     }

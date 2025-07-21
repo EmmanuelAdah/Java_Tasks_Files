@@ -2,6 +2,7 @@ package phoneBook;
 
 import java.util.ArrayList;
 import java.util.List;
+import static java.lang.reflect.Array.set;
 
 public class PhoneBook {
     private boolean isEmpty;
@@ -17,7 +18,7 @@ public class PhoneBook {
 
     public String findContactByPhoneNumber(String phone) {
         for (Contact contact : this.contacts)
-            if (contact.getPhoneNumber() == phone) return String.valueOf(contact);
+            if (contact.getPhoneNumber().equals(phone)) return String.valueOf(contact);
         return null;
     }
 
@@ -43,6 +44,10 @@ public class PhoneBook {
             }
             if (found) break;
         }
+    }
+
+    public void updateContact(int count, String firstName, String lastName, String address, String phoneNumber, String email) {
+        this.contacts.set(count, new Contact(firstName, lastName, address, phoneNumber, email));
     }
 
     public List<Contact> getContactList(){
