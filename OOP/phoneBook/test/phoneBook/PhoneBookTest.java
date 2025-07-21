@@ -1,0 +1,57 @@
+package phoneBook;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+
+public class PhoneBookTest {
+    PhoneBook contacts = new PhoneBook();
+
+    @Test
+    public void contactListIsEmptyTest(){
+        assertTrue(contacts.isEmpty());
+    }
+
+    @Test
+    public void contactListIsNotEmptyTest(){
+        contacts.addContact("Emma", "Adah", "No 2, Sabo-Yaba", "09073463473", "edo@gmail.com");
+        assertFalse(contacts.isEmpty());
+    }
+
+    @Test
+    public void addInvalidContactTest(){
+        assertThrows(InvalidNameFormatException.class, () -> contacts.addContact("Emma007",
+                "Adah", "No 2, Sabo-Yaba", "09073463473", "edo@gmail.com"));
+    }
+
+    @Test
+    public void findContactByFirstNameTest(){
+        contacts.addContact("John", "Chi", "No 32, Sabo", "090", "uquwiqwquiw");
+        contacts.addContact("Jan", "Doe", "No 13, yaba", "091", "hjjk");
+        assertEquals(String.format("First Name: %s %nLast Name: %s %nAddress: %s %nPhone Number: %s %nEmail: %s%n",
+                "Jan", "Doe", "No 13, yaba", "091", "hjjk"), contacts.findContactByFirstName("Jan"));
+    }
+
+    @Test
+    public void findContactByLastNameTest(){
+        contacts.addContact("Emma", "Adah", "No 32, Sabo", "090", "uquwiqwquiw");
+        contacts.addContact("John", "Chi", "No 13, yaba", "091", "hjjk");
+        assertEquals(String.format("First Name: %s %nLast Name: %s %nAddress: %s %nPhone Number: %s %nEmail: %s%n",
+                "Jan", "Doe", "No 13, yaba", "091", "hjjk"), contacts.findContactByLastName("Chi"));
+    }
+
+    @Test
+    public void deleteContactFromListTest(){
+        contacts.addContact("emma", "adah", "No 13, Sabo", "090", "uquwiqwquiw");
+        contacts.deleteContact("emma", "adah", "090");
+        assertTrue(contacts.isEmpty());
+    }
+
+    @Test
+    public void findContactByPhoneNumberTest(){
+        contacts.addContact("emma", "adah", "No 13, Sabo", "09430034994", "uquwiqwquiw");
+        contacts.addContact("John", "chi", "yu", "090", "chi@gmail.com");
+        assertEquals(String.format("First Name: %s %nLast Name: %s %nAddress: %s %nPhone Number: %s %nEmail: %s%n", "John", "chi", "yu", "090", "chi@gmail.com"),
+                contacts.findContactByPhoneNumber("090"));
+    }
+}
