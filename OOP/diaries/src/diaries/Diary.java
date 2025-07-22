@@ -50,7 +50,11 @@ public class Diary {
                 this.entries.remove(entry);
                 isFound = true;
             }
-            if (isFound) break;
+            if (isFound) {
+                break;
+            } else {
+                throw new UsernameMismatchException("User ID not found");
+            }
         }
     }
 

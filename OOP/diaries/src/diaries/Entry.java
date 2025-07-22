@@ -17,12 +17,12 @@ public class Entry {
     }
 
     private void validateTitle(String title) {
-        if (title.length() > 30) throw new IllegalArgumentException("Title length exceeds 30 characters");
+        if (title.length() > 50) throw new IllegalArgumentException("Title length exceeds 30 characters");
         this.title = title;
     }
 
     private void validateId(int id) {
-        if (id < 0) throw new IllegalArgumentException("UserID cannot be negative");
+        if (id <= 0) throw new IllegalArgumentException("UserID must be greater than 0");
         this.id = id;
     }
 

@@ -4,13 +4,51 @@ import java.util.Scanner;
 
 public class DiaryMain {
     public static void main(String[] args) {
+        Diaries diaries = new Diaries();
+        Diary diary = null;
+
         String diaryMenu = """
-                Welcom to Diary App!
+                Welcome to Diary App!
                 press:-
-                1 -> Add Diary
-                2 -> Delete Diary
-                3 -> find Diary By UserName
+                1 -> Create Diary
+                2 -> Add Entry
+                3 -> Delete Diary
+                4 -> find Entry By ID
+                5 -> Exit
                 """;
+        boolean menu = true;
+        while (menu){
+            print(diaryMenu);
+            String choice = input();
+            switch (choice){
+                case "1" -> {
+                    print("Enter your name: ");  String userName = input();
+
+                    print("Enter your password: ");  String password = input();
+                    diaries.add(userName, password);
+                    print("Diary created successfully!");
+                }
+
+                case "2" -> {
+                    print("Enter User ID: ");  int userID = Integer.parseInt(input());
+                    print("Enter Title: ");  String title = input();
+                    print("Enter body of diary: ");  String body = input();
+                    assert diary != null;
+                    diary.createEntry(userID, title, body);
+                }
+
+                case "3" -> {
+                    print("Enter User ID: ");  int userID = Integer.parseInt(input());
+                    if (diary != null) diary.deleteEntry(userID);
+                }
+
+                case "4" -> {
+                    print("Enter User ID: ");  int userID = Integer.parseInt(input());
+
+                }
+                default -> throw new IllegalStateException("Unexpected value: " + choice);
+            }
+        }
 
         print("Enter your name: ");
         double userName = Double.parseDouble(input());

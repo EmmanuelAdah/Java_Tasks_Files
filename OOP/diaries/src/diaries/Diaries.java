@@ -29,4 +29,8 @@ public class Diaries {
             if (isFound) break;
         }
     }
+
+    boolean diaryIsEmpty(){
+        return this.diaries.isEmpty();
+    }
 }
