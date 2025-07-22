@@ -38,6 +38,7 @@ public class PhoneBookMain {
                             print("Enter email address: "); String emailAddress = input();
 
                             contacts.addContact(firstName, lastName, address, phoneNumber, emailAddress);
+                            print("Contact added successfully!...");
                             addContact = false;
                         } catch (RuntimeException e) {
                             System.err.println(e.getMessage());
@@ -56,6 +57,7 @@ public class PhoneBookMain {
                             print("Enter phone number: "); String phoneNumber = input();
 
                             contacts.deleteContact(firstName, lastName, phoneNumber);
+                            print("Contact deleted successfully!...");
                             deleteContact = false;
                         } catch (RuntimeException e) {
                             System.err.println(e.getMessage());
