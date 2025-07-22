@@ -9,14 +9,15 @@ public class PhoneBookTest {
 
     @Test
     public void contactListIsEmptyTest(){
-        assertTrue(contacts.isEmpty());
+        assertTrue(contacts.getContactList().isEmpty());
     }
 
     @Test
     public void contactListIsNotEmptyTest(){
         contacts.addContact("Emma", "Adah", "No 2, Sabo-Yaba", "09073463473", "edo@gmail.com");
-        assertFalse(contacts.isEmpty());
+        assertFalse(contacts.getContactList().isEmpty());
     }
+
 
     @Test
     public void addInvalidContactTest(){
@@ -50,7 +51,7 @@ public class PhoneBookTest {
     public void deleteContactFromListTest(){
         contacts.addContact("emma", "adah", "No 13, Sabo", "090", "uquwiqwquiw");
         contacts.deleteContact("emma", "adah", "090");
-        assertTrue(contacts.isEmpty());
+        assertTrue(contacts.getContactList().isEmpty());
     }
 
     @Test
@@ -60,4 +61,6 @@ public class PhoneBookTest {
         assertEquals(String.format("First Name: %s %nLast Name: %s %nAddress: %s %nPhone Number: %s %nEmail: %s%n", "John", "chi", "yu", "090", "chi@gmail.com"),
                 contacts.findContactByPhoneNumber("090"));
     }
+
+
 }

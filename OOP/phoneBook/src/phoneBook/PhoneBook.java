@@ -2,18 +2,25 @@ package phoneBook;
 
 import java.util.ArrayList;
 import java.util.List;
-import static java.lang.reflect.Array.set;
+
 
 public class PhoneBook {
-    private boolean isEmpty;
     private List<Contact> contacts = new ArrayList<>();
-
-    public boolean isEmpty() {
-        return this.isEmpty = this.contacts.isEmpty();
-    }
 
     public void addContact(String firstName, String lastName, String address, String telephone, String email) {
         this.contacts.add(new Contact(firstName, lastName, address, telephone, email));
+    }
+
+    public void deleteContact(String firstName, String lastName, String phoneNumber) {
+        boolean found = false;
+        for (Contact contact : this.contacts) {
+            if (contact.getFirstName().equalsIgnoreCase(firstName) && contact.getLastName().equalsIgnoreCase(lastName)
+                    && contact.getPhoneNumber().equals(phoneNumber)) {
+                this.contacts.remove(contact);
+                found = true;
+            }
+            if (found) break;
+        }
     }
 
     public String findContactByPhoneNumber(String phone) {
@@ -32,18 +39,6 @@ public class PhoneBook {
         for (Contact contact : this.contacts)
             if (contact.getLastName().equalsIgnoreCase(name)) return String.valueOf(contact);
         return String.format("No match for %s", name);
-    }
-
-    public void deleteContact(String firstName, String lastName, String phoneNumber) {
-        boolean found = false;
-        for (Contact contact : this.contacts) {
-            if (contact.getFirstName().equalsIgnoreCase(firstName) && contact.getLastName().equalsIgnoreCase(lastName)
-                    && contact.getPhoneNumber().equals(phoneNumber)) {
-                this.contacts.remove(contact);
-                found = true;
-            }
-            if (found) break;
-        }
     }
 
     public void updateContact(int count, String firstName, String lastName, String address, String phoneNumber, String email) {

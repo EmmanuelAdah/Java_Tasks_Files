@@ -64,11 +64,17 @@ public class PhoneBookMain {
                 } break;
 
                 case "6": {
-                    print("Enter phone number: "); String phoneNumber = input();
-                    print(contacts.findContactByPhoneNumber(phoneNumber));
-
-
-                }
+                    print("Enter phone number of contact to update: ");
+                    String phoneNumber = input();
+                    int count = 0;
+                    boolean found = false;
+                    for (Contact contact : contacts.getContactList()) {
+                        if (contact.getPhoneNumber().equals(phoneNumber)) {
+                            found = true;
+                        }
+                        if (!found) break; else print("Contact not found");
+                    }
+                } break;
 
                 case "7": {
                     if (contacts.getContactList().isEmpty()) print("Contact list is empty");
