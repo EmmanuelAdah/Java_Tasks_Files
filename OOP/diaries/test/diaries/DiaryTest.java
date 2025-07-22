@@ -1,8 +1,8 @@
 package diaries;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DiaryTest {
     Diary diary = new Diary("Adah02", "trey5");
@@ -41,9 +41,10 @@ public class DiaryTest {
     }
 
     @Test
-    public void deleteEntryFailedTest2(){
+    public void deleteEntryExceptionTest(){
         diary.createEntry(1704, "Adah02", "trey5");
-        diary.deleteEntry(1701);
-        assertFalse(diary.entryIsEmpty());
+        assertThrows(IdentityMismatchException.class, () -> diary.deleteEntry(1705));
     }
+
+
 }

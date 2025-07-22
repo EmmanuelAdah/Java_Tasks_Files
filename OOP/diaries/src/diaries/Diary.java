@@ -18,12 +18,14 @@ public class Diary {
     }
 
     private void validateUserName(String userName) {
-        if (userName.length() < 4 || userName.length() > 20) throw new InvalidUserNameLengthException("Username must be between 4 and 20");
+        if (userName.length() < 4 || userName.length() > 20)
+            throw new InvalidUserNameLengthException("Username must be between 4 and 20 characters");
         this.userName = userName;
     }
 
     private void validatePassword(String password) {
-        if (password.length() < 4 || password.length() > 16) throw new InvalidPasswordLengthException("Password must be between 4 and 16");
+        if (password.length() < 4 || password.length() > 16)
+            throw new InvalidPasswordLengthException("Password must be between 4 and 16 characters");
         this.password = password;
     }
 
@@ -50,20 +52,13 @@ public class Diary {
                 this.entries.remove(entry);
                 isFound = true;
             }
-            if (isFound) {
-                break;
-            } else {
-                throw new UsernameMismatchException("User ID not found");
-            }
+            if (!isFound) throw new IdentityMismatchException("User ID not found");
+            else break;
         }
     }
 
     boolean entryIsEmpty(){
         return this.entries.isEmpty();
-    }
-
-    public List<Entry> getEntry(){
-        return this.entries;
     }
 
     public String getUserName(){
@@ -72,6 +67,10 @@ public class Diary {
 
     private String getPassword() {
         return this.password;
+    }
+
+    public List<Entry> getEntry(){
+        return this.entries;
     }
 
     public String toString(){

@@ -19,27 +19,54 @@ public class DiaryMain {
         boolean menu = true;
         while (menu){
             print(diaryMenu);
+            print("Enter your choice: ");
             String choice = input();
             switch (choice){
                 case "1" -> {
-                    print("Enter your name: ");  String userName = input();
+                    boolean createDiary = true;
+                    while (createDiary) {
+                        try {
+                            print("Enter your name: ");
+                            String userName = input();
 
-                    print("Enter your password: ");  String password = input();
-                    diaries.add(userName, password);
-                    print("Diary created successfully!");
+                            print("Enter your password: ");
+                            String password = input();
+                            diaries.add(userName, password);
+                            print("Diary created successfully!");
+                            createDiary = false;
+                        } catch (RuntimeException e) {
+                            System.err.println(e.getMessage());
+                        }
+                    }
                 }
 
                 case "2" -> {
-                    print("Enter User ID: ");  int userID = Integer.parseInt(input());
-                    print("Enter Title: ");  String title = input();
-                    print("Enter body of diary: ");  String body = input();
-                    assert diary != null;
-                    diary.createEntry(userID, title, body);
+                    boolean addEntry = true;
+                    while (addEntry) {
+                        try {
+                            print("Enter User ID: "); int userID = Integer.parseInt(input());
+
+                            print("Enter Title: ");  String title = input();
+
+                            print("Enter body of diary: "); String body = input();
+
+                            assert diary != null;
+                            diary.createEntry(userID, title, body);
+                            print("Entry added successfully!");
+
+                        } catch (RuntimeException e) {
+                            System.err.println(e.getMessage());
+                        }
+                    }
                 }
 
                 case "3" -> {
-                    print("Enter User ID: ");  int userID = Integer.parseInt(input());
-                    if (diary != null) diary.deleteEntry(userID);
+                        try{
+                        print("Enter User ID: ");  int userID = Integer.parseInt(input());
+                        if (diary != null) diary.deleteEntry(userID);
+                    } catch (RuntimeException e) {
+                            System.err.println(e.getMessage());
+                        }
                 }
 
                 case "4" -> {
