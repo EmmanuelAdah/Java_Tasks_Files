@@ -64,8 +64,12 @@ public class PhoneBookMain {
                 } break;
 
                 case "3": {
-                    print("Enter phone number: "); String phoneNumber = input();
-                    print(contacts.findContactByPhoneNumber(phoneNumber));
+                    try {
+                        print("Enter phone number: "); String phoneNumber = input();
+                        print(contacts.findContactByPhoneNumber(phoneNumber));
+                    } catch (RuntimeException e) {
+                        System.err.println(e.getMessage());
+                    }
                 } break;
 
                 case "4": {
@@ -83,16 +87,42 @@ public class PhoneBookMain {
                     String phoneNumber = input();
                     int count = 0;
                     boolean found = false;
+                    try{
                     for (Contact contact : contacts.getContactList()) {
                         if (contact.getPhoneNumber().equals(phoneNumber)) {
+                            print("Enter new first name: ");
+                            String firstName = input();
+                            if (firstName.equals(null)) firstName = contact.getFirstName();
+
+                            print("Enter new last name: ");
+                            String lastName = input();
+                            if (lastName.equals(null)) lastName = contact.getLastName();
+
+                            print("Enter new address: ");
+                            String address = input();
+                            if (address.equals(null)) address = contact.getAddress();
+
+                            print("Enter new phone number: ");
+                            String newPhoneNumber = input();
+                            if (newPhoneNumber.isEmpty()) newPhoneNumber = contact.getPhoneNumber();
+
+                            print("Enter new email address: ");
+                            String emailAddress = input();
+                            if (emailAddress.isEmpty()) emailAddress = contact.getEmail();
+
+                            contacts.updateContact(count, firstName, lastName, address, newPhoneNumber, emailAddress);
+                            print("Contact updated successfully!");
                             found = true;
                         }
-                        if (!found) break; else print("Contact not found");
+                        if (!found) { break; } else {print("Contact not found"); }
+                    }
+                    } catch (RuntimeException e) {
+                        System.err.println(e.getMessage());
                     }
                 } break;
 
                 case "7": {
-                    if (contacts.getContactList().isEmpty()) print("Contact list is empty");
+                    if (contacts.getContactList().isEmpty()) print("Contact list is empty \n");
                     for (Contact contact : contacts.getContactList()) print(contact.toString());
                 } break;
 

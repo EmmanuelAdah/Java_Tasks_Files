@@ -1,4 +1,4 @@
-import geoPoliticalZone.GeoPoliticalZone;
+package geoPoliticalZone;
 
 import java.util.Scanner;
 
