@@ -90,31 +90,32 @@ public class PhoneBookMain {
                     try{
                     for (Contact contact : contacts.getContactList()) {
                         if (contact.getPhoneNumber().equals(phoneNumber)) {
+                            print("Always press Enter to keep the old entry");
                             print("Enter new first name: ");
                             String firstName = input();
-                            if (firstName.equals(null)) firstName = contact.getFirstName();
+                            if (firstName.isBlank()) firstName = contact.getFirstName();
 
                             print("Enter new last name: ");
                             String lastName = input();
-                            if (lastName.equals(null)) lastName = contact.getLastName();
+                            if (lastName.isBlank()) lastName = contact.getLastName();
 
                             print("Enter new address: ");
                             String address = input();
-                            if (address.equals(null)) address = contact.getAddress();
+                            if (address.isBlank()) address = contact.getAddress();
 
                             print("Enter new phone number: ");
                             String newPhoneNumber = input();
-                            if (newPhoneNumber.isEmpty()) newPhoneNumber = contact.getPhoneNumber();
+                            if (newPhoneNumber.isBlank()) newPhoneNumber = contact.getPhoneNumber();
 
                             print("Enter new email address: ");
                             String emailAddress = input();
-                            if (emailAddress.isEmpty()) emailAddress = contact.getEmail();
+                            if (emailAddress.isBlank()) emailAddress = contact.getEmail();
 
                             contacts.updateContact(count, firstName, lastName, address, newPhoneNumber, emailAddress);
                             print("Contact updated successfully!");
                             found = true;
                         }
-                        if (!found) { break; } else {print("Contact not found"); }
+                        if (found) { break; } else {print("Contact not found"); }
                     }
                     } catch (RuntimeException e) {
                         System.err.println(e.getMessage());
