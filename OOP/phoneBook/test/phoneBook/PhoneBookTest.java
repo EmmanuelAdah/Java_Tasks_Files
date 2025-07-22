@@ -62,5 +62,11 @@ public class PhoneBookTest {
                 contacts.findContactByPhoneNumber("090"));
     }
 
-
+    @Test
+    public void contactUpdateTest(){
+        contacts.addContact("emma", "adah", "No 13, Sabo", "09430034994", "uquwiqwquiw");
+        contacts.updateContact(0, "Emma", "Adah", "No 13, Sabo", "09430034994", "edo");
+        assertEquals(String.format("First Name: %s %nLast Name: %s %nAddress: %s %nPhone Number: %s %nEmail: %s%n",
+                "Emma", "Adah", "No 13, Sabo", "09430034994", "edo"), contacts.findContactByPhoneNumber("09430034994"));
+    }
 }

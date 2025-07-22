@@ -12,9 +12,10 @@ public class DiaryMain {
                 press:-
                 1 -> Create Diary
                 2 -> Add Entry
-                3 -> Delete Diary
-                4 -> find Entry By ID
-                5 -> Exit
+                3 -> Find Diary By UserName
+                4 -> Delete Diary
+                5 -> find Entry By ID
+                6 -> Exit
                 """;
         boolean menu = true;
         while (menu){
@@ -53,14 +54,14 @@ public class DiaryMain {
                             assert diary != null;
                             diary.createEntry(userID, title, body);
                             print("Entry added successfully!");
-
+                            addEntry = false;
                         } catch (RuntimeException e) {
                             System.err.println(e.getMessage());
                         }
                     }
                 }
 
-                case "3" -> {
+                case "5" -> {
                         try{
                         print("Enter User ID: ");  int userID = Integer.parseInt(input());
                         if (diary != null) diary.deleteEntry(userID);

@@ -17,10 +17,10 @@ public class GeoPoliticalZone {
     }
 
     public String getPoliticalZone() {
-        return politicalZone;
+        return this.politicalZone;
     }
 
     public String getState() {
-        return state;
+        return this.state;
     }
 }
