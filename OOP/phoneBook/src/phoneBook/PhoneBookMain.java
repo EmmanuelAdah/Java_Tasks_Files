@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class PhoneBookMain {
     public static void main(String... args) {
         PhoneBook contacts = new PhoneBook();
+
         String phoneBookMenu = """
             Welcome to the Phone Book!
             press:-
@@ -23,29 +24,43 @@ public class PhoneBookMain {
 
             switch (choice) {
                 case "1": {
-                    print("Enter first name: ");  String firstName = input();
+                    boolean addContact = true;
+                    while (addContact) {
+                        try {
+                            print("Enter first name: "); String firstName = input();
 
-                    print("Enter last name: "); String lastName = input();
+                            print("Enter last name: ");  String lastName = input();
 
-                    print("Enter address: ");  String address = input();
+                            print("Enter address: ");  String address = input();
 
-                    print("Enter phone number: ");  String phoneNumber = input();
+                            print("Enter phone number: "); String phoneNumber = input();
 
-                    print("Enter email address: ");  String emailAddress = input();
+                            print("Enter email address: "); String emailAddress = input();
 
-                    contacts.addContact(firstName, lastName, address, phoneNumber, emailAddress);
+                            contacts.addContact(firstName, lastName, address, phoneNumber, emailAddress);
+                            addContact = false;
+                        } catch (RuntimeException e) {
+                            System.err.println(e.getMessage());
+                        }
+                    }
                 }  break;
 
                 case "2": {
-                    print("Enter first name: ");
-                    String firstName = input();
+                    boolean deleteContact = true;
+                    while (deleteContact) {
+                        try {
+                            print("Enter first name: "); String firstName = input();
 
-                    print("Enter last name: ");
-                    String lastName = input();
+                            print("Enter last name: "); String lastName = input();
 
-                    print("Enter phone number: ");
-                    String phoneNumber = input();
-                    contacts.deleteContact(firstName, lastName, phoneNumber);
+                            print("Enter phone number: "); String phoneNumber = input();
+
+                            contacts.deleteContact(firstName, lastName, phoneNumber);
+                            deleteContact = false;
+                        } catch (RuntimeException e) {
+                            System.err.println(e.getMessage());
+                        }
+                    }
                 } break;
 
                 case "3": {
