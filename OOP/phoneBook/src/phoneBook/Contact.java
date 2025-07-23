@@ -25,8 +25,16 @@ public class Contact {
     }
 
     private void validatePhoneNumber(String phone) {
-        for (char number : phone.toCharArray())
-            if (!Character.isDigit(number)) throw new InvalidNumberFormatException ("Phone number contains other characters");
+        if (phone != null && phone.length() == 10 || phone.length() == 11 ) {
+            for (char number : phone.toCharArray())
+                if (!Character.isDigit(number)) throw new InvalidNumberFormatException ("Phone number contains other characters");
+        } else {
+            throw new InvalidNumberLengthException("Phone number must be 10 or 11 digits");
+        }
+    }
+
+    private void validateEmail(String email) {
+
     }
 
     public String getLastName() {
