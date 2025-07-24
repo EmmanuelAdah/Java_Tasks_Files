@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class DiaryMain {
     public static void main(String[] args) {
         Diaries diaries = new Diaries();
+        Diary diary = null;
 
         String diaryMenu = """
                 Welcome to Diary App!
@@ -85,7 +86,6 @@ public class DiaryMain {
 
                 default -> {
                     print("Wrong choice! Try again!");
-                    menu = true;
                 }
             }
         }

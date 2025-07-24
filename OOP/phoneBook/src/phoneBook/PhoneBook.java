@@ -1,7 +1,6 @@
 package phoneBook;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -27,7 +26,7 @@ public class PhoneBook {
     public String findContactByPhoneNumber(String phone) {
         for (Contact contact : this.contacts)
             if (contact.getPhoneNumber().equals(phone)) return String.valueOf(contact);
-        return null;
+        return String.format("Contact not found");
     }
 
     public String findContactByFirstName(String name) {
