@@ -1,11 +1,10 @@
 package diaries;
-
 import java.util.Scanner;
 
 public class DiaryMain {
     public static void main(String[] args) {
         Diaries diaries = new Diaries();
-        Diary diary = null;
+        Diary diary;
 
         String diaryMenu = """
                 Welcome to Diary App!
@@ -80,12 +79,17 @@ public class DiaryMain {
                     diary.findEntryByUserId(diaryID);
                 }
 
-                default -> throw new IllegalStateException("Unexpected value: " + choice);
+                case "6" -> {
+                    print("GoodBye!...");
+                    menu = false;
+                }
+
+                default -> {
+                    print("Wrong choice! Try again!");
+                    menu = true;
+                }
             }
         }
-
-        print("Enter your name: ");
-        double userName = Double.parseDouble(input());
     }
     private static void print(String userInput){
         System.out.println(userInput);
