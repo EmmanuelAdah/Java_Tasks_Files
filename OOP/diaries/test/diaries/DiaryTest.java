@@ -36,13 +36,21 @@ public class DiaryTest {
     @Test
     public void deleteEntryTest(){
         diary.createEntry(1704, "Adah02", "trey5");
+
         diary.deleteEntry(1704);
         assertTrue(diary.entryIsEmpty());
     }
 
     @Test
     public void deleteEntryExceptionTest(){
-        diary.createEntry(1704, "Adah02", "trey5");
-        assertThrows(IdentityMismatchException.class, () -> diary.deleteEntry(1705));
+        diary.createEntry(17, "Adah02", "trey5");
+        assertThrows(IdentityMismatchException.class, () -> diary.deleteEntry(175));
+    }
+
+    @Test
+    public void findEntryByUserIdTest(){
+        diary.createEntry(17, "Adah02", "trey5");
+        assertEquals(String.format("ID: %d%n, Title: %s%n, Body: %s%n", 17, "Adah02", "trey5"),
+                diary.findEntryByUserId(17).toString());
     }
 }
