@@ -26,8 +26,7 @@ public class Diaries {
                 this.diaries.remove(diary);
                 isFound = true;
             }
-            if (!isFound) throw new UsernameMismatchException("Username not found");
-            else break;
+            if (isFound) break;
         }
     }
 

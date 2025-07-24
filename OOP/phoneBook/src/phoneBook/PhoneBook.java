@@ -33,13 +33,13 @@ public class PhoneBook {
     public String findContactByFirstName(String name) {
         for (Contact contact : this.contacts)
             if (contact.getFirstName().equalsIgnoreCase(name)) return String.valueOf(contact);
-        return String.format("No match for %s", name);
+        return String.format("No match for %s in contact list", name);
     }
 
     public String findContactByLastName(String name) {
         for (Contact contact : this.contacts)
             if (contact.getLastName().equalsIgnoreCase(name)) return String.valueOf(contact);
-        return String.format("No match for %s", name);
+        return String.format("No match for %s in contact list", name);
     }
 
     public void updateContact(int count, String firstName, String lastName, String address, String phoneNumber, String email) {

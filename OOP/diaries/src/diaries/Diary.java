@@ -57,6 +57,13 @@ public class Diary {
         }
     }
 
+    public Entry findEntryByUserId(int userID) {
+        for (Entry entry : this.entries) {
+            if (Objects.equals(entry.getId(), userID)) return entry;
+        }
+        return null;
+    }
+
     boolean entryIsEmpty(){
         return this.entries.isEmpty();
     }
@@ -65,15 +72,11 @@ public class Diary {
         return this.userName;
     }
 
-    private String getPassword() {
-        return this.password;
-    }
-
     public List<Entry> getEntry(){
         return this.entries;
     }
 
     public String toString(){
-        return String.format("Username: %s, Password: %s", getUserName(), getPassword());
+        return String.format("Username: %s", getUserName());
     }
 }

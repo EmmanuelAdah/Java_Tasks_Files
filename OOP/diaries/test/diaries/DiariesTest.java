@@ -2,8 +2,7 @@ package diaries;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DiariesTest {
     Diaries diaries = new Diaries();
@@ -23,7 +22,7 @@ public class DiariesTest {
     public void findDiaryByUsernameTest(){
         diaries.add("Adah01", "trey7");
         diaries.add("Adah02", "trey5");
-        System.out.println(diaries.findByUserName("Adah02"));
+        assertEquals("Username: Adah02", diaries.findByUserName("Adah02").toString());
     }
 
     @Test

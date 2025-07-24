@@ -61,19 +61,25 @@ public class DiaryMain {
                     }
                 }
 
-                case "5" -> {
-                        try{
-                        print("Enter User ID: ");  int userID = Integer.parseInt(input());
-                        if (diary != null) diary.deleteEntry(userID);
-                    } catch (RuntimeException e) {
+                case "3" -> {
+                        print("Enter username: "); String userName = input();
+                        diaries.findByUserName(userName);
+                }
+
+                case "4" -> {
+                    try{
+                            print("Enter User ID: ");  int userID = Integer.parseInt(input());
+                            if (diary != null) diary.deleteEntry(userID);
+                        } catch (RuntimeException e) {
                             System.err.println(e.getMessage());
                         }
                 }
 
-                case "4" -> {
-                    print("Enter User ID: ");  int userID = Integer.parseInt(input());
-
+                case "5" -> {
+                    print("Enter your ID: "); int diaryID = Integer.parseInt(input());
+                    diary.findEntryByUserId(diaryID);
                 }
+
                 default -> throw new IllegalStateException("Unexpected value: " + choice);
             }
         }

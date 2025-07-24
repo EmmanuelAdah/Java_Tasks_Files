@@ -45,6 +45,4 @@ public class DiaryTest {
         diary.createEntry(1704, "Adah02", "trey5");
         assertThrows(IdentityMismatchException.class, () -> diary.deleteEntry(1705));
     }
-
-
 }
