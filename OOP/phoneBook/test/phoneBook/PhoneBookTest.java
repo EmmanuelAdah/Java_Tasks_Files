@@ -43,8 +43,8 @@ public class PhoneBookTest {
     public void findContactByLastNameTest(){
         contacts.addContact("Emma", "Adah", "No 32, Sabo", "090", "uquwiqwquiw");
         contacts.addContact("John", "Chi", "No 13, yaba", "091", "hjjk");
-        assertEquals(contacts.findContactByLastName("Chi"), String.format("First Name: %s %nLast Name: %s %nAddress: %s %nPhone Number: %s %nEmail: %s%n",
-                "John", "Chi", "No 13, yaba", "091", "hjjk"));
+        assertEquals(contacts.findContactByLastName("Chi"), String.format("First Name: %s %nLast Name: %s %nAddress: " +
+                        "%s %nPhone Number: %s %nEmail: %s%n", "John", "Chi", "No 13, yaba", "091", "hjjk"));
     }
 
     @Test
@@ -58,8 +58,8 @@ public class PhoneBookTest {
     public void findContactByPhoneNumberTest(){
         contacts.addContact("emma", "adah", "No 13, Sabo", "09430034994", "uquwiqwquiw");
         contacts.addContact("John", "chi", "yu", "090", "chi@gmail.com");
-        assertEquals(String.format("First Name: %s %nLast Name: %s %nAddress: %s %nPhone Number: %s %nEmail: %s%n", "John", "chi", "yu", "090", "chi@gmail.com"),
-                contacts.findContactByPhoneNumber("090"));
+        assertEquals(String.format("First Name: %s %nLast Name: %s %nAddress: %s %nPhone Number: %s %nEmail: %s%n", "John",
+                "chi", "yu", "090", "chi@gmail.com"), contacts.findContactByPhoneNumber("090"));
     }
 
     @Test
