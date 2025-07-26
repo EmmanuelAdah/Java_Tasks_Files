@@ -1,8 +1,5 @@
 package phoneBook;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Contact {
     private String firstName;
     private String lastName;
@@ -18,7 +15,6 @@ public class Contact {
         this.address = address;
         validatePhoneNumber(phone);
         this.phoneNumber = phone;
-        validateEmail(email);
         this.email = email;
     }
 
@@ -34,16 +30,6 @@ public class Contact {
                 if (!Character.isDigit(number)) throw new InvalidNumberFormatException ("Phone number contains other characters");
         } else {
             throw new InvalidNumberLengthException("Phone number must be 10 or 11 digits");
-        }
-    }
-
-    private void validateEmail(String email) {
-        final String EMAILREGEX = "^[A-Za-z0-9+_.-]+@(.+)$";
-        Pattern pattern = Pattern.compile(EMAILREGEX);
-        Matcher matcher = pattern.matcher(email);
-        if (matcher.equals(true)) {
-            this.email = email;
-        } else { throw new InvalidEmailFormatException("Invalid format for email. Try again!...");
         }
     }
 
