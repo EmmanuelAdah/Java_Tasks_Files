@@ -73,6 +73,7 @@ public class PhoneBookMain {
                     boolean contact = true;
                     while (contact) {
                         print(findContact);
+                        print("Enter an option");
                         String userChoice = input();
 
                         switch (userChoice) {
@@ -99,7 +100,7 @@ public class PhoneBookMain {
                             }
                             case "0": contact = false; break;
 
-                            default: contact = true;
+                            default: print("Invalid option. Try again!...");
                         }
                     }
                     } break;
@@ -150,8 +151,7 @@ public class PhoneBookMain {
                 } break;
 
                 case "6":
-                    print("GoodBye...");  phoneBook = false;
-                    break;
+                    print("GoodBye...");  phoneBook = false; break;
                 default:
                     print("Invalid option! Try  again.");
             }
