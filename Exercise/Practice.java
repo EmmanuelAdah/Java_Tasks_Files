@@ -37,7 +37,7 @@ public class Practice {
         }
 */
         LocalDateTime date = LocalDateTime.now();
-        DateTimeFormatter sdf = DateTimeFormatter.ofPattern("yyyy MM dd / hh:mm AA");
+        DateTimeFormatter sdf = DateTimeFormatter.ofPattern("yyyy MM dd / hh:mm a");
         System.out.println(sdf.format(date));
     }
 }

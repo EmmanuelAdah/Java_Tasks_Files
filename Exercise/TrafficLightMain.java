@@ -1,4 +1,4 @@
-public class EnumPractice {
+public class TrafficLightMain {
     public static void main(String[] args) {
 
         for (TrafficLight light : TrafficLight.values()) {
