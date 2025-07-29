@@ -5,45 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9d0d31a-195e-44e7-88b5-703bdeaa5e5e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarChartStudentGrade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter 7 Tasks.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FibonacciNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/BarChartStudentGrade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/Chapter 7 Tasks.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/FibonacciNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/Chapter 9 Tasks.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/book/AudioBook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/book/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/book/PrintBook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/BasePlusCommissionCompensationModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/CommissionCompensationModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/HourlyEmployee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/InvalidAmountException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/InvalidCommissionRateException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/InvalidNameFormatException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/InvalidNumberFormatException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/InvalidSalesAmountException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/test/book/BookTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/test/employee/CommissionCompensationModelTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/test/employee/HourlyEmployeeTest.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter_8_tasks/CylinderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java_Deitel_Exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_Deitel_Exercises.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapter_8_tasks/cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter_8_tasks/Cylinder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

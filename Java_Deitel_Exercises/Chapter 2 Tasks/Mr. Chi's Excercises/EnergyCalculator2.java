@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EnergyCalculator {
+public class EnergyCalculator2 {
 
 	public static void main(String[] args) {
 
