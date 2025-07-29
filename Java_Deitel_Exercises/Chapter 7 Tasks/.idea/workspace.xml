@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9d0d31a-195e-44e7-88b5-703bdeaa5e5e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarChartStudentGrade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter 7 Tasks.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FibonacciNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/BarChartStudentGrade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/Chapter 7 Tasks.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter 7 Tasks/FibonacciNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/Chapter 9 Tasks.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/book/AudioBook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/book/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/book/PrintBook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/BasePlusCommissionCompensationModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/CommissionCompensationModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/HourlyEmployee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/InvalidAmountException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/InvalidCommissionRateException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/InvalidNameFormatException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/InvalidNumberFormatException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/src/employee/InvalidSalesAmountException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/test/book/BookTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/test/employee/CommissionCompensationModelTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 9 Tasks/test/employee/HourlyEmployeeTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="30WCKrkr021bhqyEwGbUwSuq7OW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FibonacciNumber.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/OneDrive/Documents/Java_Files/Java_Deitel_Exercises/Chapter 7 Tasks&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9d0d31a-195e-44e7-88b5-703bdeaa5e5e" name="Changes" comment="" />
+      <created>1753733881091</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753733881091</updated>
+      <workItem from="1753733882393" duration="6551000" />
+      <workItem from="1753825305161" duration="771000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
