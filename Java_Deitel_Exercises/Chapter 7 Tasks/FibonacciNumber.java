@@ -9,19 +9,16 @@ public class FibonacciNumber {
         int number = scan.nextInt();
 
         ArrayList<Integer> fibonacciNumbers = new ArrayList<>();
-
+        int temp = 0;
         for (int index = 0; index < number; index++) {
-            if (fibonacciNumbers.size() > 2) {
-                System.out.print((fibonacciNumbers.get(index - 2) + fibonacciNumbers.get(index - 1)) + " ");
-                fibonacciNumbers.add(index);
-            } else if (index == 1) {
-                fibonacciNumbers.add(index);
-                System.out.print(fibonacciNumbers.get(index - 1) + fibonacciNumbers.get(index) + " ");
+            if (index > 1) {
+                temp = (fibonacciNumbers.get(index - 2) + fibonacciNumbers.get(index - 1));
+                System.out.print(temp + " ");
+                fibonacciNumbers.add(temp);
             } else {
                 System.out.print(index + " ");
                 fibonacciNumbers.add(index);
             }
         }
-
     }
 }
