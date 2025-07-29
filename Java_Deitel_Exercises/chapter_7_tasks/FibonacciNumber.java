@@ -6,10 +6,10 @@ public class FibonacciNumber {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter a number: ");
-        int number = scan.nextInt();
+        double number = scan.nextDouble();
 
         ArrayList<Integer> fibonacciNumbers = new ArrayList<>();
-        int temp = 0;
+        int temp;
         for (int index = 0; index < number; index++) {
             if (index > 1) {
                 temp = (fibonacciNumbers.get(index - 2) + fibonacciNumbers.get(index - 1));
