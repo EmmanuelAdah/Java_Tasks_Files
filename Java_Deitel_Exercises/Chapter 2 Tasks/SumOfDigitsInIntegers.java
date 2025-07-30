@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SumOfDigitsInInteger {
+public class SumOfDigitsInIntegers {
 
 	public static void main(String[] args) {
 
