@@ -1,5 +1,4 @@
 package diaries;
-
 import java.time.LocalDateTime;
 
 public class Entry {
