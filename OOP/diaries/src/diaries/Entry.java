@@ -56,6 +56,6 @@ public class Entry {
     }
 
     public String toString() {
-        return String.format("ID: %d%n, Title: %s%n, Body: %s%n", getId(), getTitle(), getBody());
+        return String.format("Entry ID: %d %nTitle: %s %nBody: %s%n", getId(), getTitle(), getBody());
     }
 }

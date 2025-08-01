@@ -18,9 +18,11 @@ public class Diary {
     }
 
     private void validateUserName(String userName) {
-        if (userName.length() < 4 || userName.length() > 20)
-            throw new InvalidUserNameLengthException("Username must be between 4 and 20 characters");
-        this.userName = userName;
+        try {
+            if (userName.length() > 4 || userName.length() < 20) this.userName = userName;
+        }catch(InvalidUserNameLengthException e){
+            System.err.println("Invalid UserName Length!");
+        }
     }
 
     private void validatePassword(String password) {
@@ -58,8 +60,13 @@ public class Diary {
     }
 
     public Entry findEntryByUserId(int userID) {
+        boolean isFound = false;
         for (Entry entry : this.entries) {
-            if (Objects.equals(entry.getId(), userID)) return entry;
+            if (Objects.equals(entry.getId(), userID)) {
+                isFound = true;
+                return entry;
+            }
+            if (!isFound) throw new IdentityMismatchException("User ID not found");
         }
         return null;
     }
