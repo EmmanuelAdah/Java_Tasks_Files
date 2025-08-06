@@ -1,9 +1,6 @@
 package diaries;
 
 import org.junit.jupiter.api.Test;
-
-import java.sql.SQLOutput;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DiaryTest {

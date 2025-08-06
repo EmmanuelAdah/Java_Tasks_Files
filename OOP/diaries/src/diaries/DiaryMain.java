@@ -2,25 +2,15 @@ package diaries;
 import java.util.Scanner;
 
 public class DiaryMain {
+
     static public void main(String... args) {
 
         Diaries diaries = new Diaries();
         Diary diary = null;
 
-        String diaryMenu = """
-                Welcome to Diary App!
-                press:-
-                1 -> Create Diary
-                2 -> Add Entry
-                3 -> Find Diary By UserName
-                4 -> Delete Entry
-                5 -> find Entry By ID
-                6 -> Delete Diary
-                7 -> Exit
-                """;
         boolean menu = true;
         while (menu){
-            print(diaryMenu);
+            print(printMainMenu());
             print("Enter your choice: ");
             String choice = input();
             switch (choice){
@@ -110,6 +100,20 @@ public class DiaryMain {
             }
         }
     }
+    public static String printMainMenu(){
+        return """
+                Welcome to Diary App!
+                press:-
+                1 -> Create Diary
+                2 -> Add Entry
+                3 -> Find Diary By UserName
+                4 -> Delete Entry
+                5 -> find Entry By ID
+                6 -> Delete Diary
+                7 -> Exit
+                """;
+    }
+
     private static void print(String userInput){
         System.out.println(userInput);
     }

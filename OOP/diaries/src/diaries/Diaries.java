@@ -27,7 +27,7 @@ public class Diaries {
                 isFound = true;
             }
             if (isFound) break;
-            throw new NullPointerException("Account not found!");
+            throw new NullPointerException ("Account not found!");
         }
     }
 

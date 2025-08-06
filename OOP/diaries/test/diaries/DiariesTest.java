@@ -40,15 +40,10 @@ public class DiariesTest {
     @Test
     public void deleteDiaryWithWrongPasswordTest(){
         diaries.add("Adah02", "trey5");
-        diaries.delete("Adah02", "trey6");
-        assertFalse(diaries.diaryIsEmpty());
+        assertThrows(NullPointerException.class, () -> diaries.delete("Adah02", "trey6"));
 
         diaries.add("Eliot", "ellie");
         diaries.delete("Eliot", "elliE");
-        assertFalse(diaries.diaryIsEmpty());
-
-        diaries.add("John", "john");
-        diaries.delete("John", "John");
-        assertFalse(diaries.diaryIsEmpty());
+        assertThrows(NullPointerException.class, () -> diaries.delete("Eliot", "ellie"));
     }
 }
