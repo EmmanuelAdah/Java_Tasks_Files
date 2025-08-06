@@ -10,6 +10,12 @@ public class Diary {
     private boolean isLocked;
     private List<Entry> entries = new ArrayList<>();
 
+    public Diary(){
+        this.isLocked = true;
+        this.userName = "Unknown";
+        this.password = "<PASSWORD>";
+    }
+
     public Diary(String userName, String password){
         validateUserName(userName);
         this.userName = userName;

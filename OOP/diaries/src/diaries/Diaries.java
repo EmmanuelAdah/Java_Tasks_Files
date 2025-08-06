@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Diaries {
     private List<Diary> diaries = new ArrayList<>();
 
-    public void add(String userName, String password){
+    public void createDiary(String userName, String password){
         this.diaries.add(new Diary(userName, password));
     }
 
@@ -15,10 +15,10 @@ public class Diaries {
         for (Diary diary : this.diaries) {
             if (Objects.equals(diary.getUserName(), userName)) return diary;
         }
-        return null;
+        throw new IllegalArgumentException("Username not found!");
     }
 
-    void delete(String userName, String passKey){
+    void deleteDiary(String userName, String passKey){
         boolean isFound = false;
         for (Diary diary : this.diaries) {
             diary.unlockDiary(passKey);

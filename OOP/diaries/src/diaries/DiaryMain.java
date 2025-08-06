@@ -6,7 +6,7 @@ public class DiaryMain {
     static public void main(String... args) {
 
         Diaries diaries = new Diaries();
-        Diary diary = null;
+        Diary diary = new Diary();
 
         boolean menu = true;
         while (menu){
@@ -21,9 +21,8 @@ public class DiaryMain {
                             print("Enter username: ");  String userName = input();
 
                             print("Enter your password: ");  String password = input();
-                            diaries.add(userName, password);
 
-                            diary = new Diary(userName, password);
+                            diaries.createDiary(userName, password);
                             print("Diary created successfully!");
                             createDiary = false;
                         } catch (RuntimeException e) {
@@ -40,6 +39,7 @@ public class DiaryMain {
                             print("Enter Title: ");  String title = input();
 
                             print("Enter body of diary: "); String body = input();
+
                             diary.createEntry(userID, title, body);
 
                             print("Entry added successfully!");
@@ -56,7 +56,7 @@ public class DiaryMain {
                         print("Enter username: ");
                         String userName = input();
                         print(diaries.findByUserName(userName).toString());
-                    }catch (NullPointerException e){
+                    } catch (IllegalArgumentException e) {
                         printError("Username not found!");
                     }
                 }
@@ -75,8 +75,10 @@ public class DiaryMain {
                         print("Enter Entry ID: ");
                         int diaryID = Integer.parseInt(input());
                         print(diary.findEntryByUserId(diaryID).toString());
-                    }catch (NullPointerException | NumberFormatException e){
+                    }catch (NullPointerException e){
                         printError("Entry not found!");
+                    } catch (NumberFormatException e) {
+                        printError("Invalid input! Try again...");
                     }
                 }
                 case "6" -> {
@@ -87,7 +89,7 @@ public class DiaryMain {
                         print("Enter your password: ");
                         String password = input();
 
-                        diaries.add(userName, password);
+                        diaries.deleteDiary(userName, password);
                     }catch (NullPointerException e){
                         printError("Account not found!");
                     }
