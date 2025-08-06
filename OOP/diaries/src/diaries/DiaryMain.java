@@ -10,7 +10,7 @@ public class DiaryMain {
 
         boolean menu = true;
         while (menu){
-            print(printMainMenu());
+            print(mainMenu());
             print("Enter your choice: ");
             String choice = input();
             switch (choice){
@@ -27,7 +27,7 @@ public class DiaryMain {
                             print("Diary created successfully!");
                             createDiary = false;
                         } catch (RuntimeException e) {
-                            System.err.println(e.getMessage());
+                            printError(e.getMessage());
                         }
                     }
                 }
@@ -40,14 +40,14 @@ public class DiaryMain {
                             print("Enter Title: ");  String title = input();
 
                             print("Enter body of diary: "); String body = input();
-
                             diary.createEntry(userID, title, body);
+
                             print("Entry added successfully!");
                             addEntry = false;
                         } catch (NumberFormatException e) {
-                            System.err.println("Invalid input! Try again...");
+                            printError("Invalid input! Try again...");
                         } catch (NullPointerException e){
-                            System.err.println("Diary not found!");
+                            printError("Diary not found!");
                         }
                     }
                 }
@@ -57,7 +57,7 @@ public class DiaryMain {
                         String userName = input();
                         print(diaries.findByUserName(userName).toString());
                     }catch (NullPointerException e){
-                        System.err.println("Username not found!");
+                        printError("Username not found!");
                     }
                 }
                 case "4" -> {
@@ -65,9 +65,9 @@ public class DiaryMain {
                             print("Enter Entry ID: ");  int userID = Integer.parseInt(input());
                             diary.deleteEntry(userID);
                         } catch (NullPointerException e){
-                        System.err.println("Entry not found!");
+                        printError("Entry not found!");
                         } catch (NumberFormatException e) {
-                            System.err.println("Invalid input! Try again...");
+                            printError("Invalid input! Try again...");
                         }
                 }
                 case "5" -> {
@@ -76,7 +76,7 @@ public class DiaryMain {
                         int diaryID = Integer.parseInt(input());
                         print(diary.findEntryByUserId(diaryID).toString());
                     }catch (NullPointerException | NumberFormatException e){
-                        System.err.println("Entry not found!");
+                        printError("Entry not found!");
                     }
                 }
                 case "6" -> {
@@ -89,7 +89,7 @@ public class DiaryMain {
 
                         diaries.add(userName, password);
                     }catch (NullPointerException e){
-                        System.err.println("Account not found!");
+                        printError("Account not found!");
                     }
                 }
                 case "7" -> {
@@ -100,7 +100,7 @@ public class DiaryMain {
             }
         }
     }
-    public static String printMainMenu(){
+    public static String mainMenu(){
         return """
                 Welcome to Diary App!
                 press:-
@@ -116,6 +116,10 @@ public class DiaryMain {
 
     private static void print(String userInput){
         System.out.println(userInput);
+    }
+
+    private static void printError(String message){
+        System.err.println(message);
     }
 
     private static String input(){
