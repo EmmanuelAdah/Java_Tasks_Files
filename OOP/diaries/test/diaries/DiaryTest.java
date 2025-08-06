@@ -2,6 +2,8 @@ package diaries;
 
 import org.junit.jupiter.api.Test;
 
+import java.sql.SQLOutput;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DiaryTest {
@@ -50,7 +52,7 @@ public class DiaryTest {
     @Test
     public void findEntryByUserIdTest(){
         diary.createEntry(17, "Adah02", "trey5");
-        assertEquals(String.format("ID: %d%n, Title: %s%n, Body: %s%n", 17, "Adah02", "trey5"),
+        assertEquals(String.format("Entry ID: %d %nTitle: %s %nBody: %s%n", 17, "Adah02", "trey5"),
                 diary.findEntryByUserId(17).toString());
     }
 }

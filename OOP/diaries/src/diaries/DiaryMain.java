@@ -2,7 +2,8 @@ package diaries;
 import java.util.Scanner;
 
 public class DiaryMain {
-    public static void main(String[] args) {
+    static public void main(String... args) {
+
         Diaries diaries = new Diaries();
         Diary diary = null;
 
@@ -12,9 +13,9 @@ public class DiaryMain {
                 1 -> Create Diary
                 2 -> Add Entry
                 3 -> Find Diary By UserName
-                4 -> Delete Diary
+                4 -> Delete Entry
                 5 -> find Entry By ID
-                6 -> Delete User
+                6 -> Delete Diary
                 7 -> Exit
                 """;
         boolean menu = true;
@@ -53,8 +54,10 @@ public class DiaryMain {
                             diary.createEntry(userID, title, body);
                             print("Entry added successfully!");
                             addEntry = false;
-                        } catch (RuntimeException e) {
-                            System.err.println(e.getMessage());
+                        } catch (NumberFormatException e) {
+                            System.err.println("Invalid input! Try again...");
+                        } catch (NullPointerException e){
+                            System.err.println("Diary not found!");
                         }
                     }
                 }
@@ -69,18 +72,20 @@ public class DiaryMain {
                 }
                 case "4" -> {
                     try{
-                            print("Enter User ID: ");  int userID = Integer.parseInt(input());
+                            print("Enter Entry ID: ");  int userID = Integer.parseInt(input());
                             diary.deleteEntry(userID);
-                        } catch (NullPointerException e) {
-                            System.err.println(e.getMessage());
+                        } catch (NullPointerException e){
+                        System.err.println("Entry not found!");
+                        } catch (NumberFormatException e) {
+                            System.err.println("Invalid input! Try again...");
                         }
                 }
                 case "5" -> {
                     try {
-                        print("Enter your ID: ");
+                        print("Enter Entry ID: ");
                         int diaryID = Integer.parseInt(input());
                         print(diary.findEntryByUserId(diaryID).toString());
-                    }catch (NullPointerException e){
+                    }catch (NullPointerException | NumberFormatException e){
                         System.err.println("Entry not found!");
                     }
                 }

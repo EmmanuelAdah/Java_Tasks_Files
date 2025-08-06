@@ -66,7 +66,7 @@ public class Diary {
                 isFound = true;
                 return entry;
             }
-            if (!isFound) throw new IdentityMismatchException("User ID not found");
+            if (!isFound) System.err.println("Entry not found");
         }
         return null;
     }
