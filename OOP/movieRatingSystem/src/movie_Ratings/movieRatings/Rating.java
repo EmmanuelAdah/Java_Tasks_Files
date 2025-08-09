@@ -12,7 +12,7 @@ public class Rating extends Movie {
         return this.ratingList.isEmpty();
     }
 
-    public void averageMovieRating() {
+    public String averageMovieRating() {
         int count = 0;
         for (String[] movie : getMovieList()){
             for (ArrayList<Float> rating : ratingList){
@@ -21,10 +21,11 @@ public class Rating extends Movie {
                     total += ratingValue;
                 }
                 float average = (float)(total / ratingList.get(count).size());
-                System.out.printf("Movie Name: %s  Average rating: %.1f%n", movie[0], average);
+                return String.format("Movie Name: %s  Average rating: %.1f%n", movie[0], average);
             }
             count++;
         }
+        return null;
     }
 
     public void addMovieRating(String title, float rating) {

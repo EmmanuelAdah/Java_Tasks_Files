@@ -43,7 +43,7 @@ public class MovieRatingMain {
                     } break;
                 case "3":
                     if (!rating.movieListIsEmpty()){
-                        rating.averageMovieRating();
+                        System.out.print(rating.averageMovieRating());
                     } else {
                         System.out.println("There is no movie in the list");
                     } break;
