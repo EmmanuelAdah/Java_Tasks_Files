@@ -1,4 +1,5 @@
 package movieRatings;
+import javax.swing.*;
 import java.util.Scanner;
 
 public class MovieRatingMain {
@@ -6,29 +7,15 @@ public class MovieRatingMain {
         Scanner sc = new Scanner(System.in);
         Rating rating = new Rating();
 
-        String movieMenu = """
-                ===========================
-                Welcome to Vince Movies
-                ===========================
-                Press:-
-                ---------------------------
-                1 -> Add movie
-                2 -> Rate a movie
-                3 -> View average ratings
-                4 -> Exit
-                ===========================
-                """;
         boolean movies = true;
         while(movies){
-            System.out.printf("%s%nEnter your choice: ",movieMenu);
-            String choice = sc.next();
+            String choice = JOptionPane.showInputDialog(movieMenu());
             switch(choice){
                 case "1":
-                    System.out.print("Enter movie title: ");
-                    String title = sc.next();
+                    String title = JOptionPane.showInputDialog("Enter movie title: ");
                     rating.addMovieToList(title);
                     rating.addListToRatingList();
-                    System.out.printf("%s was added successfully!...%n", title);
+                    JOptionPane.showMessageDialog (null,title + " was added successfully!...");
                     break;
                 case "2":
                     System.out.print("Enter movie name: ");
@@ -43,17 +30,32 @@ public class MovieRatingMain {
                     } break;
                 case "3":
                     if (!rating.movieListIsEmpty()){
-                        System.out.print(rating.averageMovieRating());
+                        JOptionPane.showMessageDialog(null, rating.averageMovieRating());
                     } else {
-                        System.out.println("There is no movie in the list");
+                        JOptionPane.showMessageDialog(null, "There is no movie in the list");
                     } break;
                 case "4":
-                    System.out.println("Thank you for using Vince Movies \nGoodBye!...");
+                    JOptionPane.showMessageDialog(null, "Thank you for using Vince Movies \nGoodBye!...");
                     movies = false;
                     break;
                 default:
                     System.out.println("Invalid option. try again!...");
             }
         }
+    }
+
+    public static String movieMenu(){
+        return """
+                ===========================
+                Welcome to Vince Movies
+                ===========================
+                Press:-
+                ---------------------------
+                1 -> Add movie
+                2 -> Rate a movie
+                3 -> View average ratings
+                4 -> Exit
+                ===========================
+                """;
     }
 }
