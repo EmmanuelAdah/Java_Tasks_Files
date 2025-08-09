@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-class MystryGame2 {
+class MystryGame1 {
 
 	public static void main(String[] args){
 

@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9d0d31a-195e-44e7-88b5-703bdeaa5e5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../chapter_8_tasks/CylinderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_Deitel_Exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_Deitel_Exercises.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chapter_8_tasks/cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter_8_tasks/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter 3 Tasks/MystryGame1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter 3 Tasks/MystryGame1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapter_8_tasks/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter_8_tasks/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapter_8_tasks/CylinderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter_8_tasks/CylinderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapter_8_tasks/chapter_8_tasks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter_8_tasks/chapter_8_tasks.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +60,8 @@
       <updated>1753733881091</updated>
       <workItem from="1753733882393" duration="6551000" />
       <workItem from="1753825305161" duration="771000" />
+      <workItem from="1753908142955" duration="1444000" />
+      <workItem from="1754054517460" duration="615000" />
     </task>
     <servers />
   </component>

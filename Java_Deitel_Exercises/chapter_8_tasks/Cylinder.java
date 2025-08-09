@@ -29,8 +29,8 @@ public class Cylinder {
         return height;
     }
 
-    public double volumeOfCylinder(double radius, double height){
-        return Math.PI * radius * height;
+    public String volumeOfCylinder(double radius, double height){
+        return String.format("%.2f",Math.PI * radius * height);
     }
 
 

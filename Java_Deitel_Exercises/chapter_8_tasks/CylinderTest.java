@@ -1,7 +1,6 @@
 package chapter_8_tasks;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CylinderTest {
@@ -9,6 +8,6 @@ public class CylinderTest {
 
     @Test
     public void cylinderTest() {
-        assertEquals(62.84, cylinder.volumeOfCylinder(2.0, 10.0));
+        assertEquals("62.83", cylinder.volumeOfCylinder(2.0, 10.0));
     }
 }
