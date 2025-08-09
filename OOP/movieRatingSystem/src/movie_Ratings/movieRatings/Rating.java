@@ -16,23 +16,24 @@ public class Rating extends Movie {
         int count = 0;
         for (String[] movie : getMovieList()){
             for (ArrayList<Float> rating : ratingList){
-                double total = 0;
-                for (Float ratingValue : rating){
-                    total += ratingValue;
-                }
-                float average = (float)(total / ratingList.get(count).size());
-                return String.format("Movie Name: %s  Average rating: %.1f%n", movie[0], average);
+                float total = rating.
+                        stream().
+                        mapToInt(Float::intValue).
+                        sum();
+                float average = (total / ratingList.get(count).size());
+                if (rating.isEmpty()) average = 0;
+                return String.format("Movie Name: %s %nAverage rating: %.1f%n", movie[0], average);
             }
             count++;
         }
         return null;
     }
 
-    public void addMovieRating(String title, float rating) {
+    public void addMovieRating(String title, String rating) {
         int count = 0;
         for (String[] movie : getMovieList()){
             if (movie[0].equalsIgnoreCase(title)){
-                this.ratingList.get(count).add(rating);
+                this.ratingList.get(count).add(Float.parseFloat(rating));
             } count++;
         }
     }

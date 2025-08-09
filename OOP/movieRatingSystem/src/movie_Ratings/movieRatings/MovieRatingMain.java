@@ -15,18 +15,17 @@ public class MovieRatingMain {
                     String title = JOptionPane.showInputDialog("Enter movie title: ");
                     rating.addMovieToList(title);
                     rating.addListToRatingList();
-                    JOptionPane.showMessageDialog (null,title + " was added successfully!...");
+                    JOptionPane.showMessageDialog(null,title + " was added successfully!...");
                     break;
                 case "2":
-                    System.out.print("Enter movie name: ");
-                    String movieName = sc.next();
+                    String movieName = JOptionPane.showInputDialog("Enter movie name: ");
                     if (rating.getMovieList().stream().noneMatch(movie -> movie[0].equalsIgnoreCase(movieName))){
-                        System.out.println("Movie does not exist!");
+                        JOptionPane.showMessageDialog(null, "Movie does not exist!");
                     } else {
-                        System.out.print("Enter movie rating: ");
-                        float rate = sc.nextFloat();
+                        String rate = JOptionPane.showInputDialog("Enter movie rating: ");
                         rating.addMovieToList(movieName);
                         rating.addMovieRating(movieName, rate);
+                        JOptionPane.showMessageDialog(null, "Rating added successfully!");
                     } break;
                 case "3":
                     if (!rating.movieListIsEmpty()){

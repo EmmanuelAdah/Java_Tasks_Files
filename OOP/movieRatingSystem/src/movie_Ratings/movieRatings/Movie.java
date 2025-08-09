@@ -30,6 +30,10 @@ public class Movie {
         this.movieList.removeIf(movie -> movie[0].equalsIgnoreCase(title));
     }
 
+    public boolean movieCheck(String title){
+        return movieList.contains(title);
+    }
+
     public ArrayList<String[]> getMovieList() {
         return this.movieList;
     }
