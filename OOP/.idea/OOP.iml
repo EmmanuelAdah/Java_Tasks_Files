@@ -12,6 +12,8 @@
       <sourceFolder url="file://$MODULE_DIR$/movieRatingSystem/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/phoneBook/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/phoneBook/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_8/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_8/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,5 +1,6 @@
 package geoPoliticalZone;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class PoliticalZoneMain {
@@ -7,11 +8,10 @@ public class PoliticalZoneMain {
         GeoPoliticalZone zone = new GeoPoliticalZone();
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter state: ");
-        String state = sc.nextLine();
-
+        String state = JOptionPane.showInputDialog("Enter state: ");
         zone.setPoliticalZone(state);
 
-        System.out.printf("%s is in %s geo-political zone", zone.getState(), zone.getPoliticalZone());
+        JOptionPane.showMessageDialog(null,
+                String.format("%s is in %s geo-political zone", zone.getState(), zone.getPoliticalZone()));
     }
 }
