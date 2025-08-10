@@ -19,7 +19,6 @@ public class GeoPoliticalZone {
     public String getPoliticalZone() {
         return this.politicalZone;
     }
-
     public String getState() {
         return this.state;
     }
