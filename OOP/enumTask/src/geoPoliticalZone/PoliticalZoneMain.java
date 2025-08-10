@@ -14,4 +14,5 @@ public class PoliticalZoneMain {
         JOptionPane.showMessageDialog(null,
                 String.format("%s is in %s geo-political zone", zone.getState(), zone.getPoliticalZone()));
     }
+
 }
