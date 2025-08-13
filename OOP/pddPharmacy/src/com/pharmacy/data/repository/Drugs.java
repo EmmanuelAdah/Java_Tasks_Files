@@ -10,4 +10,16 @@ public class Drugs {
     public long count(){
         return this.drug.size();
     }
+
+    public void saveDrug(Drug drugs) {
+        drug.add(drugs);
+    }
+
+    public void delete() {
+        drug.removeLast();
+    }
+
+    public void deleteById(int id) {
+        delete();
+    }
 }

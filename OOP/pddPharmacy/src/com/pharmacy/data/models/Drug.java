@@ -7,6 +7,7 @@ public class Drug {
     private Category category;
     private LocalDateTime manufactureDate;
     private LocalDateTime expiryDate;
+    private LocalDateTime dateAdded;
     private int quantity;
 
     public String getName() {
