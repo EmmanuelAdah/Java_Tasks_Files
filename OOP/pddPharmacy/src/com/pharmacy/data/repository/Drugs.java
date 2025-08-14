@@ -12,7 +12,11 @@ public class Drugs {
     }
 
     public void saveDrug(Drug drug) {
-        drugs.add(drug);
+        if(!isNew(drug)) drugs.add(drug);
+    }
+
+    public boolean isNew(Drug drug){
+        return drugs.contains(drug);
     }
 
     public void delete() {
