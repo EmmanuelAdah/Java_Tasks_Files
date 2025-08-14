@@ -2,6 +2,7 @@ package com.pharmacy.data.models;
 import java.time.LocalDateTime;
 
 public class Drug {
+    private long id;
     private String name;
     private Type type;
     private Category category;
@@ -9,6 +10,28 @@ public class Drug {
     private LocalDateTime expiryDate;
     private LocalDateTime dateAdded;
     private int quantity;
+
+    public Drug(long id,
+                String name,
+                Type type,
+                Category category,
+                LocalDateTime manufactureDate,
+                LocalDateTime expiryDate,
+                LocalDateTime dateAdded,
+                int quantity){
+
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.category = category;
+        this.manufactureDate = manufactureDate;
+        this.expiryDate = expiryDate;
+        this.dateAdded = dateAdded;
+        this.quantity = quantity;
+    }
+    public long getId() {
+        return this.id;
+    }
 
     public String getName() {
         return name;

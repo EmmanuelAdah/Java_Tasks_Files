@@ -1,6 +1,50 @@
 package com.pharmacy.dtos.request;
 
+import java.time.LocalDate;
+
 public class AddDrugRequest {
+    private Long drugId;
+    private String drugName;
+    private LocalDate manufactureDate;
+    private LocalDate expiryDate;
+
+    public AddDrugRequest(Long id, String name, LocalDate manufactureDate, LocalDate expiryDate) {
+        this.drugId = id;
+        this.drugName = name;
+        this.manufactureDate = manufactureDate;
+        this.expiryDate = expiryDate;
+    }
+
+    public String getDrugName() {
+        return drugName;
+    }
+
+    public void setDrugName(String drugName) {
+        this.drugName = drugName;
+    }
 
 
+    public Long getDrugId() {
+        return drugId;
+    }
+
+    public void setDrugId(Long drugId) {
+        this.drugId = drugId;
+    }
+
+    public LocalDate getManufactureDate() {
+        return manufactureDate;
+    }
+
+    public void setManufactureDate(LocalDate manufactureDate) {
+        this.manufactureDate = manufactureDate;
+    }
+
+    public LocalDate getExpiryDate() {
+        return expiryDate;
+    }
+
+    public void setExpiryDate(LocalDate expiryDate) {
+        this.expiryDate = expiryDate;
+    }
 }

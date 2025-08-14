@@ -5,21 +5,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Drugs {
-    private List<Drug> drug = new ArrayList<>();
+    private List<Drug> drugs = new ArrayList<>();
 
     public long count(){
-        return this.drug.size();
+        return this.drugs.size();
     }
 
-    public void saveDrug(Drug drugs) {
-        drug.add(drugs);
+    public void saveDrug(Drug drug) {
+        drugs.add(drug);
     }
 
     public void delete() {
-        drug.removeLast();
+        drugs.removeLast();
     }
 
     public void deleteById(int id) {
         delete();
+    }
+
+    public Drug findById(Long id) {
+        for (Drug drug : drugs) if (id.equals(drug.getId())) return drug;
+        return null;
+    }
+
+    public Drug findByName(String name) {
+        for (Drug drug : drugs) if (name.equals(drug.getName())) return drug;
+        return null;
+    }
+
+    public void update(Drug drug) {
+        for (int index = 0; index < drugs.size(); index++)
+            if (drug.getId() == drugs.get(index).getId())
+                drugs.set(index, drug);
     }
 }

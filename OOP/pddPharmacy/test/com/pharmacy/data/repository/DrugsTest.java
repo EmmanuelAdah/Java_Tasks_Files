@@ -1,8 +1,12 @@
 package com.pharmacy.data.repository;
 
+import com.pharmacy.data.models.Category;
 import com.pharmacy.data.models.Drug;
+import com.pharmacy.data.models.Type;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -21,21 +25,57 @@ class DrugsTest {
 
     @Test
     void addDrugTest(){
-        drugs.saveDrug(new Drug());
+        Drug drug = new Drug(2L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
+                LocalDateTime.now(), LocalDateTime.now().plusMonths(5), LocalDateTime.now(), 4);
+        drugs.saveDrug(drug);
         assertEquals(1L, drugs.count());
     }
 
     @Test
     void deleteDrugTest(){
-        drugs.saveDrug(new Drug());
+        Drug panadol = new Drug(2L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
+                LocalDateTime.now(), LocalDateTime.now().plusMonths(5), LocalDateTime.now(), 4);
+        drugs.saveDrug(panadol);
         drugs.delete();
         assertEquals(0L, drugs.count());
     }
 
     @Test
     void deleteDrugByIdTest(){
-        drugs.saveDrug();
+        Drug drug = new Drug(2L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
+                LocalDateTime.now(), LocalDateTime.now().plusMonths(5), LocalDateTime.now(), 4);
+        drugs.saveDrug(drug);
         drugs.deleteById(1);
         assertEquals(0L, drugs.count());
+    }
+
+    @Test
+    void findDrugByIdTest(){
+        Drug panadol = new Drug(1L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
+                LocalDateTime.now(), LocalDateTime.now().plusMonths(5), LocalDateTime.now(), 4);
+        drugs.saveDrug(panadol);
+        Drug alabukum = new Drug(2L, "alabukum", Type.ANTIBIOTIC, Category.CAPSULE,
+                LocalDateTime.now(), LocalDateTime.now().plusMonths(5), LocalDateTime.now(), 4);
+        drugs.saveDrug(alabukum);
+        assertEquals(panadol, drugs.findById(1L));
+    }
+
+    @Test
+    void findDrugByNameTest(){
+        Drug alabukum = new Drug(2L, "alabukum", Type.ANTIBIOTIC, Category.CAPSULE,
+                LocalDateTime.now(), LocalDateTime.now().plusMonths(5), LocalDateTime.now(), 4);
+        drugs.saveDrug(alabukum);
+        assertEquals(alabukum, drugs.findByName("alabukum"));
+    }
+
+    @Test
+    void updateDrugTest(){
+        Drug alabukum = new Drug(1L, "alabukum", Type.ANTIBIOTIC, Category.CAPSULE,
+                LocalDateTime.now(), LocalDateTime.now().plusMonths(5), LocalDateTime.now(), 4);
+        drugs.saveDrug(alabukum);
+        Drug panadol = new Drug(2L, "panadol", Type.PAINKILLER, Category.TABLET,
+                LocalDateTime.now(), LocalDateTime.now().plusMonths(5), LocalDateTime.now(), 4);
+        drugs.update(panadol);
+        assertEquals(1L, drugs.count());
     }
 }
