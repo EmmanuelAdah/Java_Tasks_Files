@@ -29,7 +29,7 @@ public class Drugs {
     }
 
     public Drug findByName(String name) {
-        for (Drug drug : drugs) if (name.equals(drug.getName())) return drug;
+        for (Drug drug : drugs) if (name.equalsIgnoreCase(drug.getName())) return drug;
         return null;
     }
 

@@ -1,7 +1,6 @@
 package com.pharmacy.dtos.request;
 
 import java.time.LocalDate;
-import java.time.LocalDate;
 
 public class AddDrugRequest {
     private Long drugId;
