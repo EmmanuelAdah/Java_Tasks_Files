@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Drugs {
-    private List<Drug> drugs = new ArrayList<>();
+    private static List<Drug> drugs = new ArrayList<>();
 
     public long count(){
-        return this.drugs.size();
+        return drugs.size();
     }
 
     public void saveDrug(Drug drug) {
@@ -37,5 +37,9 @@ public class Drugs {
         for (int index = 0; index < drugs.size(); index++)
             if (drug.getId() == drugs.get(index).getId())
                 drugs.set(index, drug);
+    }
+
+    public void clearList() {
+        drugs.clear();
     }
 }
