@@ -6,13 +6,12 @@ import com.pharmacy.dtos.request.AddDrugRequest;
 import com.pharmacy.dtos.responses.AddDrugResponse;
 import static com.pharmacy.utils.Mapper.map;
 
-public class PharmacistService {
+public class PharmacistServices {
     private final Drugs drugs = new Drugs();
 
     public AddDrugResponse addDrug(AddDrugRequest addDrugRequest) {
         Drug drug = map(addDrugRequest);
-        AddDrugResponse addDrugResponse = new AddDrugResponse();
         drugs.saveDrug(drug);
-        return addDrugResponse;
+        return map(drug);
     }
 }

@@ -49,8 +49,17 @@ class DrugsTest {
         Drug drug = new Drug(2L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
                 LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
         drugs.saveDrug(drug);
-        drugs.deleteById(1);
+        drugs.deleteById(2);
         assertEquals(0L, drugs.count());
+    }
+
+    @Test
+    void deleteDrugByInvalidIdTest(){
+        Drug drug = new Drug(2L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
+                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
+        drugs.saveDrug(drug);
+        drugs.deleteById(1);
+        assertEquals(1L, drugs.count());
     }
 
     @Test

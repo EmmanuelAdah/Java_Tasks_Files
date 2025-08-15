@@ -2,15 +2,28 @@ package com.pharmacy.controller;
 
 import com.pharmacy.data.repository.Drugs;
 import com.pharmacy.dtos.request.AddDrugRequest;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PharmacistServiceControllerTest {
-    PharmacistServiceController controller = new PharmacistServiceController();
-    Drugs drugs = new Drugs();
+class PharmacistServicesControllerTest {
+    PharmacistServicesController controller;
+    Drugs drugs;
+
+    @BeforeEach
+    void setUp() {
+    controller = new PharmacistServicesController();
+    drugs = new Drugs();
+    }
+
+    @AfterEach
+    void tearDown() {
+        drugs.clearList();
+    }
 
     @Test
     void pharmacistServiceControllerTest() {

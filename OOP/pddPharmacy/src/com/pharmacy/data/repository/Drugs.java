@@ -23,8 +23,8 @@ public class Drugs {
         drugs.removeLast();
     }
 
-    public void deleteById(int id) {
-        delete();
+    public void deleteById(long drugId) {
+        drugs.removeIf(drug -> drug.getId() == drugId);
     }
 
     public Drug findById(Long id) {
