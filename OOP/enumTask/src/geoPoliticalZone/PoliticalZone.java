@@ -18,5 +18,4 @@ public enum PoliticalZone {
     public String[] getZone(){
         return politicalZones;
     }
-
 }
