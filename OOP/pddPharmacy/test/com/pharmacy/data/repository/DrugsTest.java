@@ -81,7 +81,14 @@ class DrugsTest {
         drugs.saveDrug(alabukum);
         assertEquals(alabukum, drugs.findByName("alabukum"));
         assertNull(drugs.findByName("panadol"));
+    }
 
+    @Test
+    void findDrugByNameWithInvalidNameTest(){
+        Drug alabukum = new Drug(2L, "alabukum", Type.ANTIBIOTIC, Category.CAPSULE,
+                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
+        drugs.saveDrug(alabukum);
+        assertNull(drugs.findByName("panadol"));
     }
 
     @Test
