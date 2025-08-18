@@ -7,12 +7,14 @@ public class AddDrugRequest {
     private String drugName;
     private LocalDate manufactureDate;
     private LocalDate expiryDate;
+    private int quantity;
 
-    public AddDrugRequest(Long id, String name, LocalDate manufactureDate, LocalDate expiryDate) {
+    public AddDrugRequest(Long id, String name, LocalDate manufactureDate, LocalDate expiryDate, int quantity) {
         this.drugId = id;
         this.drugName = name;
         this.manufactureDate = manufactureDate;
         this.expiryDate = expiryDate;
+        this.quantity = quantity;
     }
 
     public String getDrugName() {
@@ -46,5 +48,13 @@ public class AddDrugRequest {
 
     public void setExpiryDate(LocalDate expiryDate) {
         this.expiryDate = expiryDate;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

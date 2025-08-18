@@ -28,7 +28,7 @@ class PharmacistServicesControllerTest {
     @Test
     void pharmacistServiceControllerTest() {
         AddDrugRequest panadol = new AddDrugRequest(1L,
-                "Panadol", LocalDate.now(), LocalDate.now().plusMonths(5));
+                "Panadol", LocalDate.now(), LocalDate.now().plusMonths(5), 32);
         controller.recordNewDrug(panadol);
         assertEquals(1L, drugs.count());
     }
