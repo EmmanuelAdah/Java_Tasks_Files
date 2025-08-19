@@ -29,46 +29,89 @@ class DrugsTest {
 
     @Test
     void addDrugTest(){
-        Drug drug = new Drug(2L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
-                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
-        drugs.saveDrug(drug);
+        Drug alabukum = new Drug();
+        alabukum.setId(2L);
+        alabukum.setName("alabukum");
+        alabukum.setType(Type.ANTIBIOTIC);
+        alabukum.setCategory(Category.CAPSULE);
+        alabukum.setManufactureDate(LocalDate.now());
+        alabukum.setExpiryDate(LocalDate.now().plusMonths(5));
+        alabukum.setDateAdded(LocalDate.now());
+        alabukum.setQuantity(4);
+        drugs.saveDrug(alabukum);
         assertEquals(1L, drugs.count());
     }
 
     @Test
     void deleteDrugTest(){
-        Drug panadol = new Drug(2L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
-                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
+        Drug panadol = new Drug();
+        panadol.setId(1L);
+        panadol.setName("panadol");
+        panadol.setType(Type.ANTIBIOTIC);
+        panadol.setCategory(Category.TABLET);
+        panadol.setManufactureDate(LocalDate.now());
+        panadol.setExpiryDate(LocalDate.now().plusMonths(6));
+        panadol.setDateAdded(LocalDate.now());
+        panadol.setQuantity(6);
         drugs.saveDrug(panadol);
-        drugs.delete();
+        drugs.deleteById(1L);
         assertEquals(0L, drugs.count());
     }
 
     @Test
     void deleteDrugByIdTest(){
-        Drug drug = new Drug(2L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
-                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
-        drugs.saveDrug(drug);
-        drugs.deleteById(2);
+        Drug panadol = new Drug();
+        panadol.setId(2L);
+        panadol.setName("panadol");
+        panadol.setType(Type.ANTIBIOTIC);
+        panadol.setCategory(Category.TABLET);
+        panadol.setManufactureDate(LocalDate.now());
+        panadol.setExpiryDate(LocalDate.now().plusMonths(6));
+        panadol.setDateAdded(LocalDate.now());
+        panadol.setQuantity(6);
+        drugs.saveDrug(panadol);
+        drugs.deleteById(2L);
         assertEquals(0L, drugs.count());
     }
 
     @Test
     void deleteDrugByInvalidIdTest(){
-        Drug drug = new Drug(2L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
-                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
-        drugs.saveDrug(drug);
+        Drug alabukum = new Drug();
+        alabukum.setId(2L);
+        alabukum.setName("alabukum");
+        alabukum.setType(Type.ANTIBIOTIC);
+        alabukum.setCategory(Category.CAPSULE);
+        alabukum.setManufactureDate(LocalDate.now());
+        alabukum.setExpiryDate(LocalDate.now().plusMonths(5));
+        alabukum.setDateAdded(LocalDate.now());
+        alabukum.setQuantity(4);
+        drugs.saveDrug(alabukum);
         drugs.deleteById(1);
         assertEquals(1L, drugs.count());
     }
 
     @Test
     void findDrugByIdTest(){
-        Drug panadol = new Drug(1L, "panadol", Type.ANTIBIOTIC, Category.CAPSULE,
-                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
+        Drug panadol = new Drug();
+        panadol.setId(1L);
+        panadol.setName("panadol");
+        panadol.setType(Type.ANTIBIOTIC);
+        panadol.setCategory(Category.TABLET);
+        panadol.setManufactureDate(LocalDate.now());
+        panadol.setExpiryDate(LocalDate.now().plusMonths(6));
+        panadol.setDateAdded(LocalDate.now());
+        panadol.setQuantity(6);
         drugs.saveDrug(panadol);
-        Drug alabukum = new Drug(2L, "alabukum", Type.ANTIBIOTIC, Category.CAPSULE,
-                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
+
+        Drug alabukum = new Drug();
+        alabukum.setId(2L);
+        alabukum.setName("alabukum");
+        alabukum.setType(Type.ANTIBIOTIC);
+        alabukum.setCategory(Category.CAPSULE);
+        alabukum.setManufactureDate(LocalDate.now());
+        alabukum.setExpiryDate(LocalDate.now().plusMonths(5));
+        alabukum.setDateAdded(LocalDate.now());
+        alabukum.setQuantity(4);
         drugs.saveDrug(alabukum);
         assertEquals(panadol, drugs.findById(1L));
         assertNull(drugs.findById(3L));
@@ -76,8 +119,15 @@ class DrugsTest {
 
     @Test
     void findDrugByNameTest(){
-        Drug alabukum = new Drug(2L, "alabukum", Type.ANTIBIOTIC, Category.CAPSULE,
-                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
+        Drug alabukum = new Drug();
+        alabukum.setId(1L);
+        alabukum.setName("alabukum");
+        alabukum.setType(Type.ANTIBIOTIC);
+        alabukum.setCategory(Category.CAPSULE);
+        alabukum.setManufactureDate(LocalDate.now());
+        alabukum.setExpiryDate(LocalDate.now().plusMonths(5));
+        alabukum.setDateAdded(LocalDate.now());
+        alabukum.setQuantity(4);
         drugs.saveDrug(alabukum);
         assertEquals(alabukum, drugs.findByName("alabukum"));
         assertNull(drugs.findByName("panadol"));
@@ -85,19 +135,41 @@ class DrugsTest {
 
     @Test
     void findDrugByNameWithInvalidNameTest(){
-        Drug alabukum = new Drug(2L, "alabukum", Type.ANTIBIOTIC, Category.CAPSULE,
-                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
+        Drug alabukum = new Drug();
+        alabukum.setId(2L);
+        alabukum.setName("alabukum");
+        alabukum.setType(Type.ANTIBIOTIC);
+        alabukum.setCategory(Category.CAPSULE);
+        alabukum.setManufactureDate(LocalDate.now());
+        alabukum.setExpiryDate(LocalDate.now().plusMonths(5));
+        alabukum.setDateAdded(LocalDate.now());
+        alabukum.setQuantity(4);
         drugs.saveDrug(alabukum);
         assertNull(drugs.findByName("panadol"));
     }
 
     @Test
     void updateDrugTest(){
-        Drug alabukum = new Drug(1L, "alabukum", Type.ANTIBIOTIC, Category.CAPSULE,
-                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
+        Drug alabukum = new Drug();
+        alabukum.setId(2L);
+        alabukum.setName("alabukum");
+        alabukum.setType(Type.ANTIBIOTIC);
+        alabukum.setCategory(Category.CAPSULE);
+        alabukum.setManufactureDate(LocalDate.now());
+        alabukum.setExpiryDate(LocalDate.now().plusMonths(5));
+        alabukum.setDateAdded(LocalDate.now());
+        alabukum.setQuantity(4);
         drugs.saveDrug(alabukum);
-        Drug panadol = new Drug(2L, "panadol", Type.PAINKILLER, Category.TABLET,
-                LocalDate.now(), LocalDate.now().plusMonths(5), LocalDate.now(), 4);
+
+        Drug panadol = new Drug();
+        panadol.setId(2L);
+        panadol.setName("panadol");
+        panadol.setType(Type.ANTIBIOTIC);
+        panadol.setCategory(Category.TABLET);
+        panadol.setManufactureDate(LocalDate.now());
+        panadol.setExpiryDate(LocalDate.now().plusMonths(6));
+        panadol.setDateAdded(LocalDate.now());
+        panadol.setQuantity(6);
         drugs.update(panadol);
         assertEquals(1L, drugs.count());
     }
