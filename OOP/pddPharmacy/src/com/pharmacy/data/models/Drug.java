@@ -13,24 +13,6 @@ public class Drug {
 
     public Drug(){}
 
-    public Drug(long id,
-                String name,
-                Type type,
-                Category category,
-                LocalDate manufactureDate,
-                LocalDate expiryDate,
-                LocalDate dateAdded,
-                int quantity){
-
-        this.id = id;
-        this.name = name;
-        this.type = type;
-        this.category = category;
-        this.manufactureDate = manufactureDate;
-        this.expiryDate = expiryDate;
-        this.dateAdded = dateAdded;
-        this.quantity = quantity;
-    }
     public long getId() {
         return this.id;
     }
@@ -85,5 +67,13 @@ public class Drug {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public LocalDate getDateAdded() {
+        return dateAdded;
+    }
+
+    public void setDateAdded(LocalDate dateAdded) {
+        this.dateAdded = dateAdded;
     }
 }
