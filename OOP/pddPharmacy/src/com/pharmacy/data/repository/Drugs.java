@@ -39,8 +39,7 @@ public class Drugs {
 
     public void update(Drug drug) {
         for (int index = 0; index < drugs.size(); index++)
-            if (drug.getId() == drugs.get(index).getId())
-                drugs.set(index, drug);
+            if (drug.getId() == drugs.get(index).getId()) drugs.set(index, drug);
     }
 
     public void clearList() {
