@@ -21,9 +21,18 @@ class PharmacistServicesTest {
 
     @Test
     void pharmacistAddDrugTest(){
-        AddDrugRequest addDrugRequest = new AddDrugRequest(1L,
-                "Panadol", LocalDate.now(), LocalDate.now().plusMonths(5));
+        AddDrugRequest addDrugRequest = new AddDrugRequest();
+        addDrugRequest.setDrugId(1L);
+        addDrugRequest.setDrugName("Panadol");
+        addDrugRequest.setManufactureDate(LocalDate.now());
+        addDrugRequest.setExpiryDate(LocalDate.now().plusMonths(5));
+        addDrugRequest.setQuantity(23);
         pharmacistServices.addDrug(addDrugRequest);
         assertEquals(1L, drugs.count());
+    }
+
+    @Test
+    void buyDrugTest(){
+
     }
 }
