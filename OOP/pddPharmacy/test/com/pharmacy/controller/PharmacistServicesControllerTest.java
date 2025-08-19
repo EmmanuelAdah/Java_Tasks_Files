@@ -5,7 +5,6 @@ import com.pharmacy.dtos.request.AddDrugRequest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -27,8 +26,12 @@ class PharmacistServicesControllerTest {
 
     @Test
     void pharmacistServiceControllerTest() {
-        AddDrugRequest panadol = new AddDrugRequest(1L,
-                "Panadol", LocalDate.now(), LocalDate.now().plusMonths(5), 32);
+        AddDrugRequest panadol = new AddDrugRequest();
+        panadol.setDrugId(1L);
+        panadol.setDrugName("Panadol");
+        panadol.setManufactureDate(LocalDate.now());
+        panadol.setExpiryDate(LocalDate.now().plusMonths(5));
+        panadol.setQuantity(32);
         controller.recordNewDrug(panadol);
         assertEquals(1L, drugs.count());
     }
